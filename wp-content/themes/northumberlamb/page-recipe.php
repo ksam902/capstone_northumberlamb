@@ -1,4 +1,4 @@
 <?php
 /*
-Template Name: Recipe Page
+Template Name: Recipes Page
 */
