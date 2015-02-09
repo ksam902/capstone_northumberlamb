@@ -1,3 +1,3 @@
 <?php
 
-echo "HEY IM THE HOME PAGE";
+echo "HEY IM THE index PAGE";

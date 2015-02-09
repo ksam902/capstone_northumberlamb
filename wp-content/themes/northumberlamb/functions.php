@@ -1,4 +1,39 @@
 <?php
+// ------ PRE FUNCTION FOR DEBUGGING ------
+function pre($a) { echo '<pre>'; print_r($a); echo '</pre>'; }
+// ------ GLOBAL SMARTY FUNCTION ------
+function wp_smarty(){
+
+     global $wp_smarty;
+    if(!$wp_smarty){
+
+        $wp_smarty = smarty_get_instance();
+
+        $options = get_fields('options');
+        $wp_smarty->assign('options', $options);
+
+        global $post;
+        if ($post) {
+
+            setup_postdata($post);
+
+            // main-menu
+            $header_menu = wp_nav_menu(array(
+                'theme_location' => 'header-menu',
+                'echo' => false,
+                'menu_id' => 'header-menu'
+            ));
+
+            $wp_smarty->assign('menu', $header_menu );
+
+            $wp_smarty->assign('title', $post->post_title);
+            $wp_smarty->assign('content', apply_filters('the_content', get_the_content() ));
+            //$wp_smarty->assign('here', here());
+        }
+    }
+
+    return $wp_smarty;
+}
 // ------ MENUS ------
 add_action( 'init', 'create_menus' );
 function create_menus() {
