@@ -97,3 +97,20 @@ function create_post_type() {
         )
     );    
 };
+
+// ------ FETCH FUNCTIONS ------
+function fetch_page($page) {
+
+    $q = new WP_Query(array( 'post_type' => 'page', 'name' => $page ));
+    $posts = $q->posts;
+    return fetch($posts[0]);
+     
+}
+function fetch($post) {
+    
+    setup_postdata($post);
+
+    $fields = array_merge( (array)$post, (array)get_fields($post->ID) );
+  
+    return $fields;
+}
