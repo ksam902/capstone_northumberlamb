@@ -10,8 +10,6 @@ $content = array(
 	'page' => fetch_page('Home'),
 );
 
-pre($content);
-
 $smarty->assign('content', $content);
 
 get_header();
