@@ -1,4 +1,4 @@
-<div>HOME PAGEEEEEEEEEEE</div>
+<div>KYLE AND CHRISSSS PAGEEEEEEEEEEE</div>
 <br/>
 <div>THIS SHOULD BE THE ABOUT/HISTORY SECTION CONTENT : <br/><br/>
 	{$content.page.about_history_content}
