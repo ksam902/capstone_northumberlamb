@@ -1,5 +1,12 @@
-<div>RECIPES PAGEEEEEEEEEEE</div>
-<br/>
-<div>THIS SHOULD BE THE RECIPES PAGE CONTENT : <br/><br/>
-	{$content.page.post_content}
+<div class="container">
+    <div class="row">
+        <h2>
+            <strong>Recipes</strong>
+        </h2>
+        <div class="box">
+            <div class="col-lg-12">
+                <p>{$content.page.post_content}</p>
+            </div>
+        </div>
+    </div>
 </div>

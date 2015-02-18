@@ -1,5 +1,12 @@
-<div>MEDIA PAGEEEEEEEEEEE</div>
-<br/>
-<div>THIS SHOULD BE THE MEDIA PAGE CONTENT : <br/><br/>
-	{$content.page.post_content}
+<div class="container">
+    <div class="row">
+        <h2>
+            <strong>Media</strong>
+        </h2>
+        <div class="box">
+            <div class="col-lg-12">
+                <p>{$content.page.post_content}</p>
+            </div>
+        </div>
+    </div>
 </div>

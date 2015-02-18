@@ -1,13 +1,35 @@
-<div>KYLE AND CHRISSSS PAGEEEEEEEEEEE</div>
-<br/>
-<div>THIS SHOULD BE THE ABOUT/HISTORY SECTION CONTENT : <br/><br/>
-	{$content.page.about_history_content}
+
+<div class="container">
+    <div class="row">
+        <h2>
+            <strong>About</strong>
+        </h2>
+        <div class="box">
+            <div class="col-lg-12">
+                <p>{$content.page.about_history_content}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>
+            <strong>Federal Inspection Initiative</strong>
+        </h2>
+        <div class="box">
+            <div class="col-lg-12">
+                <p>{$content.page.federal_inspection_initative_content}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>
+            <strong>Board Of Directors</strong>
+        </h2>
+        <div class="box">
+            <div class="col-lg-12">
+                <img class="img-responsive img-full" src="http://placehold.it/840x200&text=Board Members" alt="">
+                <p>{$content.page.board_of_directors_caption}</p>
+            </div>
+        </div>
+    </div>
 </div>
-<br/>
-<div>THIS SHOULD BE THE FEDERAL INSPECTION INITIATIVE SECTION CONTENT : <br/><br/>
-	{$content.page.federal_inspection_initative_content}
-</div>
-<br/>
-<div>THIS SHOULD BE THE BOARD OF DIRECTORS SECTION CONTENT : <br/><br/>
-	{$content.page.board_of_directors_caption}
-</div>
+<!-- /.container -->

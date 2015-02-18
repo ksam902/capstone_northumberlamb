@@ -1,4 +1,112 @@
 <?php
+define('JS_CSS_VER', '0.0.1');
+define('DESCRIPTION_LENGTH', 40);
+function quick_slug($s) { return sanitize_title(str_replace('/','-',$s)); }
+// ------ ADDING STYLESHEETS ------
+$stylesheets = array(
+
+    'all'=>array(
+        'bootstrap-theme.css',
+        'bootstrap-theme.css.map',
+        'bootstrap-theme.min.css',
+        'bootstrap.css',
+        'bootstrap.css.map',
+        'bootstrap.min.css',
+        'northumberlamb.css',
+        'font-awesome.min.css',
+    ),
+
+    'lt_ie_9'=>array(),
+
+    'gte_ie_9'=>array(),
+);
+add_action('wp_enqueue_scripts', 'add_stylesheets');
+function add_stylesheets() {
+
+    global $wp_styles;
+    global $stylesheets;
+    $css = array();
+
+    foreach ( $stylesheets as $st ) {
+    foreach ( $st as $s ) {
+
+        $slug = quick_slug($s);
+        wp_enqueue_style($slug, get_bloginfo('stylesheet_directory').'/css/'.$s, $css, JS_CSS_VER);
+        array_push($css, $slug);
+    } }
+
+    foreach ($stylesheets['lt_ie_9'] as $s) {
+
+        $wp_styles->add_data( quick_slug($s), 'conditional', 'lt IE 9' );
+    }
+
+    foreach ($stylesheets['gte_ie_9'] as $s) {
+
+        $wp_styles->add_data( quick_slug($s), 'conditional', 'gte IE 9' );
+    }
+
+}
+// ------ ADDING JAVASCRIPTS ------
+$javascripts = array(
+
+    'head'=>array(
+
+        'all'=>array(
+        ),
+
+        'lt_ie_9'=>array(),
+
+        'gte_ie_9'=>array(),
+    ),
+
+    'body'=>array(
+
+        'all'=>array(
+            'jquery.js',
+            'bootstrap.js',
+            'bootstrap.min.js',
+            'npm.js',
+            'northumberlamb.js',
+        ),
+
+        'lt_ie_9'=>array(),
+
+        'gte_ie_9'=>array(),
+    ),
+);
+add_action('wp_enqueue_scripts', 'add_javascripts');
+function add_javascripts(){
+    
+    global $wp_scripts;
+    global $javascripts;
+    $js = array();
+    
+    foreach ($javascripts['head'] as $ja) {
+    foreach ($ja as $s) {
+    
+        $slug = quick_slug($s);
+        wp_enqueue_script($slug, get_bloginfo('stylesheet_directory').'/javascripts/'.$s, $js, JS_CSS_VER);
+        array_push($js, $slug);
+    } }
+
+    foreach ($javascripts['body'] as $ja) {
+    foreach ($ja as $s) {
+    
+        $slug = quick_slug($s);
+        wp_enqueue_script($slug, get_bloginfo('stylesheet_directory').'/javascripts/'.$s, $js, JS_CSS_VER, true);
+        array_push($js, $slug);
+    } }
+
+    foreach (array_merge($javascripts['head']['lt_ie_9'],$javascripts['body']['lt_ie_9']) as $s) {
+
+        $wp_scripts->add_data( quick_slug($s), 'conditional', 'lt IE 9' );
+    }
+
+    foreach (array_merge($javascripts['head']['gte_ie_9'],$javascripts['body']['gte_ie_9']) as $s) {
+
+        $wp_scripts->add_data( quick_slug($s), 'conditional', 'gte IE 9' );
+    }
+}
 // ------ PRE FUNCTION FOR DEBUGGING ------
 function pre($a) { echo '<pre>'; print_r($a); echo '</pre>'; }
 // ------ GLOBAL SMARTY FUNCTION ------
