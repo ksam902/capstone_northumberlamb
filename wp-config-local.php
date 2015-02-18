@@ -19,3 +19,5 @@
     define('DB_COLLATE', '');
 
 	define('LOCAL_DEV', false);
+
+    define('FS_METHOD', 'direct');
