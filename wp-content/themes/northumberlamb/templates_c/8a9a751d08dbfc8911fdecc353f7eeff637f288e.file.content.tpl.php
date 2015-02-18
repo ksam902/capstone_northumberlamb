@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 16:11:24
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 17:48:12
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/contact/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210567381554db79601be840-21149286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8a9a751d08dbfc8911fdecc353f7eeff637f288e' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/contact/content.tpl',
-      1 => 1424275879,
+      1 => 1424281112,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="col-lg-12">
                 <!-- Contact Details Column -->
                 <div class="col-md-4">
-                    <h3>Contact Details</h3>
+                    <h3>Contact</h3>
                     <p>
                         <?php echo $_smarty_tpl->tpl_vars['content']->value['page']['street_address'];?>
 <br><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['city'];?>
