@@ -7,7 +7,7 @@
             <div class="col-lg-12">
                 <!-- Contact Details Column -->
                 <div class="col-md-4">
-                    <h3>Contact Details</h3>
+                    <h3>Contact</h3>
                     <p>
                         {$content.page.street_address}<br>{$content.page.city}, {$content.page.province} {$content.page.postal_code}<br>
                     </p>
