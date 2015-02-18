@@ -22,6 +22,7 @@
                 <!-- Map Column -->
                 <div class="col-md-8">
                     <!-- Embedded Google Map -->
+                    <div class="overlay"></div>
                     <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;fb=1&amp;cid=7317000422442979290&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd&amp;hq=&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=45.390059,-63.244085&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;fb=1&amp;cid=7317000422442979290&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd&amp;hq=&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=45.390059,-63.244085&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
                 </div>
 

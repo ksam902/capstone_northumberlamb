@@ -14,9 +14,7 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <li class="nav navbar-nav navbar-right">
 				{$menu}
-            </li>
         </div>
         <!-- /.navbar-collapse -->
     </div>

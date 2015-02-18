@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 15:11:57
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 16:27:02
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1424272309,
+      1 => 1424276666,
       2 => 'file',
     ),
   ),
@@ -39,10 +39,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <li class="nav navbar-nav navbar-right">
 				<?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
-            </li>
         </div>
         <!-- /.navbar-collapse -->
     </div>

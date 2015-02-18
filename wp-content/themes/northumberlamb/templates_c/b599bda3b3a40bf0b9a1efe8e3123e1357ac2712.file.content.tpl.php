@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 15:25:38
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 16:13:50
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/home/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:151822962954d90fb16e47f8-88336190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b599bda3b3a40bf0b9a1efe8e3123e1357ac2712' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/home/content.tpl',
-      1 => 1424273136,
+      1 => 1424273263,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54d90fb1747816_72965240')) {function content_54d90fb1747816_72965240($_smarty_tpl) {?>
 <div class="container">
-
     <div class="row">
         <h2>
             <strong>About</strong>
@@ -37,7 +36,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
     </div>
-
     <div class="row">
         <h2>
             <strong>Federal Inspection Initiative</strong>
@@ -49,7 +47,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
     </div>
-
     <div class="row">
         <h2>
             <strong>Board Of Directors</strong>
@@ -62,6 +59,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
         </div>
     </div>
-
 </div>
 <!-- /.container --><?php }} ?>

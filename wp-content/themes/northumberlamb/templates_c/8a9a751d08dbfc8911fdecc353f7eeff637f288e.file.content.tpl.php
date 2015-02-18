@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 15:48:25
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 16:11:24
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/contact/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210567381554db79601be840-21149286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8a9a751d08dbfc8911fdecc353f7eeff637f288e' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/contact/content.tpl',
-      1 => 1424274503,
+      1 => 1424275879,
       2 => 'file',
     ),
   ),
@@ -55,6 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <!-- Map Column -->
                 <div class="col-md-8">
                     <!-- Embedded Google Map -->
+                    <div class="overlay"></div>
                     <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;fb=1&amp;cid=7317000422442979290&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd&amp;hq=&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=45.390059,-63.244085&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;fb=1&amp;cid=7317000422442979290&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd&amp;hq=&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=45.390059,-63.244085&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
                 </div>
 
