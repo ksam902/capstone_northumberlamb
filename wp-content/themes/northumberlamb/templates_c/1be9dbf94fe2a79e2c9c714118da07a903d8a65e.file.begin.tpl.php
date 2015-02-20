@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 15:15:27
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-20 18:49:19
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/begin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:89378548754d90fb159b790-07566002%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1be9dbf94fe2a79e2c9c714118da07a903d8a65e' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/begin.tpl',
-      1 => 1424272524,
+      1 => 1424458158,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <?php echo wp_head();?>
 
            	<!-- Custom Fonts -->
-		    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+		    <!-- <link href="//font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         </head>
 
         <body><?php }} ?>
