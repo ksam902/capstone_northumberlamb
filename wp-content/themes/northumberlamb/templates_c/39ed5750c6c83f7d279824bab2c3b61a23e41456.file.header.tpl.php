@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-18 16:27:02
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-20 15:53:27
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1424276666,
+      1 => 1424447604,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_54d90fb16ade51_38160939')) {function content_54d90fb16ade51_38160939($_smarty_tpl) {?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div id="nav-container" class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -64,15 +64,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="img-responsive img-full" src="http://placehold.it/840x400&text=Slide One" alt="">
+                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide One" alt="">
                         </div>
 
                         <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/840x400&text=Slide Two" alt="">
+                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Two" alt="">
                         </div>
 
                         <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/840x400&text=Slide Three" alt="">
+                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Three" alt="">
                         </div>
                     </div>
 

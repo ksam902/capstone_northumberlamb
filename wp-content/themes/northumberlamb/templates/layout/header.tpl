@@ -1,7 +1,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div id="nav-container" class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -38,15 +38,15 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img class="img-responsive img-full" src="http://placehold.it/840x400&text=Slide One" alt="">
+                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide One" alt="">
                         </div>
 
                         <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/840x400&text=Slide Two" alt="">
+                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Two" alt="">
                         </div>
 
                         <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/840x400&text=Slide Three" alt="">
+                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Three" alt="">
                         </div>
                     </div>
 
