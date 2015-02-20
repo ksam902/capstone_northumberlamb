@@ -10,15 +10,15 @@ $posts = array(
 );
 foreach ($recipes->posts as $p) {
 	$post = fetch($p);
-	$posts['recipes'] = $post;
+	$posts['recipes'][] = $post;
 }
-pre($posts['recipes']);
+
 $content = array(
 	'page' => fetch_page('recipes'),
 );
 
 $smarty->assign('content', $content);
-
+$smarty->assign('posts', $posts);
 get_header();
 $smarty->display('recipes/content.tpl');
 get_footer();

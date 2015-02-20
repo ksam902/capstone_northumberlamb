@@ -3,10 +3,16 @@
         <h2>
             <strong>Recipes</strong>
         </h2>
-        <div class="box">
-            <div class="col-lg-12">
-                <p>{$content.page.post_content}</p>
+        <div class="box box-recipes">
+            <div class="div-recipes">
+            {foreach $posts.recipes as $recipe}
+            <div class="col-lg-12 div-recipe">
+                <img class="img-recipe" src="http://placehold.it/175x125">
+                <h4>{$recipe.post_title}</h4>
+                <p>{$recipe.post_content} <br/> <strong>Prep Time:</strong> {$recipe.prep_time}</p>
             </div>
+            {/foreach}
+        </div>
         </div>
     </div>
 </div>

@@ -176,7 +176,33 @@ footer p {
         color: #fff;
     }
 }
+/* RECIPES */
+div.box-recipes{
+    max-height: 300px;
+}
+div.div-recipes{
+    max-height: 250px;
+    overflow-y: scroll;
+}
+div.div-recipe{
+    margin-bottom: 20px;
+}
+.img-recipe{
+    float: left;
+    margin-right: 10px;
+}
+div.div-recipe h4{
+    margin-top: 0;
+}
+div.div-recipe p{
+    font-size: 1em !important;
+}
 
+
+
+
+
+/* END RECIPES */
 @media screen and (min-width:991px) {
     .box:after {
         content: '';
