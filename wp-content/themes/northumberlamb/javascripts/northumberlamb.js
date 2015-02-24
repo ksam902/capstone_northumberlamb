@@ -6,4 +6,14 @@ $(function() {
     $('.overlay').click(function(){
     	$(this).css('pointer-events', 'none');
     });
+    $('a.open-modal').click(function(e){
+    	e.preventDefault();
+    	$('#recipe-modal').modal('show');
+    });
+    // $('img.img-recipe').click(function(){
+    // 	$('#modalOverlay').stop().fadeTo(500,1);
+    // });
+    $('.modalClose').click(function(){
+    	$('#modalOverlay').hide();
+    });
 });
