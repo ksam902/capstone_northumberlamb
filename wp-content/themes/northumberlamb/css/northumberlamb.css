@@ -178,24 +178,39 @@ footer p {
 }
 /* RECIPES */
 .modal-content{
-    margin-top: 10%;
 }
 .modal-body{
     min-height: 500px !important;
 }
-div#imgStudent{
+.modal-body p{
+    font-size: 14px !important;
+}
+div#imgModalRecipe{
     max-width: 200px;
     margin-right: 20px;
     height: 200px;
     float: left;
     background-color: #AB3334;
     border-radius: 15px;
+    margin-bottom: 5%;
 }
-div#imgStudent img{
+div#imgModalRecipe img{
     min-height: 200px;
     max-width: 200px;
     border-radius: 15px;
     margin-right: 10px;
+}
+hr{
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #405FA2;
+    margin: 0 auto;
+    width: 100%;
+}
+hr.modal-hr{
+    margin-top: 5%;
+    clear: both;
 }
 div.box-recipes{
     max-height: 500px;

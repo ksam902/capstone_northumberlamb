@@ -3,13 +3,28 @@
     <div class="modal-content">
 		<div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title">Recipe Title</h4>
+	        <h2 class="modal-title">Recipe Title</h2>
 		</div>
 		<div class="modal-body">
-			<div id="imgStudent">
+			<div id="imgModalRecipe">
 				<img src="http://placehold.it/200x200">
-            </div> 
-		    <p>Recipe Content</p>
+            </div>
+            <h4>Recipe Description :</h4> 
+		    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+		    <p><strong>Prep Time :</strong> XX</p>
+		    <hr class="modal-hr" style="width:100%">
+		    <h4>Recipe Instructions :</h4> 
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<hr class="modal-hr">
+			<h4>Recipe Ingredients :</h4> 
+			<p>
+				<ul>
+					<li>Recipe Ingredient</li>
+					<li>Recipe Ingredient</li>
+					<li>Recipe Ingredient</li>
+					<li>Recipe Ingredient</li>
+				</ul>	
+			</p>
 		</div>
 		<div class="modal-footer">
 		    <button type="button" class="btn btn-primary">Previous Recipe</button>
