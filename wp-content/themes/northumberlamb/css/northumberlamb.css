@@ -232,12 +232,18 @@ div.div-recipe h4{
 div.div-recipe p{
     font-size: 1em !important;
 }
-
-
-
-
-
 /* END RECIPES */
+
+/*MEDIA PAGE*/
+ul.nav-tabs li.active a{
+    color: #FFFFFF;
+    background-color: #405FA2;
+}
+ul.nav-tabs li:hover a{
+    color: #405FA2 !important;
+}
+
+/* END MEDIA */
 @media screen and (min-width:991px) {
     .box:after {
         content: '';

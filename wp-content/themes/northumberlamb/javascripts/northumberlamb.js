@@ -10,10 +10,7 @@ $(function() {
     	e.preventDefault();
     	$('#recipe-modal').modal('show');
     });
-    // $('img.img-recipe').click(function(){
-    // 	$('#modalOverlay').stop().fadeTo(500,1);
-    // });
-    $('.modalClose').click(function(){
-    	$('#modalOverlay').hide();
+     $('ul.nav-tabs li a').click(function(e){
+    	e.preventDefault();
     });
 });
