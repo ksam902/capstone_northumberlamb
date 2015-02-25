@@ -232,6 +232,10 @@ div.div-recipe h4{
 div.div-recipe p{
     font-size: 1em !important;
 }
+.modal-recipe-print{
+    text-align: center;
+    width: 20%;
+}
 /* END RECIPES */
 
 /*MEDIA PAGE*/

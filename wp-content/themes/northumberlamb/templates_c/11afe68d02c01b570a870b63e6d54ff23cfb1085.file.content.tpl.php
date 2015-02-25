@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-24 21:23:44
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-24 21:29:42
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/media/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:182181235254db7961ba9611-69538817%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '11afe68d02c01b570a870b63e6d54ff23cfb1085' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/media/content.tpl',
-      1 => 1424813023,
+      1 => 1424813275,
       2 => 'file',
     ),
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <!-- <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['post_content'];?>
 </p> -->
                 <ul class="nav nav-tabs nav-justified">
-                  <li role="presentation" class="active"><a href="#" data-toggle="collapse" data-target="#photos">Photos</a></li>
-                  <li role="presentation"><a href="#" data-toggle="collapse" data-target="#videos">Videos</a></li>
-                  <li role="presentation"><a href="#" data-toggle="collapse" data-target="#articles">Articles</a></li>
+                  <li role="presentation" class="active"><a href="#" id="tab-photos" data-toggle="collapse" data-target="#photos">Photos</a></li>
+                  <li role="presentation"><a href="#" id="tab-videos" data-toggle="collapse" data-target="#videos">Videos</a></li>
+                  <li role="presentation"><a href="#" id="tab-articles" data-toggle="collapse" data-target="#articles">Articles</a></li>
                 </ul>
                 <div id="photos" class="collapse in">
                     PHOTOS : Lorem ipsum dolor sit amet, consectetur adipisicing elit,

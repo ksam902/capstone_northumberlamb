@@ -37,17 +37,18 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide One" alt="">
-                        </div>
-
-                        <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Two" alt="">
-                        </div>
-
-                        <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Three" alt="">
-                        </div>
+                        
+                        {foreach $options.banner as $image}
+                        <!-- {pre($image)} -->
+                            {if $image@iteration == 1}
+                               <div class="item active">
+                            {else}
+                                <div class="item">    
+                            {/if}
+                            
+                                <img class="img-responsive img-full" src="{$image.image.url}" alt="{$image.image.alt}">
+                            </div>
+                        {/foreach}
                     </div>
 
                     <!-- Controls -->

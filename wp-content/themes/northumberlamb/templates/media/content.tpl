@@ -7,9 +7,9 @@
             <div class="col-lg-12">
                 <!-- <p>{$content.page.post_content}</p> -->
                 <ul class="nav nav-tabs nav-justified">
-                  <li role="presentation" class="active"><a href="#" data-toggle="collapse" data-target="#photos">Photos</a></li>
-                  <li role="presentation"><a href="#" data-toggle="collapse" data-target="#videos">Videos</a></li>
-                  <li role="presentation"><a href="#" data-toggle="collapse" data-target="#articles">Articles</a></li>
+                  <li role="presentation" class="active"><a href="#" id="tab-photos" data-toggle="collapse" data-target="#photos">Photos</a></li>
+                  <li role="presentation"><a href="#" id="tab-videos" data-toggle="collapse" data-target="#videos">Videos</a></li>
+                  <li role="presentation"><a href="#" id="tab-articles" data-toggle="collapse" data-target="#articles">Articles</a></li>
                 </ul>
                 <div id="photos" class="collapse in">
                     PHOTOS : Lorem ipsum dolor sit amet, consectetur adipisicing elit,

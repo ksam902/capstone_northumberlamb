@@ -10,7 +10,7 @@ $(function() {
     	e.preventDefault();
     	$('#recipe-modal').modal('show');
     });
-     $('ul.nav-tabs li a').click(function(e){
+    $('ul.nav-tabs li a').click(function(e){
     	e.preventDefault();
     });
 });

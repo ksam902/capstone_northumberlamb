@@ -12,6 +12,7 @@
             <h4>Recipe Description :</h4> 
 		    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 		    <p><strong>Prep Time :</strong> XX</p>
+		    <p><strong>Servings :</strong> XX</p>
 		    <hr class="modal-hr" style="width:100%">
 		    <h4>Recipe Instructions :</h4> 
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -27,6 +28,7 @@
 			</p>
 		</div>
 		<div class="modal-footer">
+		    <button type="button" class="btn btn-danger pull-left modal-recipe-print">Print</button>
 		    <button type="button" class="btn btn-primary">Previous Recipe</button>
 		    <button type="button" class="btn btn-primary">Next Recipe</button>
       	</div>

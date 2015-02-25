@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-24 20:24:27
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-25 01:33:34
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1424809465,
+      1 => 1424828013,
       2 => 'file',
     ),
   ),
@@ -42,7 +42,9 @@ $_smarty_tpl->tpl_vars['recipe']->_loop = true;
 </h4></a>
                 <p><?php echo $_smarty_tpl->tpl_vars['recipe']->value['post_content'];?>
 <?php if ($_smarty_tpl->tpl_vars['recipe']->value['prep_time']) {?> <br/> <strong>Prep Time:</strong> <?php echo $_smarty_tpl->tpl_vars['recipe']->value['prep_time'];?>
-<?php }?></p>
+<?php }?>
+                    <strong>Servings:</strong>
+                </p>
             </div>
             <?php } ?>
         </div>

@@ -118,8 +118,6 @@ function wp_smarty(){
         $wp_smarty = smarty_get_instance();
 
         $options = get_fields('options');
-        $options['banner']['images'] = fetch($options['banner']['image']);
-        //pre($options);
         $wp_smarty->assign('options', $options);
 
         global $post;

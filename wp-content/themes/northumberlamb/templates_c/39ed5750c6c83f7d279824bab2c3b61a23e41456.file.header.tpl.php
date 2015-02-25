@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-20 15:53:27
+<?php /* Smarty version Smarty-3.1.18, created on 2015-02-25 02:50:15
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1424447604,
+      1 => 1424832538,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'menu' => 0,
+    'options' => 0,
+    'image' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -63,17 +65,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide One" alt="">
-                        </div>
-
-                        <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Two" alt="">
-                        </div>
-
-                        <div class="item">
-                            <img class="img-responsive img-full" src="http://placehold.it/640x200&text=Slide Three" alt="">
-                        </div>
+                        
+                        <?php  $_smarty_tpl->tpl_vars['image'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['image']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['options']->value['banner']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['image']->iteration=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['image']->key => $_smarty_tpl->tpl_vars['image']->value) {
+$_smarty_tpl->tpl_vars['image']->_loop = true;
+ $_smarty_tpl->tpl_vars['image']->iteration++;
+?>
+                        <!-- <?php echo pre($_smarty_tpl->tpl_vars['image']->value);?>
+ -->
+                            <?php if ($_smarty_tpl->tpl_vars['image']->iteration==1) {?>
+                               <div class="item active">
+                            <?php } else { ?>
+                                <div class="item">    
+                            <?php }?>
+                            
+                                <img class="img-responsive img-full" src="<?php echo $_smarty_tpl->tpl_vars['image']->value['image']['url'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['image']->value['image']['alt'];?>
+">
+                            </div>
+                        <?php } ?>
                     </div>
 
                     <!-- Controls -->
