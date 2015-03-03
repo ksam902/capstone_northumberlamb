@@ -205,7 +205,9 @@ function create_post_type() {
         )
     );    
 };
-
+// ------ IMAGE RESIZING ------
+add_image_size( 'recipe-modal', 200, 200, true );
+// ------ /IMAGE RESIZING ------
 // ------ FETCH FUNCTIONS ------
 function fetch_page($page) {
 

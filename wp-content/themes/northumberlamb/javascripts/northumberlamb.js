@@ -6,9 +6,15 @@ $(function() {
     $('.overlay').click(function(){
     	$(this).css('pointer-events', 'none');
     });
-    $('a.open-modal').click(function(e){
+    $('a.recipe-modal-open').click(function(e){
     	e.preventDefault();
-    	$('#recipe-modal').modal('show');
+
+        var url = '/ajax/?recipe_id='+ $(this).attr('rel');
+        
+        $.ajax( url ).done(function(response, status) {
+            $('#recipe-popup .popup-content').html(response);
+            $('#recipe-modal-ajax').modal('show');
+        }); 
     });
     $('#btnShipperApplication').click(function(e){
         e.preventDefault();

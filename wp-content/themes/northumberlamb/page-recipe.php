@@ -22,5 +22,6 @@ $smarty->assign('posts', $posts);
 get_header();
 $smarty->display('recipes/lamb-cut-chart.tpl');
 $smarty->display('recipes/content.tpl');
-$smarty->display('recipes/recipe-modal.tpl');
+$smarty->display('recipes/recipe-popup.tpl');
+// $smarty->display('recipes/recipe-modal.tpl');
 get_footer();

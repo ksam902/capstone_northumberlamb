@@ -191,13 +191,13 @@ div#imgModalRecipe{
     height: 200px;
     float: left;
     background-color: #AB3334;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 5%;
 }
 div#imgModalRecipe img{
     min-height: 200px;
     max-width: 200px;
-    border-radius: 15px;
+    border-radius: 5px;
     margin-right: 10px;
 }
 hr{
