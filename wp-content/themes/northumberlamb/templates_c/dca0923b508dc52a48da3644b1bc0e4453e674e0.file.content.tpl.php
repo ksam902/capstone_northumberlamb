@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-03 13:54:27
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-03 15:19:59
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:212581338854e4b0ffd5c4a8-34523584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dca0923b508dc52a48da3644b1bc0e4453e674e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl',
-      1 => 1425390864,
+      1 => 1425395865,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="application-div box">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <div class="centered">
-                            <button class="btn btn-default" type="submit">Shipper Application</button>
+                            <button class="btn btn-default" type="submit" id="btnShipperApplication">Shipper Application</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="application-div box">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <div class="centered">
-                            <button class="btn btn-default" type="submit">Member Application</button>
+                            <button class="btn btn-default" type="submit" id="btnMemberApplication">Member Application</button>
                         </div>
                     </div>
               </div>    

@@ -14,4 +14,6 @@ $smarty->assign('content', $content);
 
 get_header();
 $smarty->display('shippers/content.tpl');
+$smarty->display('shippers/member-application-modal.tpl');
+$smarty->display('shippers/shipper-application-modal.tpl');
 get_footer();

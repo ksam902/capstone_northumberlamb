@@ -266,6 +266,9 @@ ul
 {
     text-align:center;
 }
+div.application-modal div {
+    margin-bottom: 10px;
+}
 /* /SHIPPERS PAGE*/
 
 @media screen and (min-width:991px) {
