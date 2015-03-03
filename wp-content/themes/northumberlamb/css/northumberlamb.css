@@ -249,6 +249,13 @@ ul.nav-tabs li:hover a{
 
 /* END MEDIA */
 
+/*CONSUMERS PAGE*/
+ul
+{
+    list-style-type: none;
+}
+
+/* /CONSUMERS PAGE*/
 /*SHIPPERS PAGE*/
 
 

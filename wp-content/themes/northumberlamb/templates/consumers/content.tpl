@@ -7,7 +7,8 @@
         <div class="box">
             <div class="col-lg-12">
                 <p>{$content.page.post_content}</p>
-                <hr>
+                <br/><hr><br/>
+                <h5><strong>Clients</strong></h5>
                 <ul>
                     {foreach $content.posts.clients as $client}
                         <li><a href='{$client.link}' target="_blank">{$client.post_title}</a></li>
