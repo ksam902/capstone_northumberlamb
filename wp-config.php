@@ -13,6 +13,8 @@
  *
  * @package WordPress
  */
+define('WP_MEMORY_LIMIT', '64M');
+
 if (file_exists(dirname(__FILE__) . '/wp-config-local.php')) {
 	require_once(dirname(__FILE__) . '/wp-config-local.php');
 }else{
