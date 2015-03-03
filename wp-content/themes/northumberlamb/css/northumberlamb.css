@@ -36,7 +36,7 @@ nav, #nav-container{
     color: #9d9d9c !important;
 }
 .box{
-    border-radius: 15px;
+    border-radius: 5px;
 }
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -248,6 +248,19 @@ ul.nav-tabs li:hover a{
 }
 
 /* END MEDIA */
+
+/*SHIPPERS PAGE*/
+
+
+.application-div{
+    margin: 5px;
+}
+.centered
+{
+    text-align:center;
+}
+/* /SHIPPERS PAGE*/
+
 @media screen and (min-width:991px) {
     .box:after {
         content: '';
