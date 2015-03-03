@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">NorthumberLamb</a>
+            <a class="navbar-brand" href="/"> <img src="/wp-content/uploads/2015/03/new_logo_white.png" alt="logo" width="190" height="30"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
