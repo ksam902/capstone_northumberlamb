@@ -10,6 +10,14 @@ $(function() {
     	e.preventDefault();
     	$('#recipe-modal').modal('show');
     });
+    $('#btnShipperApplication').click(function(e){
+        e.preventDefault();
+        $('#shipper-applicaton-modal').modal('show');
+    });
+    $('#btnMemberApplication').click(function(e){
+        e.preventDefault();
+        $('#member-application-modal').modal('show');
+    });
     $('ul.nav-tabs li a').click(function(e){
     	e.preventDefault();
     });
