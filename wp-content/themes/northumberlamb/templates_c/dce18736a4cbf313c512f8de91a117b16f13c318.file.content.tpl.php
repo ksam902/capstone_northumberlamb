@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 15:54:01
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 18:36:43
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1426002839,
+      1 => 1426012586,
       2 => 'file',
     ),
   ),
@@ -44,12 +44,15 @@ $_smarty_tpl->tpl_vars['recipe']->_loop = true;
                 <a href="#" data-reveal-id="recipe-modal-ajax" class="open-modal recipe-modal-open" rel="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['ID'];?>
 "><h4 class="open-modal"><?php echo $_smarty_tpl->tpl_vars['recipe']->value['post_title'];?>
 </h4></a>
-                <p><?php echo $_smarty_tpl->tpl_vars['recipe']->value['post_content'];?>
-<?php if ($_smarty_tpl->tpl_vars['recipe']->value['prep_time']) {?> <br/> <strong>Prep Time:</strong> <?php echo $_smarty_tpl->tpl_vars['recipe']->value['prep_time'];?>
+                <div class="text-center"><?php if ($_smarty_tpl->tpl_vars['recipe']->value['prep_time']) {?><strong>Prep Time:</strong> <?php echo $_smarty_tpl->tpl_vars['recipe']->value['prep_time'];?>
 <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['recipe']->value['servings']) {?> <strong>| Servings:</strong> <?php echo $_smarty_tpl->tpl_vars['recipe']->value['servings'];?>
 <?php }?>
-                </p>
+                </div>
+                <div>
+                    <?php echo $_smarty_tpl->tpl_vars['recipe']->value['post_content'];?>
+
+                </div>
             </div>
             <?php } ?>
         </div>

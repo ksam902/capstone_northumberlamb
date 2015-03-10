@@ -229,6 +229,9 @@ div.div-recipes{
     max-height: 450px;
     overflow-y: scroll;
 }
+div.text-center{
+    text-align: center;
+}
 div.div-recipe{
     margin-bottom: 20px;
 }
@@ -237,7 +240,7 @@ div.div-recipe strong{
 }
 .img-recipe{
     float: left;
-    margin-right: 10px;
+    margin-right: 20px;
     border-radius: 5px;
 }
 div.modal-body h6{
@@ -256,7 +259,7 @@ div.modal-body ol{
 div.div-recipe h4{
     margin-top: 0;
 }
-div.div-recipe p{
+div.div-recipe div{
     font-size: 1em !important;
 }
 
