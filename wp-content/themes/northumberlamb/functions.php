@@ -76,14 +76,14 @@ $javascripts = array(
 );
 add_action('wp_enqueue_scripts', 'add_javascripts');
 function add_javascripts(){
-    
+
     global $wp_scripts;
     global $javascripts;
     $js = array();
-    
+
     foreach ($javascripts['head'] as $ja) {
     foreach ($ja as $s) {
-    
+
         $slug = quick_slug($s);
         wp_enqueue_script($slug, get_bloginfo('stylesheet_directory').'/javascripts/'.$s, $js, JS_CSS_VER);
         array_push($js, $slug);
@@ -91,7 +91,7 @@ function add_javascripts(){
 
     foreach ($javascripts['body'] as $ja) {
     foreach ($ja as $s) {
-    
+
         $slug = quick_slug($s);
         wp_enqueue_script($slug, get_bloginfo('stylesheet_directory').'/javascripts/'.$s, $js, JS_CSS_VER, true);
         array_push($js, $slug);
@@ -203,10 +203,10 @@ function create_post_type() {
         'public' => true,
         'has_archive' => true,
         )
-    );    
+    );
 };
 // ------ IMAGE RESIZING ------
-add_image_size( 'recipe-modal', 200, 200, true );
+add_image_size( 'recipe-modal', 450, 200, true );
 add_image_size( 'recipe-list', 175, 125, true );
 // ------ /IMAGE RESIZING ------
 // ------ FETCH FUNCTIONS ------
@@ -215,13 +215,13 @@ function fetch_page($page) {
     $q = new WP_Query(array( 'post_type' => 'page', 'name' => $page ));
     $posts = $q->posts;
     return fetch($posts[0]);
-     
+
 }
 function fetch($post) {
-    
+
     setup_postdata($post);
 
     $fields = array_merge( (array)$post, (array)get_fields($post->ID) );
-  
+
     return $fields;
 }

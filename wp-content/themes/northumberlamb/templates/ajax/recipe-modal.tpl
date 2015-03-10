@@ -7,22 +7,21 @@
             </div>
             <div class="modal-body">
                     <div id="imgModalRecipe">
-                        <img src="{$recipe.image.url}" alt="{$recipe.image.alt}">
+                        <img src="{$recipe.image.sizes['recipe-modal']}" alt="{$recipe.image.alt}">
                     </div>
-                    <h4>Recipe Description :</h4>
+                    <h6>Prep Time : {$recipe.prep_time} | Servings : {$recipe.servings}</h6>
+                    <h4>Recipe Description</h4>
                     <p>{$recipe.post_content}</p>
-                    <p><strong>Prep Time : </strong>{$recipe.prep_time}</p>
-                    <p><strong>Servings : </strong>{$recipe.servings}</p>
                     <hr class="modal-hr" style="width:100%; color:#405FA2;">
-                    <h4>Recipe Instructions :</h4>
+                    <h4>Recipe Instructions</h4>
                     <p>{$recipe.instructions}</p>
                     <hr class="modal-hr">
-                    <h4>Recipe Ingredients :</h4>
-        		<ul id="ul-recipe-ingredients">
+                    <h4>Recipe Ingredients</h4>
+        		<ol id="ul-recipe-ingredients">
             	{foreach $recipe.ingredients as $ingredient}
             		<li>{$ingredient.ingredient}</li>
             	{/foreach}
-        		</ul>
+        		</ol>
                     <div id="imgModalCut">
                         <img src="http://placehold.it/140x100" alt="">
                     </div>

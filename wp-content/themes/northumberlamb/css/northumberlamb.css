@@ -47,6 +47,13 @@ h1, h2, h3, h4, h5, h6 {
 h2{
     color: #FFFFFF;
 }
+.box h4{
+    color: #405FA2;
+    text-align: center;
+}
+.box h3{
+    color: #405FA2;
+}
 p {
     font-size: 1.25em;
     line-height: 1.6;
@@ -188,19 +195,19 @@ footer p {
     font-size: 14px !important;
 }
 div#imgModalRecipe{
-    max-width: 200px;
-    margin-right: 20px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
     height: 200px;
-    float: left;
-    background-color: #AB3334;
     border-radius: 5px;
-    margin-bottom: 5%;
+    margin-bottom: 15px;
+    min-width: 100px;
 }
 div#imgModalRecipe img{
     min-height: 200px;
-    max-width: 200px;
-    border-radius: 5px;
-    margin-right: 10px;
+    min-width: 100px;
+    max-width: 450px;
+    border-radius: 5px !important;
 }
 hr{
     display: block;
@@ -211,8 +218,9 @@ hr{
     width: 100%;
 }
 hr.modal-hr{
-    margin-top: 5%;
     clear: both;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 div.box-recipes{
     max-height: 500px;
@@ -224,10 +232,26 @@ div.div-recipes{
 div.div-recipe{
     margin-bottom: 20px;
 }
+div.div-recipe strong{
+    color: #405FA2;
+}
 .img-recipe{
     float: left;
     margin-right: 10px;
     border-radius: 5px;
+}
+div.modal-body h6{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+div.modal-body p{
+    width: 90%;
+    margin: auto;
+}
+div.modal-body ol{
+    width: 70%;
+    margin-left: 5%;
+    float: left;
 }
 div.div-recipe h4{
     margin-top: 0;
@@ -235,12 +259,15 @@ div.div-recipe h4{
 div.div-recipe p{
     font-size: 1em !important;
 }
-div.modal-body ul{
-    width: 75%;
-    float: left;
+
+div.modal-header h2, div.modal-body h4, div.modal-body h6{
+    text-align: center;
 }
-div.modal-header h2, div.modal-body h4, div.modal-body p strong{
+div.modal-header h2, div.modal-body h4, div.modal-body h6, div.modal-body p strong{
     color: #405FA2;
+}
+div#imgModalCut img{
+    border-radius: 5px;
 }
 div#recipe-modal-ajax button.btn.btn-primary{
     background-color: #405FA2;
@@ -283,7 +310,15 @@ div.application-modal div {
     margin-bottom: 10px;
 }
 /* /SHIPPERS PAGE*/
-
+@media screen and (max-width:991px){
+    div#imgModalRecipe{
+        width: 100%;
+    }
+    div#imgModalRecipe img{
+        width: 250px;
+        margin: auto;
+    }
+}
 @media screen and (min-width:991px) {
     .box:after {
         content: '';
