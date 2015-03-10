@@ -13,7 +13,7 @@
                     <p>{$recipe.post_content}</p>
                     <p><strong>Prep Time : </strong>{$recipe.prep_time}</p>
                     <p><strong>Servings : </strong>{$recipe.servings}</p>
-                    <hr class="modal-hr" style="width:100%">
+                    <hr class="modal-hr" style="width:100%; color:#405FA2;">
                     <h4>Recipe Instructions :</h4>
                     <p>{$recipe.instructions}</p>
                     <hr class="modal-hr">

@@ -44,7 +44,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     letter-spacing: 1px;
 }
-
+h2{
+    color: #FFFFFF;
+}
 p {
     font-size: 1.25em;
     line-height: 1.6;
@@ -236,6 +238,12 @@ div.div-recipe p{
 div.modal-body ul{
     width: 75%;
     float: left;
+}
+div.modal-header h2, div.modal-body h4, div.modal-body p strong{
+    color: #405FA2;
+}
+div#recipe-modal-ajax button.btn.btn-primary{
+    background-color: #405FA2;
 }
 .modal-recipe-print{
     text-align: center;
