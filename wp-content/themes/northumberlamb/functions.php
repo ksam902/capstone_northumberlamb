@@ -225,3 +225,14 @@ function fetch($post) {
 
     return $fields;
 }
+// custom admin login logo
+function custom_login_logo() {
+    echo '<style type="text/css">
+    h1 a {
+        background-image: url('.get_bloginfo('template_directory').'/images/black-logo.png) !important;
+        width: 100% !important;
+        background-size: 200px !important;
+    }
+    </style>';
+}
+add_action('login_head', 'custom_login_logo');
