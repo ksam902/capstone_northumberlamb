@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"> <img src="/wp-content/uploads/2015/03/new_logo_white.png" alt="logo" width="190" height="30"></a>
+            <a class="navbar-brand" href="/"> <img src="/images/new_logo_white.png" alt="logo" width="190" height="30"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -37,15 +37,15 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        
+
                         {foreach $options.banner as $image}
                         <!-- {pre($image)} -->
                             {if $image@iteration == 1}
                                <div class="item active">
                             {else}
-                                <div class="item">    
+                                <div class="item">
                             {/if}
-                            
+
                                 <img class="img-responsive img-full" src="{$image.image.url}" alt="{$image.image.alt}">
                             </div>
                         {/foreach}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-03 19:29:02
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 14:24:16
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1425410940,
+      1 => 1425997452,
       2 => 'file',
     ),
   ),
@@ -38,7 +38,9 @@ $_smarty_tpl->tpl_vars['recipe']->_loop = true;
 ?>
             <div class="col-lg-12 div-recipe">
                 <a href="#" data-reveal-id="recipe-modal-ajax" class="open-modal recipe-modal-open" rel="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['ID'];?>
-"><img class="img-recipe" src="http://placehold.it/175x125"></a>
+"><img class="img-recipe" src="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['image']['sizes']['recipe-list'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['image']['alt'];?>
+"></a>
                 <a href="#" data-reveal-id="recipe-modal-ajax" class="open-modal recipe-modal-open" rel="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['ID'];?>
 "><h4 class="open-modal"><?php echo $_smarty_tpl->tpl_vars['recipe']->value['post_title'];?>
 </h4></a>

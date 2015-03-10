@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-25 02:50:15
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 14:12:38
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1424832538,
+      1 => 1425996740,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">NorthumberLamb</a>
+            <a class="navbar-brand" href="/"> <img src="/images/new_logo_white.png" alt="logo" width="190" height="30"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -65,7 +65,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                        
+
                         <?php  $_smarty_tpl->tpl_vars['image'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['image']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['options']->value['banner']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
  $_smarty_tpl->tpl_vars['image']->iteration=0;
@@ -78,9 +78,9 @@ $_smarty_tpl->tpl_vars['image']->_loop = true;
                             <?php if ($_smarty_tpl->tpl_vars['image']->iteration==1) {?>
                                <div class="item active">
                             <?php } else { ?>
-                                <div class="item">    
+                                <div class="item">
                             <?php }?>
-                            
+
                                 <img class="img-responsive img-full" src="<?php echo $_smarty_tpl->tpl_vars['image']->value['image']['url'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['image']->value['image']['alt'];?>
 ">
