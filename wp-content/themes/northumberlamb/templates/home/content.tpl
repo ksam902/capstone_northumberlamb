@@ -6,7 +6,7 @@
         </h2>
         <div class="box">
             <div class="col-lg-12">
-                <p>{$content.page.post_content}</p>
+                {$content.page.post_content}
             </div>
         </div>
     </div>
