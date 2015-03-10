@@ -46,7 +46,7 @@
                                 <div class="item">
                             {/if}
 
-                                <img class="img-responsive img-full" src="{$image.image.url}" alt="{$image.image.alt}">
+                                <img class="img-responsive img-full" src="{$image.image.sizes['banner']}" alt="{$image.image.alt}">
                             </div>
                         {/foreach}
                     </div>

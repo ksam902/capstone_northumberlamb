@@ -154,16 +154,16 @@ function create_menus() {
 // ------ CUSTOM POST TYPES ------
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-    register_post_type( 'banner',
-        array(
-            'labels' => array(
-                'name' => 'Banner',
-                'singular_name' => '',
-            ),
-        'public' => true,
-        'has_archive' => true,
-        )
-    );
+    // register_post_type( 'banner',
+    //     array(
+    //         'labels' => array(
+    //             'name' => 'Banner',
+    //             'singular_name' => '',
+    //         ),
+    //     'public' => true,
+    //     'has_archive' => true,
+    //     )
+    // );
     register_post_type( 'important-links',
         array(
             'labels' => array(
@@ -206,6 +206,7 @@ function create_post_type() {
     );
 };
 // ------ IMAGE RESIZING ------
+add_image_size( 'banner', 640, 200, true );
 add_image_size( 'recipe-modal', 450, 200, true );
 add_image_size( 'recipe-list', 175, 125, true );
 // ------ /IMAGE RESIZING ------
