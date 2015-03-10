@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <h2>
-            <strong>About</strong>
+            <strong>Ask for NorthumberLamb</strong>
         </h2>
         <div class="box">
             <div class="col-lg-12">
