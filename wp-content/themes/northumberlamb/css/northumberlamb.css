@@ -18,7 +18,7 @@ nav, #nav-container{
     border-color: #FFFFFF !important;
 }
 .navbar-brand{
-    color: #FFFFFF !important;    
+    color: #FFFFFF !important;
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
     border-color: #FFFFFF !important;
@@ -123,8 +123,8 @@ header.carousel .fill {
     margin: 0 auto 0;
 }
 div.overlay {
-   background:transparent; 
-   position:relative; 
+   background:transparent;
+   position:relative;
    width:100%;
    height:350px; /* your iframe height */
    top:350px;  /* your iframe height */
@@ -201,9 +201,9 @@ div#imgModalRecipe img{
     margin-right: 10px;
 }
 hr{
-    display: block; 
+    display: block;
     height: 1px;
-    border: 0; 
+    border: 0;
     border-top: 1px solid #405FA2;
     margin: 0 auto;
     width: 100%;
@@ -225,12 +225,17 @@ div.div-recipe{
 .img-recipe{
     float: left;
     margin-right: 10px;
+    border-radius: 5px;
 }
 div.div-recipe h4{
     margin-top: 0;
 }
 div.div-recipe p{
     font-size: 1em !important;
+}
+div.modal-body ul{
+    width: 75%;
+    float: left;
 }
 .modal-recipe-print{
     text-align: center;
