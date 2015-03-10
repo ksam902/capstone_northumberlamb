@@ -43,7 +43,7 @@
               <input type="text" class="form-control" placeholder="Telephone" aria-describedby="basic-addon1">
             </div>
             <div>
-                A one-time Membership Fee of $200 is due upon notification that your application has been reviewed
+                <strong>A one-time Membership Fee of $200</strong> is due upon notification that your application has been reviewed
                 and accepted by the Board of Directors.
             </div>
       </div>
