@@ -1,5 +1,5 @@
 
-<div id="shipper-applicaton-modal" class="modal fade">
+<div id="shipper-application-modal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -10,7 +10,7 @@
 		<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon0"><i class="fa fa-user"></i></span>
 		  <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon0">
-		</div>				
+		</div>
 		<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
 		  <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">

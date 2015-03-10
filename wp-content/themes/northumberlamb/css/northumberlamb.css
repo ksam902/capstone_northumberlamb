@@ -300,7 +300,7 @@ ul
 
 /* /CONSUMERS PAGE*/
 /*SHIPPERS PAGE*/
-div#member-application-modal h4.modal-title{
+div#member-application-modal h4.modal-title, div#shipper-application-modal h4.modal-title{
     color: #405FA2;
     text-align: center;
 }

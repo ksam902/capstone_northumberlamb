@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 18:56:16
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 20:00:52
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/home/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:151822962954d90fb16e47f8-88336190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b599bda3b3a40bf0b9a1efe8e3123e1357ac2712' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/home/content.tpl',
-      1 => 1426013769,
+      1 => 1426017423,
       2 => 'file',
     ),
   ),
@@ -31,8 +31,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </h2>
         <div class="box">
             <div class="col-lg-12">
-                <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['post_content'];?>
-</p>
+                <?php echo $_smarty_tpl->tpl_vars['content']->value['page']['post_content'];?>
+
             </div>
         </div>
     </div>
