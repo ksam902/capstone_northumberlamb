@@ -51,7 +51,7 @@ h2{
     color: #405FA2;
     text-align: center;
 }
-.box h3{
+.box h3, .box h2{
     color: #405FA2;
 }
 p {
