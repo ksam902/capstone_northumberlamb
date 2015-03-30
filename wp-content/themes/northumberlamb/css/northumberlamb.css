@@ -293,8 +293,23 @@ ul.nav-tabs li:hover a{
 /* END MEDIA */
 
 /*CONSUMERS PAGE*/
-ul
-{
+div#client_navigation{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+div#client_navigation h5{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+div#client_lists hr{
+    clear: both;
+}
+div#client_lists h5{
+    text-align: center;
+}
+ul{
     list-style-type: none;
 }
 

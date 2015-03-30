@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 19:10:22
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-30 20:04:59
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/consumers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:33396914054db75c432ed81-13430795%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '02c97a2dc7980d75fd734a2a9cadf52ac08ab9e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/consumers/content.tpl',
-      1 => 1426000915,
+      1 => 1427745887,
       2 => 'file',
     ),
   ),
@@ -34,19 +34,59 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="col-lg-12">
                 <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['post_content'];?>
 </p>
-                <br/><hr><br/>
-                <h4><strong>Clients</strong></h4>
-                <ul>
-                    <?php  $_smarty_tpl->tpl_vars['client'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['client']->_loop = false;
+                <br/><h4><strong>Where to Buy NorthumberLamb Product</strong></h4><br/>
+                <div id="client_navigation">
+                    <h5><a href="#" id="first"><strong>Restaurants</strong></a></h5>
+                    <h5><a href="#" id="second"><strong>Butcher Shops</strong></a></h5>
+                    <h5><a href="#" id="third"><strong>Grocery Stores</strong></a></h5>
+                </div>
+                <div id="client_lists">
+                    <br/><br/><hr><br/>
+                    <h5 id="first_section"><strong>Restaurants</strong></h5>
+                    <ul class='small-12 medium-4 columns'>
+                        <?php  $_smarty_tpl->tpl_vars['client'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['client']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['content']->value['posts']['clients']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['client']->key => $_smarty_tpl->tpl_vars['client']->value) {
 $_smarty_tpl->tpl_vars['client']->_loop = true;
 ?>
-                        <li><a href='<?php echo $_smarty_tpl->tpl_vars['client']->value['link'];?>
+                            <?php if ($_smarty_tpl->tpl_vars['client']->value['client_category']=="restaurant") {?>
+                                <li><a href='<?php echo $_smarty_tpl->tpl_vars['client']->value['link'];?>
 ' target="_blank"><?php echo $_smarty_tpl->tpl_vars['client']->value['post_title'];?>
 </a></li>
-                    <?php } ?>
-                </ul>
+                            <?php }?>
+                        <?php } ?>
+                    </ul>
+                    <br/><hr><br/>
+                    <h5 id="second_section"><strong>Butcher Shops</strong></h5>
+                    <ul class='small-12 medium-4 columns'>
+                        <?php  $_smarty_tpl->tpl_vars['client'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['client']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['content']->value['posts']['clients']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['client']->key => $_smarty_tpl->tpl_vars['client']->value) {
+$_smarty_tpl->tpl_vars['client']->_loop = true;
+?>
+                            <?php if ($_smarty_tpl->tpl_vars['client']->value['client_category']=="butcher_shop") {?>
+                                <li><a href='<?php echo $_smarty_tpl->tpl_vars['client']->value['link'];?>
+' target="_blank"><?php echo $_smarty_tpl->tpl_vars['client']->value['post_title'];?>
+</a></li>
+                            <?php }?>
+                        <?php } ?>
+                    </ul>
+                    <br/><hr><br/>
+                    <h5 id="third_section"><strong>Grocery Stores</strong></h5>
+                    <ul class='small-12 medium-4 columns'>
+                        <?php  $_smarty_tpl->tpl_vars['client'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['client']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['content']->value['posts']['clients']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['client']->key => $_smarty_tpl->tpl_vars['client']->value) {
+$_smarty_tpl->tpl_vars['client']->_loop = true;
+?>
+                            <?php if ($_smarty_tpl->tpl_vars['client']->value['client_category']=="grocery_stores") {?>
+                                <li><a href='<?php echo $_smarty_tpl->tpl_vars['client']->value['link'];?>
+' target="_blank"><?php echo $_smarty_tpl->tpl_vars['client']->value['post_title'];?>
+</a></li>
+                            <?php }?>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

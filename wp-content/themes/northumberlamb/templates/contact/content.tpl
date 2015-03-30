@@ -16,8 +16,8 @@
                     <p><i class="fa fa-envelope-o"></i>
                         <abbr title="Email">E</abbr>: <a href="mailto:{$content.page.email}">{$content.page.email}</a>
                     </p>
-                    <p><i class="fa fa-clock-o"></i>
-                        <abbr title="Hours">H</abbr>: {$content.page.hours}</p>
+<!--                     <p><i class="fa fa-clock-o"></i>
+                        <abbr title="Hours">H</abbr>: {$content.page.hours}</p> -->
                 </div>
                 <!-- Map Column -->
                 <div class="col-md-8">
