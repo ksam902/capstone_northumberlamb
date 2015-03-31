@@ -1,3 +1,5 @@
+var count = 0;
+
 $(function() {
     $('.menu-header-menu-container ul').addClass('nav navbar-nav navbar-right');
     $('.carousel').carousel({
@@ -8,7 +10,6 @@ $(function() {
         $('html, body').animate({
             scrollTop: $("#"+$(this).attr("id") +"_section").offset().top
         }, 2000);
-        // alert($(this).attr("id"));
     });
     $('.overlay').click(function(){
     	$(this).css('pointer-events', 'none');
@@ -23,6 +24,14 @@ $(function() {
             $('#recipe-modal-ajax').modal('show');
         });
     });
+    $('button#next_recipe').click(function() {
+        e.preventDefault();
+        alert("next clicked");
+
+    });
+    function increaseCount(){
+        return count += 1;
+    }
     $('#btnShipperApplication').click(function(e){
         e.preventDefault();
         $('#shipper-application-modal').modal('show');

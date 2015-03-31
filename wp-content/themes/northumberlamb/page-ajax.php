@@ -9,7 +9,6 @@ $post = false;
 if ( isset($_GET['recipe_id']) ) {
 	$post = get_post($_GET['recipe_id']);
 
-
 	$post = array_merge( (array)$post, (array)get_fields($post->ID) );
 	$posts['recipe'][] = $post;
 	$smarty->assign('recipe', $post);

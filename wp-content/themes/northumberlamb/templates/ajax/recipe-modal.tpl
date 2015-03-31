@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h2 class="modal-title">{$recipe.post_title}</h2>
+                <h2 class="modal-title recipe-title" data-recipe="{$recipe.ID}">{$recipe.post_title}</h2>
             </div>
             <div class="modal-body">
                     <div id="imgModalRecipe">
@@ -28,8 +28,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger pull-left modal-recipe-print">Print</button>
-                <button type="button" class="btn btn-primary">Previous Recipe</button>
-                <button type="button" class="btn btn-primary">Next Recipe</button>
+                <button type="button" class="btn btn-primary" id="previous_recipe">Previous Recipe</button>
+                <button type="button" class="btn btn-primary" id="next_recipe">Next Recipe</button>
             </div>
         </div>
     </div>

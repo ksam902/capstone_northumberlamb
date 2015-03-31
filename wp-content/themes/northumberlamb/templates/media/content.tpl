@@ -5,6 +5,7 @@
         </h2>
 
         <div class="box">
+            <div>{$content.page.post_content}</div>
             <div class="col-lg-12">
                 <!-- <p>{$content.page.post_content}</p> -->
                 <ul class="nav nav-tabs nav-justified">

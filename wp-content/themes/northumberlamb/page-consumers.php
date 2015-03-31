@@ -17,7 +17,6 @@ foreach($content['page']['featured_clients'] as $client){
 }
 $content['posts'] = $posts;
 $smarty->assign('content', $content);
-// pre($content);
 get_header();
 $smarty->display('consumers/content.tpl');
 get_footer();

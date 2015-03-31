@@ -237,3 +237,22 @@ function custom_login_logo() {
     </style>';
 }
 add_action('login_head', 'custom_login_logo');
+
+//------Recipes
+add_action('wp_ajax_get_next_recipe', 'get_next_recipe');
+add_action('wp_ajax_nopriv_get_next_recipe', 'get_next_recipe');
+
+function get_next_recipe() {
+
+    $id = $_POST['id'];
+    $next_id = $_POST['next_id'];
+    $count = $_POST['count'];
+    $next = false;
+    $p = fetch_by('post','time');
+    $posts = array();
+    $next_post = false;
+
+    foreach ($p as $post) {
+        pre($p);
+    }
+}
