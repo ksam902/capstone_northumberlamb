@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-30 19:16:21
+<?php /* Smarty version Smarty-3.1.18, created on 2015-03-31 23:02:26
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:212581338854e4b0ffd5c4a8-34523584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dca0923b508dc52a48da3644b1bc0e4453e674e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl',
-      1 => 1427742978,
+      1 => 1427842943,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="col-md-6">
                     <h2><strong>Become a Shipper</strong></h2>
                     <div class="application-div box">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['become_a_shipper'];?>
+</p>
                         <div class="centered">
                             <button class="btn btn-default" type="submit" id="btnShipperApplication">Shipper Application</button>
                         </div>
@@ -41,7 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="col-md-6">
                     <h2><strong>Become a Member</strong></h2>
                     <div class="application-div box">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['become_a_member'];?>
+</p>
                         <div class="centered">
                             <button class="btn btn-default" type="submit" id="btnMemberApplication">Member Application</button>
                         </div>
@@ -49,13 +51,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </div>
             </div>
         </div>
-<!--         <h2><strong>Shippers</strong></h2>
-        <div class="box">
-            <div class="col-lg-12">
-                <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['post_content'];?>
-</p>
-            </div>
-        </div> -->
         <div class="container-fluid">
             <h2><strong>Lamb Grading Chart</strong></h2>
             <div class="row box">
