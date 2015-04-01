@@ -34,6 +34,41 @@
               <span class="input-group-addon" id="basic-addon5"><i class="fa fa-phone"></i></span>
               <input type="text" class="form-control" placeholder="(C)" aria-describedby="basic-addon5">
             </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon"><i class="fa fa-question"></i></span>
+              <input type="number" class="form-control" placeholder="Flock Size" aria-describedby="basic-addon">
+            </div>
+            <div>
+                Lambing Practice: Do you lamb...
+                <div class="radio">
+                    <label><input type="radio" name="optradio">In-Season</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Out-Of-Season</label>
+                </div>
+            </div>
+            <div>
+                Do you currently have lambs ready to ship?
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Yes</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">No</label>
+                </div>
+                 <div class="input-group">
+                  <span class="input-group-addon" id="basic-addo"><i class="fa fa-question"></i></span>
+                  <input type="number" class="form-control" placeholder="How Many?" aria-describedby="basic-addo">
+                </div>
+            </div>
+            <div>
+                Do you expect to have more ready in the next:
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Month</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Next Month</label>
+                </div>
+            </div>
 	<div class="input-group">
 	  <span class="input-group-addon" id="basic-addon6"><i class="fa fa-globe"></i></span>
 	  <input type="text" class="form-control" placeholder="Location" aria-describedby="basic-addon6">
