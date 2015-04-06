@@ -186,6 +186,11 @@ footer p {
     }
 }
 /* RECIPES */
+table.broiling-table, table.braising-table, table.roasting-table{
+    text-align: center;
+    max-height: 100px;
+    overflow-y: scroll;
+}
 .modal-content{
 }
 .modal-body{

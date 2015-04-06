@@ -40,6 +40,20 @@ $(function() {
         e.preventDefault();
         $('#member-application-modal').modal('show');
     });
+    // RECIPE PAGE MODALS
+    $('#btnBroiling').click(function(e){
+        e.preventDefault();
+        $('#broiling-modal').modal('show');
+    });
+    $('#btnBraising').click(function(e){
+        e.preventDefault();
+        $('#braising-modal').modal('show');
+    });
+    $('#btnRoasting').click(function(e){
+        e.preventDefault();
+        $('#roasting-modal').modal('show');
+    });
+    // END RECIPE PAGE MODAL
     $('ul.nav-tabs li a').click(function(e){
     	e.preventDefault();
     });

@@ -1,4 +1,16 @@
 <div class="container">
+    <!-- MODAL BUTTONS -->
+    <div class="row">
+            <h2>
+                <strong>Cooking Lamb</strong>
+            </h2>
+        <div class="btn-group" role="group">
+            <button class="btn btn-default" type="submit" id="btnBroiling">Broiling</button>
+            <button class="btn btn-default" type="submit" id="btnBraising">Braising</button>
+            <button class="btn btn-default" type="submit" id="btnRoasting">Roasting</button>
+        </div>
+    </div>
+<!-- ALL RECIPES -->
     <div class="row">
         <h2>
             <strong>Recipes</strong>

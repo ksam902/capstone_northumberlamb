@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-10 18:36:43
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-06 14:31:10
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1426012586,
+      1 => 1428330664,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54db75bb701b91_81159689')) {function content_54db75bb701b91_81159689($_smarty_tpl) {?><div class="container">
+    <!-- MODAL BUTTONS -->
+    <div class="row">
+            <h2>
+                <strong>Cooking Lamb</strong>
+            </h2>
+        <div class="btn-group" role="group">
+            <button class="btn btn-default" type="submit" id="btnBroiling">Broiling</button>
+            <button class="btn btn-default" type="submit" id="btnBraising">Braising</button>
+            <button class="btn btn-default" type="submit" id="btnRoasting">Roasting</button>
+        </div>
+    </div>
+<!-- ALL RECIPES -->
     <div class="row">
         <h2>
             <strong>Recipes</strong>
