@@ -334,6 +334,15 @@ div#member-application-modal h4.modal-title, div#shipper-application-modal h4.mo
 div.application-modal div {
     margin-bottom: 10px;
 }
+div.lamb-grading{
+    max-height: 800px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    text-align: center;
+}
+table.lamb-grading-table{
+
+}
 /* /SHIPPERS PAGE*/
 @media screen and (max-width:991px){
     div#imgModalRecipe{
