@@ -5,7 +5,6 @@
         </h2>
 
         <div class="box">
-            <div>{$content.page.post_content}</div>
             <div class="col-lg-12">
                 <!-- <p>{$content.page.post_content}</p> -->
                 <ul class="nav nav-tabs nav-justified">
@@ -18,9 +17,7 @@
                 </ul>
                 <div class="tab-content">
                     <div id="photos" class="tab-pane fade active in">
-                        PHOTOS : Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        {do_shortcode(get_the_content())}
                     </div>
                     <div id="videos" class="tab-pane fade">
                         VIDEOS : Lorem ipsum dolor sit amet, consectetur adipisicing elit,
