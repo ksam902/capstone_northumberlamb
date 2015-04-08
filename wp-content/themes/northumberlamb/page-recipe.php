@@ -16,7 +16,7 @@ foreach ($recipes->posts as $p) {
 $content = array(
 	'page' => fetch_page('recipes'),
 );
-pre($content);
+
 $smarty->assign('content', $content);
 $smarty->assign('posts', $posts);
 get_header();
