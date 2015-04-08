@@ -5,6 +5,9 @@
         </h2>
 
         <div class="box">
+            <div style="text-align: center; padding-bottom: 30px;">
+                <a class="btn btn-primary" style="background-color: #405FA2;" role="button" href="http://northumberlamb.verygooddevelopment.ca/wp-content/uploads/2015/04/NLMC_Flyer.pdf" target="_blank">View Our Brochure</a>
+            </div>
             <div class="col-lg-12">
                 <ul class="nav nav-tabs nav-justified">
                     <li role="presentation" class="active"><a href="#" id="tab-photos" data-toggle="tab"
