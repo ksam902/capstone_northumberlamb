@@ -6,7 +6,7 @@
         <div class="box ">
             <div class="col-md-12 text-center">
                 <div style="margin-bottom: 10px;">
-                    Click the desired cooking method to find out more information, or filter recipes by clicking on the desired cut of lamb.
+                    {$content.page.post_content}
                 </div>
                 <div class="btn-group" role="group" style="margin-bottom: 10px;">
                     <button class="btn btn-default" type="submit" id="btnBroiling">Broiling</button>
