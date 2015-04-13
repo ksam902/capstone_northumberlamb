@@ -615,7 +615,8 @@ if (isset($_POST['contactSubmit'])) {
 			          <cborden+northumberlamb@gmail.com>\n";
     $mailheaders .= "Reply-To: cborden+northumberlamb@gmail.com\n";
     //send the mail
-    mail($to, $subject, $msg, $mailheaders);
+    //mail($to, $subject, $msg, $mailheaders);
+    wp_mail($to, $subject, $msg, $mailheaders);
     header("Location: contact");
     exit();
 }
