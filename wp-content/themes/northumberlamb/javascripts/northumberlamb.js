@@ -56,19 +56,29 @@ $(function() {
     // --- LAMB CUT CHART
     $('img[usemap]').rwdImageMaps();
 
+    $('#btnAllRecipes').on('click', function(){
+        $('small.filtering').show();
+        $('small.filtering span').html("All Recipes");
+            var target = '.recipe';
+            $(target).each(function() {
+                $(this).fadeIn( 200);
+            });
+            $('div.no-recipes').hide();
+            $('html, body').animate({
+                scrollTop: $(".div-recipes").offset().top
+            }, 1000);
+    });
+
     $('area').on('click', function(e) {
-         e.preventDefault();
-        //alert($(this).attr('alt') + ' clicked');
-        var filter = $(this).attr('alt');
+             e.preventDefault();
+            var filter = $(this).attr('alt');
+            $('small.filtering span').html(filter);
+            var matched = 0;
 
-        var target = '.recipe';
-        $(target).each(function() {
-            $(this).hide();
-        });
-        if (filter === 'All') {
-            //$(target).fadeIn(200).removeClass('_f');
-
-        } else {
+            var target = '.recipe';
+            $(target).each(function() {
+                $(this).hide();
+            });
             //Lamb Cut Chart Filtering
             $(target).each(function() {
                 var item = this;
@@ -77,13 +87,21 @@ $(function() {
                 $.each(lamb_cuts, function(k,v){
                     //if the category matches the filter then display that div
                     if ( v === filter ) {
-                        console.log("match");
-                        console.log(item);
-                        $(item).show();
+                        matched ++;
+                        $(item).fadeIn( 200);
                     }
                 });
             });
-        }
+            if(matched === 0){
+                $('div.no-recipes').fadeIn( 200);;
+                $('small.filtering').hide();
+            }else{
+                $('div.no-recipes').hide();
+                $('small.filtering').show();
+            }
+            $('html, body').animate({
+                scrollTop: $(".div-recipes").offset().top
+            }, 1000);
     });
 
     // END RECIPE PAGE MODAL

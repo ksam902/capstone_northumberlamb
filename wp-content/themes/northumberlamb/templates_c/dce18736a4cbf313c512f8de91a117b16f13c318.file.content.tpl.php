@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-13 15:41:57
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-13 17:40:01
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1428939434,
+      1 => 1428946799,
       2 => 'file',
     ),
   ),
@@ -26,24 +26,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54db75bb701b91_81159689')) {function content_54db75bb701b91_81159689($_smarty_tpl) {?><div class="container">
-    <!-- MODAL BUTTONS -->
-    <div class="row">
-            <h2>
-                <strong>Cooking Lamb</strong>
-            </h2>
-        <div class="btn-group" role="group">
-            <button class="btn btn-default" type="submit" id="btnBroiling">Broiling</button>
-            <button class="btn btn-default" type="submit" id="btnBraising">Braising</button>
-            <button class="btn btn-default" type="submit" id="btnRoasting">Roasting</button>
-        </div>
-    </div>
 <!-- ALL RECIPES -->
     <div class="row">
         <h2>
-            <strong>Recipes</strong>
+            <strong>Recipes</strong> <small class="filtering" style="color: #FFFFFF;">- Filtering by: <span>All Recipes</span></small>
         </h2>
         <div class="box box-recipes">
             <div class="div-recipes">
+                <div class="no-recipes" style="text-align:center; display: none;">
+                    <p>Sorry, We didn't find any recipes using the selected cut of lamb.</p>
+                </div>
             <?php  $_smarty_tpl->tpl_vars['recipe'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['recipe']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['posts']->value['recipes']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['recipe']->key => $_smarty_tpl->tpl_vars['recipe']->value) {
