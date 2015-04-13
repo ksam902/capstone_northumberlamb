@@ -3,6 +3,16 @@
 Template Name: Ajax Page
 */
 $smarty = wp_smarty();
+$recipes = new WP_Query(array( 'post_type' => 'recipe', 'posts_per_page' => '-1'));
+$posts = array(
+    'recipes' => array(),
+);
+foreach ($recipes->posts as $p) {
+    $recipe = fetch($p);
+    $posts['recipes'][] = $recipe['ID'];
+}
+// pre($posts);
+$smarty->assign('posts', $posts);
 
 $post = false;
 

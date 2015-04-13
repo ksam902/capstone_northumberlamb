@@ -17,6 +17,27 @@ $(function() {
     $('.overlay').click(function(){
     	$(this).css('pointer-events', 'none');
     });
+    $('#btnShipperApplication').click(function(e){
+        e.preventDefault();
+        $('#shipper-application-modal').modal('show');
+    });
+    $('#btnMemberApplication').click(function(e){
+        e.preventDefault();
+        $('#member-application-modal').modal('show');
+    });
+    // -----------------    RECIPE PAGE
+    $('#btnBroiling').click(function(e){
+        e.preventDefault();
+        $('#broiling-modal').modal('show');
+    });
+    $('#btnBraising').click(function(e){
+        e.preventDefault();
+        $('#braising-modal').modal('show');
+    });
+    $('#btnRoasting').click(function(e){
+        e.preventDefault();
+        $('#roasting-modal').modal('show');
+    });
     $('a.recipe-modal-open').click(function(e){
         e.preventDefault();
 
@@ -30,6 +51,14 @@ $(function() {
                         printRecipe(document.getElementById("print-title"), false);
                         printRecipe(document.getElementById("print-content"), true);
                         window.print();
+                    });
+                    $('button#next_recipe').click(function() {
+                        e.preventDefault();
+                        alert("next clicked");
+                    });
+                    $('button#previous_recipe').click(function() {
+                        e.preventDefault();
+                        alert("previous clicked");
                     });
                 });
         });
@@ -58,35 +87,9 @@ $(function() {
 
         $printSection.appendChild(domClone);
     }
-    $('button#next_recipe').click(function() {
-        e.preventDefault();
-        alert("next clicked");
-
-    });
     function increaseCount(){
         return count += 1;
     }
-    $('#btnShipperApplication').click(function(e){
-        e.preventDefault();
-        $('#shipper-application-modal').modal('show');
-    });
-    $('#btnMemberApplication').click(function(e){
-        e.preventDefault();
-        $('#member-application-modal').modal('show');
-    });
-    // RECIPE PAGE MODALS
-    $('#btnBroiling').click(function(e){
-        e.preventDefault();
-        $('#broiling-modal').modal('show');
-    });
-    $('#btnBraising').click(function(e){
-        e.preventDefault();
-        $('#braising-modal').modal('show');
-    });
-    $('#btnRoasting').click(function(e){
-        e.preventDefault();
-        $('#roasting-modal').modal('show');
-    });
     // --- LAMB CUT CHART
     $('img[usemap]').rwdImageMaps();
 
