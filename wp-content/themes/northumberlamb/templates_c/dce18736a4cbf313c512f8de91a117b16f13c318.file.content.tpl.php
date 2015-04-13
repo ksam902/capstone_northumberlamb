@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-13 15:31:58
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-13 15:41:57
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1428938876,
+      1 => 1428939434,
       2 => 'file',
     ),
   ),
@@ -49,7 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['recipe']->key => $_smarty_tpl->tpl_vars['recipe']->value) {
 $_smarty_tpl->tpl_vars['recipe']->_loop = true;
 ?>
-            <div class="col-lg-12 div-recipe" data-cuts="<?php  $_smarty_tpl->tpl_vars['cut'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cut']->_loop = false;
+            <div class="col-lg-12 div-recipe recipe" data-cuts="<?php  $_smarty_tpl->tpl_vars['cut'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cut']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['recipe']->value['lamb_cut']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
  $_smarty_tpl->tpl_vars['cut']->iteration=0;
 foreach ($_from as $_smarty_tpl->tpl_vars['cut']->key => $_smarty_tpl->tpl_vars['cut']->value) {
