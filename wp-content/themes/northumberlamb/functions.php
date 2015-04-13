@@ -285,3 +285,337 @@ function load_custom_fonts_frontend() {
 }
 add_action('wp_head', 'load_custom_fonts_frontend');
 add_action('admin_head', 'load_custom_fonts_frontend');
+
+//------------------------------------------------------------------- Submit Shipper Form
+if (isset($_POST['shipperFormSubmit'])) {
+
+    $txtNameSF = htmlentities($_POST['txtNameSF']);
+    $txtFarmNameSF = htmlentities($_POST['txtFarmNameSF']);
+    $txtAddressSF = htmlentities($_POST['txtAddressSF']);
+    $txtPostalCodeSF = htmlentities($_POST['txtPostalCodeSF']);
+    $txtHomePhoneSF = htmlentities($_POST['txtHomePhoneSF']);
+    $txtCellPhoneSF = htmlentities($_POST['txtCellPhoneSF']);
+    $txtFlockSizeSF = htmlentities($_POST['txtFlockSizeSF']);
+    $rdoLambingPracticeSF = htmlentities($_POST['rdoLambingPracticeSF']);
+    $rdoReadyToShipSF = htmlentities($_POST['rdoReadyToShipSF']);
+    $txtNumOfLambsSF = htmlentities($_POST['txtNumOfLambsSF']);
+    $drpMoreLambsSF = htmlentities($_POST['drpMoreLambsSF']);
+    $txtCommentsSF = htmlentities($_POST['txtCommentsSF']);
+    $txtReferenceNameSF = htmlentities($_POST['txtReferenceNameSF']);
+    $txtReferencePhoneNumberSF = htmlentities($_POST['txtReferencePhoneNumberSF']);
+
+//    $txtNameSF = "";
+//    $txtFarmNameSF = "";
+//    $txtAddressSF = "";
+//    $txtPostalCodeSF = "";
+//    $txtHomePhoneSF = "";
+//    $txtCellPhoneSF = "";
+//    $txtFlockSizeSF = "";
+//    $rdoLambingPracticeSF = "";
+//    $rdoReadyToShipSF = "";
+//    $txtNumOfLambsSF = "";
+//    $drpMoreLambsSF = "";
+//    $txtCommentsSF = "";
+//    $txtReferenceNameSF = "";
+//    $txtReferencePhoneNumberSF = "";
+//
+//    $errorMsg = "";
+//    $validate = true;
+//
+//// check for input
+//// first name
+//    if ($_POST['txtNameSF'] !== "") {
+//        $txtNameSF = $_POST['txtNameSF'];
+//        // check for correct name format
+//        if (!preg_match("/^[a-zA-Z\\- ]{1,30}$/", $txtNameSF)) {
+//            $errorMsg .= "First Name: Only letters, hyphens, and white space allowed. Max 30 characters.<br>";
+//            $validate = false;
+//        }
+//    } else {
+//        $errorMsg .= "First Name: You must enter a first name.<br>";
+//        $validate = false;
+//    }
+//// farm name
+//    if ($_POST['txtFarmNameSF'] !== "") {
+//        $txtFarmNameSF = $_POST['txtFarmNameSF'];
+//        // check for correct name format
+//        if (!preg_match("/^[a-zA-Z\\- ]{1,50}$/", $txtFarmNameSF)) {
+//            $errorMsg .= "First Name: Only letters, hyphens, and white space allowed. Max 50 characters.<br>";
+//            $validate = false;
+//        }
+//    }
+//// address
+//    if ($_POST['txtAddressSF'] !== "") {
+//        $txtAddressSF = $_POST['txtAddressSF'];
+//        // check for correct name format
+//        if (!preg_match("/^[a-zA-Z0-9.\\-# ]{1,50}$/", $txtAddressSF)) {
+//            $errorMsg .= "Address is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    } else {
+//        $errorMsg .= "You must enter an address.<br>";
+//        $validate = false;
+//    }
+//// postal code
+//    if ($_POST['txtPostalCodeSF'] !== "") {
+//        $txtPostalCodeSF = $_POST['txtPostalCodeSF'];
+//        // check for correct name format
+//        if (!preg_match("/[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/", $txtPostalCodeSF)) {
+//            $errorMsg .= "Postal code is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    } else {
+//        $errorMsg .= "You must enter a postal code.<br>";
+//        $validate = false;
+//    }
+//// home phone
+//    if ($_POST['txtHomePhoneSF'] !== "") {
+//        $txtHomePhoneSF = $_POST['txtHomePhoneSF'];
+//        // check for correct name format
+//        if (!preg_match("/([2-9]([02-9]\\d|1[02-9])\\)|[2-9]([02-9]\\d|1[02-9]))-?[2-9]([02-9]\\d|1[02-9])-?\\d{4}$/", $txtHomePhoneSF)) {
+//            $errorMsg .= "Home phone number is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    }
+//// cell phone
+//    if ($_POST['txtCellPhoneSF'] !== "") {
+//        $txtCellPhoneSF = $_POST['txtCellPhoneSF'];
+//        // check for correct name format
+//        if (!preg_match("/([2-9]([02-9]\\d|1[02-9])\\)|[2-9]([02-9]\\d|1[02-9]))-?[2-9]([02-9]\\d|1[02-9])-?\\d{4}$/", $txtCellPhoneSF)) {
+//            $errorMsg .= "Cell phone number is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    }
+//// flock size
+//    if ($_POST['txtFlockSizeSF'] !== "") {
+//        $txtFlockSizeSF = $_POST['txtFlockSizeSF'];
+//        // check for correct name format
+//        if (!preg_match("/[0-9]{0,10}/", $txtFlockSizeSF)) {
+//            $errorMsg .= "Flock size is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    } else {
+//        $errorMsg .= "You must enter a flock size.<br>";
+//        $validate = false;
+//    }
+//// lambing practice
+//    if (isset($_POST['rdoLambingPracticeSF'])) {
+//        $rdoLambingPracticeSF = $_POST['rdoLambingPracticeSF'];
+//    } else {
+//        $errorMsg .= "You must choose a lambing practice.<br>";
+//        $validate = false;
+//    }
+//// lambs ready to ship
+//    if (isset($_POST['rdoReadyToShipSF'])) {
+//        $rdoReadyToShipSF = $_POST['rdoReadyToShipSF'];
+//    } else {
+//        $errorMsg .= "You must select whether you have lambs to ship.<br>";
+//        $validate = false;
+//    }
+//// number of lambs ready to ship
+//    if ($_POST['txtNumOfLambsSF'] !== "") {
+//        $txtNumOfLambsSF = $_POST['txtNumOfLambsSF'];
+//        // check for correct name format
+//        if (!preg_match("/[0-9]{0,10}/", $txtNumOfLambsSF)) {
+//            $errorMsg .= "Number of lambs is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    }
+//// expecting lambs
+//    if (isset($_POST['drpMoreLambsSF'])) {
+//        $drpMoreLambsSF = $_POST['drpMoreLambsSF'];
+//    } else {
+//        $errorMsg .= "Please select a drop down item<br>";
+//        $validate = false;
+//    }
+//// additional comments
+//    if ($_POST['txtCommentsSF'] !== "") {
+//        $txtCommentsSF = $_POST['txtCommentsSF'];
+//        // check for correct name format
+//        if (!preg_match("/.*/", $txtCommentsSF)) {
+//            $errorMsg .= "Comment is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    }
+//// reference name
+//    if ($_POST['txtReferenceNameSF'] !== "") {
+//        $txtReferenceNameSF = $_POST['txtReferenceNameSF'];
+//        // check for correct name format
+//        if (!preg_match("/^[a-zA-Z\\- ]{1,30}$/", $txtReferenceNameSF)) {
+//            $errorMsg .= "Reference Name: Only letters, hyphens, and white space allowed. Max 25 characters.<br>";
+//            $validate = false;
+//        }
+//    }
+//// reference phone
+//    if ($_POST['txtReferencePhoneNumberSF'] !== "") {
+//        $txtReferencePhoneNumberSF = $_POST['txtReferencePhoneNumberSF'];
+//        // check for correct name format
+//        if (!preg_match("/([2-9]([02-9]\\d|1[02-9])\\)|[2-9]([02-9]\\d|1[02-9]))-?[2-9]([02-9]\\d|1[02-9])-?\\d{4}$/", $txtReferencePhoneNumberSF)) {
+//            $errorMsg .= "Home phone number is not in a valid format.<br>";
+//            $validate = false;
+//        }
+//    }
+
+    //if ($validate) {
+
+    $msg = "<table border='1'>
+  <tr>
+    <th colspan=\"2\">NorthumberLamb Shipper Application<br></th>
+  </tr>
+  <tr>
+    <td>Name<br></td>
+    <td>$txtNameSF</td>
+  </tr>
+  <tr>
+    <td>Farm Name<br></td>
+    <td>$txtFarmNameSF</td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>$txtAddressSF</td>
+  </tr>
+  <tr>
+    <td>Postal Code<br></td>
+    <td>$txtPostalCodeSF</td>
+  </tr>
+  <tr>
+    <td>Home Phone<br></td>
+    <td>$txtHomePhoneSF</td>
+  </tr>
+  <tr>
+    <td>Cell Phone<br></td>
+    <td>$txtCellPhoneSF</td>
+  </tr>
+  <tr>
+    <td>Flock Size<br></td>
+    <td>$txtFlockSizeSF</td>
+  </tr>
+  <tr>
+    <td>Lambing Practice<br></td>
+    <td>$rdoLambingPracticeSF</td>
+  </tr>
+  <tr>
+    <td>Do you currently have<br>lambs ready to ship?<br></td>
+    <td>$rdoReadyToShipSF</td>
+  </tr>
+  <tr>
+    <td>How Many?<br></td>
+    <td>$txtNumOfLambsSF</td>
+  </tr>
+  <tr>
+    <td>Are you expecting to have <br>more lambs ready in the next:<br></td>
+    <td>$drpMoreLambsSF</td>
+  </tr>
+  <tr>
+    <td>Comments<br></td>
+    <td>$txtCommentsSF</td>
+  </tr>
+  <tr>
+    <td>Reference Name<br></td>
+    <td>$txtReferenceNameSF</td>
+  </tr>
+  <tr>
+    <td>Reference Contact Number<br></td>
+    <td>$txtReferencePhoneNumberSF</td>
+  </tr>
+</table>";
+
+    $to = "cborden+northumberlamb@gmail.com";
+    $subject = "subject";
+    $mailheaders = "From:cborden+northumberlamb@gmail.com
+			          <cborden+northumberlamb@gmail.com>\n";
+    $mailheaders .= "Reply-To: cborden+northumberlamb@gmail.com\n";
+    //send the mail
+    mail($to, $subject, $msg, $mailheaders);
+    header("Location: shippers");
+    exit();
+//    } else {
+//        echo $errorMsg;
+//    }
+
+
+}
+
+//------------------------------------------------------------------- Submit Member Form
+if (isset($_POST['memberFormSubmit'])) {
+    $txtFirstNameMF = htmlentities($_POST['txtFirstNameMF']);
+    $txtLastNameMF = htmlentities($_POST['txtLastNameMF']);
+    $txtAddressSFMF = htmlentities($_POST['txtAddressSFMF']);
+    $txtPostalCodeSFMF = htmlentities($_POST['txtPostalCodeSFMF']);
+    $txtPhoneMF = htmlentities($_POST['txtPhoneMF']);
+
+    $msg = "<table border='1'>
+  <tr>
+    <th colspan=\"2\">NorthumberLamb Shipper Application<br></th>
+  </tr>
+  <tr>
+    <td>First Name<br></td>
+    <td>$txtFirstNameMF</td>
+  </tr>
+  <tr>
+    <td>Last Name<br></td>
+    <td>$txtLastNameMF</td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>$txtAddressSFMF</td>
+  </tr>
+  <tr>
+    <td>Postal Code<br></td>
+    <td>$txtPostalCodeSFMF</td>
+  </tr>
+  <tr>
+    <td>Phone<br></td>
+    <td>$txtPhoneMF</td>
+  </tr>
+</table>";
+    $to = "cborden+northumberlamb@gmail.com";
+    $subject = "NorthumberLamb Membership Application";
+    $mailheaders = "From:cborden+northumberlamb@gmail.com
+			          <cborden+northumberlamb@gmail.com>\n";
+    $mailheaders .= "Reply-To: cborden+northumberlamb@gmail.com\n";
+    //send the mail
+    mail($to, $subject, $msg, $mailheaders);
+    header("Location: shippers");
+    exit();
+
+}
+
+//------------------------------------------------------------------- Submit Contact Form
+if (isset($_POST['contactSubmit'])) {
+    $contactName = htmlentities($_POST['contactName']);
+    $contactPhone = htmlentities($_POST['contactPhone']);
+    $contactEmail = htmlentities($_POST['contactEmail']);
+    $contactMessage = htmlentities($_POST['contactMessage']);
+
+    $msg = "<table border='1'>
+  <tr>
+    <th colspan=\"2\">NorthumberLamb Contact Form<br></th>
+  </tr>
+  <tr>
+    <td>Name<br></td>
+    <td>$contactName</td>
+  </tr>
+  <tr>
+    <td>Phone<br></td>
+    <td>$contactPhone</td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>$contactEmail</td>
+  </tr>
+  <tr>
+    <td>Message<br></td>
+    <td>$contactMessage</td>
+  </tr>
+</table>";
+    $to = "cborden+northumberlamb@gmail.com";
+    $subject = "NorthumberLamb Contact Form";
+    $mailheaders = "From:cborden+northumberlamb@gmail.com
+			          <cborden+northumberlamb@gmail.com>\n";
+    $mailheaders .= "Reply-To: cborden+northumberlamb@gmail.com\n";
+    //send the mail
+    mail($to, $subject, $msg, $mailheaders);
+    header("Location: contact");
+    exit();
+}

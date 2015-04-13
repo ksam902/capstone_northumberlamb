@@ -41,35 +41,35 @@
                     <div class="col-md-8">
                         <!-- Contact Details Column -->
                         <h3>Send us a Message</h3>
-                        <form name="sentMessage" id="contactForm" novalidate>
+                        <form id="contactForm" method="post" action="../../functions.php">
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Full Name:</label>
-                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" id="contactName" name="contactName" required>
                                     <p class="help-block"></p>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Phone Number:</label>
-                                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" id="contactPhone" name="contactPhone" required>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Email Address:</label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" id="contactEmail" name="contactEmail" required>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Message:</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                    <textarea rows="10" cols="100" class="form-control" id="contactMessage" name="contactMessage" required maxlength="500" style="resize:none"></textarea>
                                 </div>
                             </div>
                             <div id="success"></div>
                             <!-- For success/fail messages -->
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="submit" name="contactSubmit" class="btn btn-primary">Send Message</button>
                         </form>
                     </div>
                 <!-- /.row -->
