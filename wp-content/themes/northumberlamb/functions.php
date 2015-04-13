@@ -67,6 +67,8 @@ $javascripts = array(
             'bootstrap.min.js',
             'npm.js',
             'northumberlamb.js',
+            'jquery.rwdImageMaps.js',
+            'jquery.rwdImageMaps.min.js',
         ),
 
         'lt_ie_9'=>array(),

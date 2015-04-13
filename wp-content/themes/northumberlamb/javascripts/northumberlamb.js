@@ -53,6 +53,41 @@ $(function() {
         e.preventDefault();
         $('#roasting-modal').modal('show');
     });
+    // --- LAMB CUT CHART
+    $('img[usemap]').rwdImageMaps();
+
+    $('area').on('click', function(e) {
+         e.preventDefault();
+        //alert($(this).attr('alt') + ' clicked');
+        var filter = $(this).attr('alt');
+        console.log(filter);
+
+        var target = '.recipe';
+        if (filter === 'All') {
+            //$(target).fadeIn(200).removeClass('_f');
+            // $(news_target).fadeIn(200).removeClass('_f');
+            // $(projects_target).fadeIn(200).removeClass('_f');
+        } else {
+            //$(target).hide().removeClass('_f');
+            // $(news_target).hide().removeClass('_f');
+            // $(projects_target).hide().removeClass('_f');
+            //News Filtering
+            $(target).each(function() {
+
+                var item = this;
+                alert(this);
+                //split data-categories by white space, each string becoming a category to compare to the selected filter
+                //var news_categories = $(item).attr('data-categories').split(" ");
+
+                // $.each(news_categories, function(k,v){
+                //     //if the category matches the filter then display that div
+                //     if ( v === filter ) {
+                //         $(item).fadeIn(200).removeClass('_f');
+                //     }
+                // });
+            });
+    });
+
     // END RECIPE PAGE MODAL
     $('ul.nav-tabs li a').click(function(e){
     	e.preventDefault();

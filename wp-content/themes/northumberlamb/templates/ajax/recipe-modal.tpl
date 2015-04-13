@@ -9,7 +9,9 @@
                     <div id="imgModalRecipe">
                         <img src="{$recipe.image.sizes['recipe-modal']}" alt="{$recipe.image.alt}">
                     </div>
-                    <h6>Prep Time : {$recipe.prep_time} | Servings : {$recipe.servings}</h6>
+                    <h6>Prep Time : {$recipe.prep_time} | Servings : {$recipe.servings} | Lamb Cut(s): {foreach $recipe.lamb_cut as $cut}
+                      {$cut}{if $cut@iteration != count($recipe.lamb_cut)},{/if}
+                    {/foreach}</h6>
                     <h4>Recipe Description</h4>
                     <p>{$recipe.post_content}</p>
                     <hr class="modal-hr" style="width:100%; color:#405FA2;">
@@ -19,11 +21,11 @@
                     <h4>Recipe Ingredients</h4>
         		<ol id="ul-recipe-ingredients">
             	{foreach $recipe.ingredients as $ingredient}
-            		<li>{$ingredient.ingredient}</li>
+            	   <li>{$ingredient.ingredient}</li>
             	{/foreach}
         		</ol>
                     <div id="imgModalCut">
-                        <img src="http://placehold.it/140x100" alt="">
+                        <!-- <img src="http://placehold.it/140x100" alt=""> -->
                     </div>
             </div>
             <div class="modal-footer">

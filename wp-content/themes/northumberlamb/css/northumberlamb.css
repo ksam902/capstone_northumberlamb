@@ -284,6 +284,9 @@ div#recipe-modal-ajax button.btn.btn-primary{
     text-align: center;
     width: 20%;
 }
+.modal-footer{
+    clear: both;
+}
 /* END RECIPES */
 
 /*MEDIA PAGE*/

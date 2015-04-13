@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-06 14:31:10
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-13 15:31:58
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80731179154db75bb5d8d18-65229018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dce18736a4cbf313c512f8de91a117b16f13c318' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/recipes/content.tpl',
-      1 => 1428330664,
+      1 => 1428938876,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'posts' => 0,
     'recipe' => 0,
+    'cut' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -48,7 +49,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['recipe']->key => $_smarty_tpl->tpl_vars['recipe']->value) {
 $_smarty_tpl->tpl_vars['recipe']->_loop = true;
 ?>
-            <div class="col-lg-12 div-recipe">
+            <div class="col-lg-12 div-recipe" data-cuts="<?php  $_smarty_tpl->tpl_vars['cut'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cut']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['recipe']->value['lamb_cut']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['cut']->iteration=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['cut']->key => $_smarty_tpl->tpl_vars['cut']->value) {
+$_smarty_tpl->tpl_vars['cut']->_loop = true;
+ $_smarty_tpl->tpl_vars['cut']->iteration++;
+?><?php echo $_smarty_tpl->tpl_vars['cut']->value;?>
+ <?php } ?>" >
                 <a href="#" data-reveal-id="recipe-modal-ajax" class="open-modal recipe-modal-open" rel="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['ID'];?>
 "><img class="img-recipe" src="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['image']['sizes']['recipe-list'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['recipe']->value['image']['alt'];?>
@@ -60,6 +68,17 @@ $_smarty_tpl->tpl_vars['recipe']->_loop = true;
 <?php }?>
                     <?php if ($_smarty_tpl->tpl_vars['recipe']->value['servings']) {?> <strong>| Servings:</strong> <?php echo $_smarty_tpl->tpl_vars['recipe']->value['servings'];?>
 <?php }?>
+                    <strong>| Lamb Cut(s):</strong>
+                    <?php  $_smarty_tpl->tpl_vars['cut'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['cut']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['recipe']->value['lamb_cut']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['cut']->iteration=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['cut']->key => $_smarty_tpl->tpl_vars['cut']->value) {
+$_smarty_tpl->tpl_vars['cut']->_loop = true;
+ $_smarty_tpl->tpl_vars['cut']->iteration++;
+?>
+                      <?php echo $_smarty_tpl->tpl_vars['cut']->value;?>
+<?php if ($_smarty_tpl->tpl_vars['cut']->iteration!=count($_smarty_tpl->tpl_vars['recipe']->value['lamb_cut'])) {?>,<?php }?>
+                    <?php } ?>
                 </div>
                 <div>
                     <?php echo $_smarty_tpl->tpl_vars['recipe']->value['post_content'];?>
