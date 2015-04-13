@@ -39,7 +39,6 @@
                     <div class="carousel-inner">
 
                         {foreach $options.banner as $image}
-                        <!-- {pre($image)} -->
                             {if $image@iteration == 1}
                                <div class="item active">
                             {else}

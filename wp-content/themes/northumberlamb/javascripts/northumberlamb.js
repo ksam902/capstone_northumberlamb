@@ -1,6 +1,9 @@
 var count = 0;
 
 $(function() {
+    // var btnPrint = $('#btnPrintRecipe');
+    var btnPrint = document.getElementById("btnPrintRecipe");
+
     $('.menu-header-menu-container ul').addClass('nav navbar-nav navbar-right');
     $('.carousel').carousel({
         interval: 5000 //changes the speed
@@ -15,15 +18,46 @@ $(function() {
     	$(this).css('pointer-events', 'none');
     });
     $('a.recipe-modal-open').click(function(e){
-    	e.preventDefault();
+        e.preventDefault();
 
         var url = '/ajax/?recipe_id='+ $(this).attr('rel');
 
         $.ajax( url ).done(function(response, status) {
             $('#recipe-popup .popup-content').html(response);
             $('#recipe-modal-ajax').modal('show');
+                $( "#recipe-modal-ajax" ).on('shown.bs.modal', function(e){
+                    $('#btnPrintRecipe').on('click', function(){
+                        printRecipe(document.getElementById("print-title"), false);
+                        printRecipe(document.getElementById("print-content"), true);
+                        window.print();
+                    });
+                });
         });
+
     });
+        // ---- PRINTING MODAL
+    function printRecipe(elem, append, delimiter) {
+        var domClone = elem.cloneNode(true);
+        var $printSection = document.getElementById("print-section");
+
+        if (!$printSection) {
+            var $printSection = document.createElement("div");
+            $printSection.id = "print-section";
+            document.body.appendChild($printSection);
+        }
+        if (append !== true) {
+            $printSection.innerHTML = "";
+        }else if (append === true) {
+            if (typeof(delimiter) === "string") {
+                $printSection.innerHTML += delimiter;
+            }
+            else if (typeof(delimiter) === "object") {
+                $printSection.appendChlid(delimiter);
+            }
+        }
+
+        $printSection.appendChild(domClone);
+    }
     $('button#next_recipe').click(function() {
         e.preventDefault();
         alert("next clicked");
@@ -103,7 +137,6 @@ $(function() {
                 scrollTop: $(".div-recipes").offset().top
             }, 1000);
     });
-
     // END RECIPE PAGE MODAL
     $('ul.nav-tabs li a').click(function(e){
     	e.preventDefault();

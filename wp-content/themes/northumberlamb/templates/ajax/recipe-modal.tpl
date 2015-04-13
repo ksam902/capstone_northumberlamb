@@ -1,11 +1,11 @@
 <div id="recipe-modal-ajax" class="modal fade bs-example-modal-lg">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
+            <div id="print-title" class="modal-header print">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h2 class="modal-title recipe-title" data-recipe="{$recipe.ID}">{$recipe.post_title}</h2>
             </div>
-            <div class="modal-body">
+            <div id="print-content" class="modal-body print">
                     <div id="imgModalRecipe">
                         <img src="{$recipe.image.sizes['recipe-modal']}" alt="{$recipe.image.alt}">
                     </div>
@@ -29,7 +29,7 @@
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left modal-recipe-print">Print</button>
+                <button id="btnPrintRecipe" type="button" class="btn btn-danger pull-left modal-recipe-print">Print</button>
                 <button type="button" class="btn btn-primary" id="previous_recipe">Previous Recipe</button>
                 <button type="button" class="btn btn-primary" id="next_recipe">Next Recipe</button>
             </div>
