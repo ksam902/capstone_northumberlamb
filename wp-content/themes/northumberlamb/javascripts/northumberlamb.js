@@ -61,10 +61,8 @@ $(function() {
                     $('button#next_recipe').on('click', function() {
                         e.preventDefault();
                         increaseCount();
-                        //populateModal(count);
-                        $('h2.recipe-title').html(recipeData[count].post_title);
-                        $('div#print-content').find('p:nth-of-type(2)').html(recipeData[count].post_content);
-                        $('div#print-content').find('p:nth-of-type(5)').html(recipeData[count].instructions);
+                        populateModal(count);
+
                         if(count === recipeData.length - 1){
                             $('button#next_recipe').prop('disabled', true);
                         }else if(count != 0){
@@ -75,7 +73,7 @@ $(function() {
                     $('button#previous_recipe').on('click', function() {
                         e.preventDefault();
                         decreaseCount();
-                        $('h2.recipe-title').html(recipeData[count].post_title);
+                        populateModal(count);
                         if(count === 0){
                             $('button#previous_recipe').prop('disabled', true);
                         }else if(count != recipeData.length - 1){
@@ -86,6 +84,30 @@ $(function() {
         });
 
     });
+    function populateModal(count){
+        //loop through cuts of lamb and append to string
+        var cuts = "";
+        for(var i=0;i<= recipeData[count].lamb_cut.length-1;i++){
+            cuts += recipeData[count].lamb_cut[i] ;
+            if(i != recipeData[count].lamb_cut.length-1){
+                cuts += ", ";
+            }
+        }
+        //loop through ingredients of recipe and append to string
+        $('ol#ul-recipe-ingredients').empty();
+        var ingredients;
+        for(var i=0;i<= recipeData[count].ingredients.length-1;i++){
+            $('ol#ul-recipe-ingredients').append('<li>' + recipeData[count].ingredients[i].ingredient + '</li>');
+        }
+
+        $('div#imgModalRecipe img').attr('src', recipeData[count].image.sizes['recipe-modal']);
+        $('h2.recipe-title').html(recipeData[count].post_title);
+        $('div#print-content h6').find('span:nth-of-type(1)').fadeIn(600).html(recipeData[count].prep_time);
+        $('div#print-content h6').find('span:nth-of-type(2)').fadeIn(600).html(recipeData[count].servings);
+        $('div#print-content h6').find('span:nth-of-type(3)').fadeIn(600).html(cuts);
+        $('div#print-content').find('p:nth-of-type(2)').fadeIn(600).html(recipeData[count].post_content);
+        $('div#print-content').find('p:nth-of-type(5)').fadeIn(600).html(recipeData[count].instructions);
+    }
     function increaseCount(){
         return count += 1;
     }
