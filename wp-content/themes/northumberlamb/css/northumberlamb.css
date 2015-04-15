@@ -10,7 +10,7 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    padding-top: 75px;  /*Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 100px;  /*Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 nav, #nav-container{
     background-color: #405FA2 !important;
@@ -22,6 +22,7 @@ nav, #nav-container{
 }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
     border-color: #FFFFFF !important;
+    height: 80px !important;
 }
 .navbar-inverse .navbar-toggle{
     border-color: #FFFFFF !important;
@@ -356,6 +357,9 @@ ul.dropdown-menu li > a:link,
 ul.dropdown-menu li > a:visited{
     color: #405FA2 !important;
 }
+.navbar-right{
+    padding-top: 20px !important;
+}
 
 /* /SHIPPERS PAGE*/
 @media screen and (max-width:991px){
@@ -374,7 +378,11 @@ ul.dropdown-menu li > a:visited{
         clear: both;
     }
 }
-
+@media(max-width:884px){
+    body {
+        padding-top: 135px;
+    }
+}
 @media(max-width:767px) {
     .img-portfolio {
         margin-bottom: 15px;
@@ -386,6 +394,9 @@ ul.dropdown-menu li > a:visited{
     ul.dropdown-menu li > a:link,
     ul.dropdown-menu li > a:visited {
         color: #FFFFFF !important;
+    }
+    div#nav-container {
+        height: 80px !important;
     }
 }
 /*MEDIA QUERIES FOR RECIPE MODAL PRINTING*/
