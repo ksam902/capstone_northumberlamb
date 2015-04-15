@@ -352,7 +352,8 @@ table.lamb-grading-table{
 ul.dropdown-menu li {
     width: 100% !important;
 }
-ul.dropdown-menu li > a:link {
+ul.dropdown-menu li > a:link,
+ul.dropdown-menu li > a:visited{
     color: #405FA2 !important;
 }
 
@@ -382,7 +383,8 @@ ul.dropdown-menu li > a:link {
     header.carousel .carousel {
         height: 70%;
     }
-    ul.dropdown-menu li > a:link {
+    ul.dropdown-menu li > a:link,
+    ul.dropdown-menu li > a:visited {
         color: #FFFFFF !important;
     }
 }
