@@ -346,6 +346,13 @@ div.lamb-grading{
 table.lamb-grading-table{
 
 }
+ul.dropdown-menu li {
+    width: 100% !important;
+}
+ul.dropdown-menu li > a:link {
+    color: #405FA2 !important;
+}
+
 /* /SHIPPERS PAGE*/
 @media screen and (max-width:991px){
     div#imgModalRecipe{
