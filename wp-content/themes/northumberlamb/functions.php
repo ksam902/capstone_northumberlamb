@@ -69,6 +69,7 @@ $javascripts = array(
             'northumberlamb.js',
             'jquery.rwdImageMaps.js',
             'jquery.rwdImageMaps.min.js',
+            'jquery.validate.min.js',
         ),
 
         'lt_ie_9'=>array(),
@@ -291,7 +292,7 @@ if (isset($_POST['shipperFormSubmit'])) {
     $rdoLambingPracticeSF = htmlentities($_POST['rdoLambingPracticeSF']);
     $rdoReadyToShipSF = htmlentities($_POST['rdoReadyToShipSF']);
     $txtNumOfLambsSF = htmlentities($_POST['txtNumOfLambsSF']);
-    $drpMoreLambsSF = htmlentities($_POST['drpMoreLambsSF']);
+    $txtExpectingLambsSF = htmlentities($_POST['txtExpectingLambsSF']);
     $txtCommentsSF = htmlentities($_POST['txtCommentsSF']);
     $txtReferenceNameSF = htmlentities($_POST['txtReferenceNameSF']);
     $txtReferencePhoneNumberSF = htmlentities($_POST['txtReferencePhoneNumberSF']);
@@ -306,7 +307,7 @@ if (isset($_POST['shipperFormSubmit'])) {
 //    $rdoLambingPracticeSF = "";
 //    $rdoReadyToShipSF = "";
 //    $txtNumOfLambsSF = "";
-//    $drpMoreLambsSF = "";
+//    $txtExpectingLambsSF = "";
 //    $txtCommentsSF = "";
 //    $txtReferenceNameSF = "";
 //    $txtReferencePhoneNumberSF = "";
@@ -414,8 +415,8 @@ if (isset($_POST['shipperFormSubmit'])) {
 //        }
 //    }
 //// expecting lambs
-//    if (isset($_POST['drpMoreLambsSF'])) {
-//        $drpMoreLambsSF = $_POST['drpMoreLambsSF'];
+//    if (isset($_POST['txtExpectingLambsSF'])) {
+//        $txtExpectingLambsSF = $_POST['txtExpectingLambsSF'];
 //    } else {
 //        $errorMsg .= "Please select a drop down item<br>";
 //        $validate = false;
@@ -496,7 +497,7 @@ if (isset($_POST['shipperFormSubmit'])) {
   </tr>
   <tr>
     <td>Are you expecting to have <br>more lambs ready in the next:<br></td>
-    <td>$drpMoreLambsSF</td>
+    <td>$txtExpectingLambsSF</td>
   </tr>
   <tr>
     <td>Comments<br></td>

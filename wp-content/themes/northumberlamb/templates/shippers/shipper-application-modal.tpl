@@ -23,7 +23,7 @@
                             <label class="col-md-4 control-label" for="txtNameSF">Name</label>
 
                             <div class="col-md-6">
-                                <input id="txtNameSF" name="txtNameSF" placeholder="Name" class="form-control input-md"
+                                <input id="txtNameSF" name="txtNameSF" class="form-control input-md"
                                        maxlength="30" type="text" required>
 
                             </div>
@@ -34,7 +34,7 @@
                             <label class="col-md-4 control-label" for="txtFarmNameSF">Farm Name</label>
 
                             <div class="col-md-6">
-                                <input id="txtFarmNameSF" name="txtFarmNameSF" placeholder="Farm Name"
+                                <input id="txtFarmNameSF" name="txtFarmNameSF"
                                        class="form-control input-md" maxlength="50" type="text" required>
 
                             </div>
@@ -45,7 +45,7 @@
                             <label class="col-md-4 control-label" for="txtAddressSF">Address</label>
 
                             <div class="col-md-6">
-                                <input id="txtAddressSF" name="txtAddressSF" placeholder="Address"
+                                <input id="txtAddressSF" name="txtAddressSF"
                                        class="form-control input-md" maxlength="100" type="text" required>
 
                             </div>
@@ -56,7 +56,7 @@
                             <label class="col-md-4 control-label" for="txtPostalCodeSF">Postal Code</label>
 
                             <div class="col-md-6">
-                                <input id="txtPostalCodeSF" name="txtPostalCodeSF" placeholder="Postal Code"
+                                <input id="txtPostalCodeSF" name="txtPostalCodeSF" placeholder="A1A 1A1"
                                        class="form-control input-md" maxlength="7" type="text" required>
 
                             </div>
@@ -67,7 +67,7 @@
                             <label class="col-md-4 control-label" for="txtHomePhoneSF">Home Phone</label>
 
                             <div class="col-md-6">
-                                <input id="txtHomePhoneSF" name="txtHomePhoneSF" placeholder="Home Phone"
+                                <input id="txtHomePhoneSF" name="txtHomePhoneSF" placeholder="9025551234"
                                        class="form-control input-md" maxlength="16" type="text">
 
                             </div>
@@ -78,7 +78,7 @@
                             <label class="col-md-4 control-label" for="txtCellPhoneSF">Cell Phone</label>
 
                             <div class="col-md-6">
-                                <input id="txtCellPhoneSF" name="txtCellPhoneSF" placeholder="Cell Phone"
+                                <input id="txtCellPhoneSF" name="txtCellPhoneSF" placeholder="9025551234"
                                        class="form-control input-md" maxlength="16" type="text">
 
                             </div>
@@ -89,7 +89,7 @@
                             <label class="col-md-4 control-label" for="txtflockSizeSF">Flock Size</label>
 
                             <div class="col-md-6">
-                                <input id="txtFlockSizeSF" name="txtFlockSizeSF" placeholder="Flock Size"
+                                <input id="txtFlockSizeSF" name="txtFlockSizeSF"
                                        class="form-control input-md" maxlength="10" type="text">
 
                             </div>
@@ -139,7 +139,7 @@
                             <label class="col-md-4 control-label" for="txtHowManySF">How Many?</label>
 
                             <div class="col-md-6">
-                                <input id="txtNumOfLambsSF" name="txtNumOfLambsSF" placeholder="How Many?"
+                                <input id="txtNumOfLambsSF" name="txtNumOfLambsSF"
                                        class="form-control input-md" maxlength="10" type="text">
 
                             </div>
@@ -147,15 +147,12 @@
 
                         <!-- Select Basic -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="drpMoreLambsSF">Are you expecting to have more
-                                lambs ready in the next:</label>
+                            <label class="col-md-4 control-label" for="txtExpectingLambsSF">When are you expecting to have more
+                                lambs ready?</label>
 
                             <div class="col-md-6">
-                                <select id="drpMoreLambsSF" name="drpMoreLambsSF" class="form-control">
-                                    <option value="No Selection">Select</option>
-                                    <option value="Month">Month</option>
-                                    <option value="Two Months">Two Months</option>
-                                </select>
+                                <input id="txtExpectingLambsSF" name="txtExpectingLambsSF"
+                                       class="form-control input-md" maxlength="10" type="text">
                             </div>
                         </div>
 
@@ -188,7 +185,7 @@
 
                             <div class="col-md-6">
                                 <input id="txtReferencePhoneNumberSF" name="txtReferencePhoneNumberSF"
-                                       placeholder="Contact Number" class="form-control input-md" maxlength="16"
+                                       placeholder="Reference Contact" class="form-control input-md" maxlength="16"
                                        type="text">
 
                             </div>
