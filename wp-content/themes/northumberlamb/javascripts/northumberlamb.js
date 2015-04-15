@@ -141,4 +141,10 @@ $(function() {
     $('ul.nav-tabs li a').click(function(e){
     	e.preventDefault();
     });
+// -------------------------------------------------------------------------- dropdown menu for important links
+    $('li > a:contains("Important Links")').addClass("dropdown-toggle");
+    $('li > a:contains("Important Links")').attr('data-toggle','dropdown');
+    $('li > a:contains("Important Links")').next().addClass("dropdown-menu");
+    $('li > a:contains("Important Links")').next().attr('role','menu');
+    $('.dropdown-toggle').dropdown();
 });
