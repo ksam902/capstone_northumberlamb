@@ -196,5 +196,46 @@ $(function() {
     $('li > a:contains("Important Links")').attr('data-toggle','dropdown');
     $('li > a:contains("Important Links")').next().addClass("dropdown-menu");
     $('li > a:contains("Important Links")').next().attr('role','menu');
+    $('li > a:contains("Important Links")').next().find('a').attr('target','_blank');
     $('.dropdown-toggle').dropdown();
+
+    //----------------------------------------------------------------------- form validation
+    jQuery.validator.addMethod("cdnPostal", function(postal, element) {
+        return this.optional(element) ||
+            postal.match(/[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/);
+    }, "Please specify a valid postal code.");
+    $("#shipperForm").validate({
+        rules: {
+            txtHomePhoneSF: {
+                phoneUS: true
+            },
+            txtCellPhoneSF: {
+                phoneUS: true
+            },
+            txtPostalCodeSF: {
+                cdnPostal: true
+            }
+        }
+    });
+    $("#memberForm").validate({
+        rules: {
+            txtPhoneMF: {
+                phoneUS: true
+            },
+            txtPostalCodeMF: {
+                cdnPostal: true
+            }
+        }
+    });
+    $("#contactForm").validate({
+        rules: {
+            contactPhone: {
+                phoneUS: true
+            },
+            contactEmail: {
+                email: true
+            }
+        }
+    });
+
 });
