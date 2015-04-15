@@ -42,7 +42,7 @@ $(function() {
         e.preventDefault();
 
         var url = '/ajax/?recipe_id='+ $(this).attr('rel');
-
+        count = (parseInt($(this).parent().attr('data-position')));
         $.ajax( url ).done(function(response, status) {
             $('#recipe-popup .popup-content').html(response);
             $('#recipe-modal-ajax').modal('show');
@@ -52,18 +52,46 @@ $(function() {
                         printRecipe(document.getElementById("print-content"), true);
                         window.print();
                     });
-                    $('button#next_recipe').click(function() {
+                    //disable buttons if first or last recipe is clicked
+                    if(count === 0){
+                        $('button#previous_recipe').prop('disabled', true);
+                    }else if(count === recipeData.length - 1){
+                        $('button#next_recipe').prop('disabled', true);
+                    }
+                    $('button#next_recipe').on('click', function() {
                         e.preventDefault();
-                        alert("next clicked");
+                        increaseCount();
+                        //populateModal(count);
+                        $('h2.recipe-title').html(recipeData[count].post_title);
+                        $('div#print-content').find('p:nth-of-type(2)').html(recipeData[count].post_content);
+                        $('div#print-content').find('p:nth-of-type(5)').html(recipeData[count].instructions);
+                        if(count === recipeData.length - 1){
+                            $('button#next_recipe').prop('disabled', true);
+                        }else if(count != 0){
+                            $('button#previous_recipe').prop('disabled', false);
+                        }
+
                     });
-                    $('button#previous_recipe').click(function() {
+                    $('button#previous_recipe').on('click', function() {
                         e.preventDefault();
-                        alert("previous clicked");
+                        decreaseCount();
+                        $('h2.recipe-title').html(recipeData[count].post_title);
+                        if(count === 0){
+                            $('button#previous_recipe').prop('disabled', true);
+                        }else if(count != recipeData.length - 1){
+                            $('button#next_recipe').prop('disabled', false);
+                        }
                     });
                 });
         });
 
     });
+    function increaseCount(){
+        return count += 1;
+    }
+    function decreaseCount(){
+        return count -= 1;
+    }
         // ---- PRINTING MODAL
     function printRecipe(elem, append, delimiter) {
         var domClone = elem.cloneNode(true);
@@ -86,9 +114,6 @@ $(function() {
         }
 
         $printSection.appendChild(domClone);
-    }
-    function increaseCount(){
-        return count += 1;
     }
     // --- LAMB CUT CHART
     $('img[usemap]').rwdImageMaps();

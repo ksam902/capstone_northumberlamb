@@ -156,16 +156,6 @@ function create_menus() {
 // ------ CUSTOM POST TYPES ------
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-    // register_post_type( 'banner',
-    //     array(
-    //         'labels' => array(
-    //             'name' => 'Banner',
-    //             'singular_name' => '',
-    //         ),
-    //     'public' => true,
-    //     'has_archive' => true,
-    //     )
-    // );
     register_post_type( 'important-links',
         array(
             'labels' => array(
@@ -228,6 +218,8 @@ function fetch($post) {
 
     return $fields;
 }
+
+// ------ END FETCH FUNCTIONS ------
 // custom admin login logo
 function custom_login_logo() {
     echo '<style type="text/css">
@@ -247,16 +239,16 @@ add_action('wp_ajax_nopriv_get_next_recipe', 'get_next_recipe');
 function get_next_recipe() {
 
     $id = $_POST['id'];
-    $next_id = $_POST['next_id'];
+    //$next_id = $_POST['next_id'];
+    $next_id = 63;
     $count = $_POST['count'];
     $next = false;
-    $p = fetch_by('post','time');
+    //$p = fetch($next_id);
     $posts = array();
     $next_post = false;
 
-    foreach ($p as $post) {
-        pre($p);
-    }
+    pre($id . " : " . $count );
+
 }
 
 function load_custom_fonts($init) {

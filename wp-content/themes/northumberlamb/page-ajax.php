@@ -9,9 +9,10 @@ $posts = array(
 );
 foreach ($recipes->posts as $p) {
     $recipe = fetch($p);
-    $posts['recipes'][] = $recipe['ID'];
+    // $posts['recipes'][] = $recipe['ID'];
+    $posts['recipes'][] = $recipe;
 }
-// pre($posts);
+
 $smarty->assign('posts', $posts);
 
 $post = false;

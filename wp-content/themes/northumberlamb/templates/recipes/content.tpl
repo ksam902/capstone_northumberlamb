@@ -10,7 +10,7 @@
                     <p>Sorry, We didn't find any recipes using the selected cut of lamb.</p>
                 </div>
             {foreach $posts.recipes as $recipe}
-            <div class="col-lg-12 div-recipe recipe" data-cuts="{foreach $recipe.lamb_cut as $cut}{$cut} {/foreach}" >
+            <div class="col-lg-12 div-recipe recipe" data-cuts="{foreach $recipe.lamb_cut as $cut}{$cut} {/foreach}" data-position="{$recipe@iteration - 1}">
                 <a href="#" data-reveal-id="recipe-modal-ajax" class="open-modal recipe-modal-open" rel="{ $recipe.ID }"><img class="img-recipe" src="{$recipe.image.sizes['recipe-list']}" alt="{$recipe.image.alt}"></a>
                 <a href="#" data-reveal-id="recipe-modal-ajax" class="open-modal recipe-modal-open" rel="{ $recipe.ID }"><h4 class="open-modal">{$recipe.post_title}</h4></a>
                 <div class="text-center">{if $recipe.prep_time}<strong>Prep Time:</strong> {$recipe.prep_time}{/if}
@@ -29,3 +29,6 @@
         </div>
     </div>
 </div>
+<script>
+   recipeData = {$json_content};
+</script>
