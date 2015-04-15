@@ -174,5 +174,6 @@ $(function() {
     $('li > a:contains("Important Links")').attr('data-toggle','dropdown');
     $('li > a:contains("Important Links")').next().addClass("dropdown-menu");
     $('li > a:contains("Important Links")').next().attr('role','menu');
+    $('li > a:contains("Important Links")').next().find('a').attr('target','_blank');
     $('.dropdown-toggle').dropdown();
 });

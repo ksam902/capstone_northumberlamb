@@ -379,6 +379,9 @@ ul.dropdown-menu li > a:link {
     header.carousel .carousel {
         height: 70%;
     }
+    ul.dropdown-menu li > a:link {
+        color: #FFFFFF !important;
+    }
 }
 /*MEDIA QUERIES FOR RECIPE MODAL PRINTING*/
 @media screen {
