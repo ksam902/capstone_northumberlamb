@@ -70,6 +70,7 @@ $javascripts = array(
             'jquery.rwdImageMaps.js',
             'jquery.rwdImageMaps.min.js',
             'jquery.validate.min.js',
+            'additional-methods.min.js',
         ),
 
         'lt_ie_9'=>array(),
