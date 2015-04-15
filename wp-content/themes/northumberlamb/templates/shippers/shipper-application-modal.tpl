@@ -194,7 +194,7 @@
                     </fieldset>
                     <hr>
                     <div>
-                        <strong>Only producers who abide by the Canadian Sheep Federation best practices <a href"http://www.cansheep.ca/">www.cansheep.ca/</a>
+                        <strong>Only producers who abide by the Canadian Sheep Federation best practices <a href="http://www.cansheep.ca/" id="shipper-modal-link" target="_blank">www.cansheep.ca/</a>
                             need apply. We will contact you within 24 hours OR you can call Michael Isenor at
                             902-895-4262 .</strong>
                     </div>
