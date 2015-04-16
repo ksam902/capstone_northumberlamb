@@ -18,6 +18,7 @@ $stylesheets = array(
         'bootstrap.min.css',
         'northumberlamb.css',
         'font-awesome.min.css',
+        '../custom-fonts/custom-fonts.css',
     ),
 
     'lt_ie_9' => array(),
@@ -295,7 +296,7 @@ function load_custom_fonts($init)
 
     $font_formats = isset($init['font_formats']) ? $init['font_formats'] : 'Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sans-serif;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats';
 
-    $custom_fonts = ';' . 'Freestyle Script=freestyle script';
+    $custom_fonts = ';' . 'Freestyle Script=freestyleScript';
 
     $init['font_formats'] = $font_formats . $custom_fonts;
 
@@ -303,15 +304,6 @@ function load_custom_fonts($init)
 }
 
 add_filter('tiny_mce_before_init', 'load_custom_fonts');
-
-function load_custom_fonts_frontend()
-{
-
-    echo '<link type="text/css" rel="stylesheet" href="custom-fonts/custom-fonts.css">';
-}
-
-add_action('wp_head', 'load_custom_fonts_frontend');
-add_action('admin_head', 'load_custom_fonts_frontend');
 
 //------------------------------------------------------------------- Submit Shipper Form
 if (isset($_POST['shipperFormSubmit'])) {
