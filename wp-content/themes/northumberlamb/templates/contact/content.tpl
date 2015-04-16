@@ -52,13 +52,13 @@
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Phone Number:</label>
-                                    <input type="tel" class="form-control" id="contactPhone" name="contactPhone" required>
+                                    <input type="tel" class="form-control" id="contactPhone" name="contactPhone" placeholder="9025551234" required>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Email Address:</label>
-                                    <input type="email" class="form-control" id="contactEmail" name="contactEmail" required>
+                                    <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="email@example.com" required>
                                 </div>
                             </div>
                             <div class="control-group form-group">
