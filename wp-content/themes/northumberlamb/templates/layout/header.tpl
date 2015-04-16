@@ -29,11 +29,18 @@
                     <!-- Header Carousel -->
                     <!--<header id="myCarousel" class="carousel slide">-->
                     <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
+<!--                     <ol class="carousel-indicators">
+
+                        {foreach $options.banner as $image}
+
+                             {if $image@iteration == 1}
+
+                                <li data-target="#myCarousel" data-slide-to="" class="active"></li>
+                            {else}
+                                <li data-target="#myCarousel" data-slide-to=""></li>
+                             {/if}
+                        {/foreach}
+                    </ol> -->
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
@@ -50,13 +57,16 @@
                         {/foreach}
                     </div>
 
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="icon-prev"></span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="icon-next"></span>
-                    </a>
+                    <!-- Controls - Only display if there is more than one banner image uploaded-->
+
+                    {if $options.banner|@count gt 1}
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    {/if}
                     <!--</header>-->
                 </div>
             </div>

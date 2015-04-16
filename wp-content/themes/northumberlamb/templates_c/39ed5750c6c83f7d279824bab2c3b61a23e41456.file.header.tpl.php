@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-15 22:55:50
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-16 14:12:32
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1429136098,
+      1 => 1429193545,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"> <img src="/images/NorthumberLamb_White.png" alt="logo" width="354" height="200"></a>
+            <a class="navbar-brand" href="/"> <img src="/images/NorthumberLamb_White.png" alt="logo" width="230" height="58"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,11 +57,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <!-- Header Carousel -->
                     <!--<header id="myCarousel" class="carousel slide">-->
                     <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
+<!--                     <ol class="carousel-indicators">
+
+                        <?php  $_smarty_tpl->tpl_vars['image'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['image']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['options']->value['banner']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['image']->iteration=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['image']->key => $_smarty_tpl->tpl_vars['image']->value) {
+$_smarty_tpl->tpl_vars['image']->_loop = true;
+ $_smarty_tpl->tpl_vars['image']->iteration++;
+?>
+
+                             <?php if ($_smarty_tpl->tpl_vars['image']->iteration==1) {?>
+
+                                <li data-target="#myCarousel" data-slide-to="" class="active"></li>
+                            <?php } else { ?>
+                                <li data-target="#myCarousel" data-slide-to=""></li>
+                             <?php }?>
+                        <?php } ?>
+                    </ol> -->
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
@@ -86,13 +99,16 @@ $_smarty_tpl->tpl_vars['image']->_loop = true;
                         <?php } ?>
                     </div>
 
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span class="icon-prev"></span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span class="icon-next"></span>
-                    </a>
+                    <!-- Controls - Only display if there is more than one banner image uploaded-->
+
+                    <?php if (count($_smarty_tpl->tpl_vars['options']->value['banner'])>1) {?>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    <?php }?>
                     <!--</header>-->
                 </div>
             </div>

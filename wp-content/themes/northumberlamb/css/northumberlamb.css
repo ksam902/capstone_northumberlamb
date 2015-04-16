@@ -43,8 +43,12 @@ nav, #nav-container {
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #9d9d9c !important;
 }
-
-.box {
+/*BANNER*/
+img.img-responsive.img-full {
+    height: 350px;
+}
+/*END BANNER
+*/.box {
     border-radius: 5px;
 }
 
