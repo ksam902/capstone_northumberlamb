@@ -1,6 +1,4 @@
 var count = 0;
-var filter = "All Recipes";
-var currentRow;
 $(function () {
     // var btnPrint = $('#btnPrintRecipe');
     var btnPrint = document.getElementById("btnPrintRecipe");
@@ -83,7 +81,7 @@ $(function () {
                     $('button#next_recipe').on('click', function () {
                         e.preventDefault();
                         increaseCount();
-                        populateModal(count, filter);
+                        populateModal(count);
 
                         if (count === recipeData.length - 1) {
                             $('button#next_recipe').prop('disabled', true);
@@ -95,7 +93,7 @@ $(function () {
                     $('button#previous_recipe').on('click', function () {
                         e.preventDefault();
                         decreaseCount();
-                        populateModal(count, filter);
+                        populateModal(count);
                         if (count === 0) {
                             $('button#previous_recipe').prop('disabled', true);
                         } else if (count != recipeData.length - 1) {
@@ -106,7 +104,7 @@ $(function () {
         });
 
     });
-    function populateModal(count, filter) {
+    function populateModal(count) {
         //loop through cuts of lamb and append to string
         var cuts = "";
         for (var i = 0; i <= recipeData[count].lamb_cut.length - 1; i++) {

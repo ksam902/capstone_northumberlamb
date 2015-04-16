@@ -178,18 +178,7 @@ function create_menus()
 
 // ------ CUSTOM POST TYPES ------
 add_action('init', 'create_post_type');
-function create_post_type()
-{
-    register_post_type('important-links',
-        array(
-            'labels' => array(
-                'name' => 'Important Links',
-                'singular_name' => 'Important Link',
-            ),
-            'public' => true,
-            'has_archive' => true,
-        )
-    );
+function create_post_type(){
     register_post_type('recipe',
         array(
             'labels' => array(
