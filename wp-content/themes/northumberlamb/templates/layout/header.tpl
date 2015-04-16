@@ -44,14 +44,12 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-
                         {foreach $options.banner as $image}
                             {if $image@iteration == 1}
                                <div class="item active">
                             {else}
                                 <div class="item">
                             {/if}
-
                                 <img class="img-responsive img-full" src="{$image.image.sizes['banner']}" alt="{$image.image.alt}">
                             </div>
                         {/foreach}
