@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-06 15:54:57
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-16 17:30:52
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:212581338854e4b0ffd5c4a8-34523584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dca0923b508dc52a48da3644b1bc0e4453e674e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl',
-      1 => 1428335690,
+      1 => 1429205450,
       2 => 'file',
     ),
   ),
@@ -56,7 +56,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h2><strong>Lamb Grading Chart</strong></h2>
             <div class="row box">
                 <div class="col-md-12 .table-responsive lamb-grading">
-                    <table class="table table-hover lamb-grading-table">
+                    <table id="lamb-grading-chart-table" class="table lamb-grading-table">
                         <tr>
                           <td class="info"><h6>Weight (LBS)</h6></td>
                           <td class="info"><h6>Grade 0</h6></td>

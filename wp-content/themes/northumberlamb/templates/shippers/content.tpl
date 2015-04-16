@@ -28,7 +28,7 @@
             <h2><strong>Lamb Grading Chart</strong></h2>
             <div class="row box">
                 <div class="col-md-12 .table-responsive lamb-grading">
-                    <table class="table table-hover lamb-grading-table">
+                    <table id="lamb-grading-chart-table" class="table lamb-grading-table">
                         <tr>
                           <td class="info"><h6>Weight (LBS)</h6></td>
                           <td class="info"><h6>Grade 0</h6></td>

@@ -1,4 +1,5 @@
 var count = 0;
+var filter = "All Recipes";
 
 $(function () {
     // var btnPrint = $('#btnPrintRecipe');
@@ -17,6 +18,7 @@ $(function () {
     $('.overlay').click(function () {
         $(this).css('pointer-events', 'none');
     });
+    // ----------------- SHIPPER PAGE
     $('#btnShipperApplication').click(function (e) {
         e.preventDefault();
         $('#shipper-application-modal').modal('show');
@@ -25,6 +27,13 @@ $(function () {
         e.preventDefault();
         $('#member-application-modal').modal('show');
     });
+    $('table#lamb-grading-chart-table tr').on('click', function(e) {
+        $(this).addClass('highlight-table-row').siblings().removeClass('highlight-table-row');
+    });
+    $('table#lamb-grading-chart-table tr').on('mouseover', function(e) {
+        $(this).addClass('highlight-table-row');
+    });
+    // ----------------- END SHIPPER PAGE
     // -----------------    RECIPE PAGE
     $('#btnBroiling').click(function (e) {
         e.preventDefault();
@@ -52,39 +61,39 @@ $(function () {
                     printRecipe(document.getElementById("print-content"), true);
                     window.print();
                 });
-                //disable buttons if first or last recipe is clicked
-                if (count === 0) {
-                    $('button#previous_recipe').prop('disabled', true);
-                } else if (count === recipeData.length - 1) {
-                    $('button#next_recipe').prop('disabled', true);
-                }
-                $('button#next_recipe').on('click', function () {
-                    e.preventDefault();
-                    increaseCount();
-                    populateModal(count);
-
-                    if (count === recipeData.length - 1) {
-                        $('button#next_recipe').prop('disabled', true);
-                    } else if (count != 0) {
-                        $('button#previous_recipe').prop('disabled', false);
-                    }
-
-                });
-                $('button#previous_recipe').on('click', function () {
-                    e.preventDefault();
-                    decreaseCount();
-                    populateModal(count);
+                    //disable buttons if first or last recipe is clicked
                     if (count === 0) {
                         $('button#previous_recipe').prop('disabled', true);
-                    } else if (count != recipeData.length - 1) {
-                        $('button#next_recipe').prop('disabled', false);
+                    } else if (count === recipeData.length - 1) {
+                        $('button#next_recipe').prop('disabled', true);
                     }
-                });
+                    $('button#next_recipe').on('click', function () {
+                        e.preventDefault();
+                        increaseCount();
+                        populateModal(count, filter);
+
+                        if (count === recipeData.length - 1) {
+                            $('button#next_recipe').prop('disabled', true);
+                        } else if (count != 0) {
+                            $('button#previous_recipe').prop('disabled', false);
+                        }
+
+                    });
+                    $('button#previous_recipe').on('click', function () {
+                        e.preventDefault();
+                        decreaseCount();
+                        populateModal(count, filter);
+                        if (count === 0) {
+                            $('button#previous_recipe').prop('disabled', true);
+                        } else if (count != recipeData.length - 1) {
+                            $('button#next_recipe').prop('disabled', false);
+                        }
+                    });
             });
         });
 
     });
-    function populateModal(count) {
+    function populateModal(count, filter) {
         //loop through cuts of lamb and append to string
         var cuts = "";
         for (var i = 0; i <= recipeData[count].lamb_cut.length - 1; i++) {
@@ -159,7 +168,7 @@ $(function () {
 
     $('area').on('click', function (e) {
         e.preventDefault();
-        var filter = $(this).attr('alt');
+        filter = $(this).attr('alt');
         $('small.filtering span').html(filter);
         var matched = 0;
 

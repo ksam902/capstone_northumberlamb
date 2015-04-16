@@ -9,7 +9,7 @@
                     <div id="imgModalRecipe">
                         <img src="{$recipe.image.sizes['recipe-modal']}" alt="{$recipe.image.alt}">
                     </div>
-                    <h6>{if $recipe.prep_time}Prep Time : <span>{$recipe.prep_time}</span> | {/if}{if @recipe@servings} Servings : <span>{$recipe.servings}</span> | {/if}Lamb Cut(s): <span>{foreach $recipe.lamb_cut as $cut}
+                    <h6>{if $recipe.prep_time}Prep Time : <span>{$recipe.prep_time}</span> | {/if}{if $recipe.servings} Servings : <span>{$recipe.servings}</span> | {/if}Lamb Cut(s): <span>{foreach $recipe.lamb_cut as $cut}
                       {$cut}{if $cut@iteration != count($recipe.lamb_cut)},{/if}
                     {/foreach}</span></h6>
                     <h4>Recipe Description</h4>

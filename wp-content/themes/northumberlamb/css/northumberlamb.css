@@ -384,19 +384,19 @@ div#member-application-modal h4.modal-title, div#shipper-application-modal h4.mo
     color: #405FA2;
     text-align: center;
 }
-
 .application-div {
     margin: 5px;
 }
-
 .centered {
     text-align: center;
 }
-
 div.application-modal div {
     margin-bottom: 10px;
 }
-
+.highlight-table-row{
+    background-color: #405FA2;
+    color: #FFFFFF;
+}
 div.lamb-grading {
     max-height: 800px;
     overflow-x: scroll;
@@ -487,7 +487,9 @@ ul.dropdown-menu li > a:visited {
     ul.dropdown-menu li > a:visited {
         color: #FFFFFF !important;
     }
-
+    ul.sub-menu.nav.navbar-nav.navbar-right.dropdown-menu{
+        margin-bottom: 0;
+    }
     div#nav-container {
         height: 80px !important;
     }
