@@ -5,6 +5,7 @@ body {
 
 body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px !important;
     background: #405FA2;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -241,6 +242,7 @@ div#imgModalRecipe {
 
 div#imgModalRecipe img {
     min-height: 200px;
+    max-height: 200px;
     min-width: 100px;
     max-width: 450px;
     border-radius: 5px !important;
@@ -416,7 +418,7 @@ ul.dropdown-menu li > a:visited {
 }
 
 .navbar-right {
-    padding-top: 20px !important;
+    padding-top: 20px;
 }
 
 /* /SHIPPERS PAGE*/
@@ -453,7 +455,34 @@ ul.dropdown-menu li > a:visited {
     header.carousel .carousel {
         height: 70%;
     }
-
+    .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+        background-color: #FFFFFF;
+    }
+    .navbar-inverse .navbar-toggle:focus span, .navbar-inverse .navbar-toggle:hover span{
+        background-color: #405FA2;
+    }
+    .navbar-inverse .navbar-toggle span, .navbar-inverse .navbar-toggle span{
+        background-color: #FFFFFF;
+    }
+    .navbar-inverse .navbar-toggle:focus{
+         background-color: #FFFFFF;
+    }
+    .navbar-header{
+        height: 80px;
+    }
+    .navbar-right{
+        padding-top: 0px;
+    }
+    ul#header-menu{
+        position: absolute;
+        width: 100%;
+    }
+    div#bs-example-navbar-collapse-1, li.menu-item{
+        background-color: #405FA2;
+    }
+    li.menu-item:hover{
+        background-color: #FFFFFF;
+    }
     ul.dropdown-menu li > a:link,
     ul.dropdown-menu li > a:visited {
         color: #FFFFFF !important;

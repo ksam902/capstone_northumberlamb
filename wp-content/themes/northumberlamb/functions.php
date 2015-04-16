@@ -225,7 +225,7 @@ function create_post_type()
 ;
 // ------ IMAGE RESIZING ------
 add_image_size('banner', 640, 9999);
-add_image_size('recipe-modal', 450, 200, true);
+add_image_size('recipe-modal', 450, 9999);
 add_image_size('recipe-list', 175, 125, true);
 // ------ /IMAGE RESIZING ------
 // ------ FETCH FUNCTIONS ------

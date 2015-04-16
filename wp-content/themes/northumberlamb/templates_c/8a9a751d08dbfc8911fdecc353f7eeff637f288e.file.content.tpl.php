@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-13 16:26:58
+<?php /* Smarty version Smarty-3.1.18, created on 2015-04-16 14:50:22
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/contact/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210567381554db79601be840-21149286%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8a9a751d08dbfc8911fdecc353f7eeff637f288e' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/contact/content.tpl',
-      1 => 1427742516,
+      1 => 1429193636,
       2 => 'file',
     ),
   ),
@@ -74,35 +74,35 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="col-md-8">
                         <!-- Contact Details Column -->
                         <h3>Send us a Message</h3>
-                        <form name="sentMessage" id="contactForm" novalidate>
+                        <form id="contactForm" method="post" action="../../functions.php">
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Full Name:</label>
-                                    <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" id="contactName" name="contactName" required>
                                     <p class="help-block"></p>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Phone Number:</label>
-                                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" id="contactPhone" name="contactPhone" placeholder="9025551234" required>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Email Address:</label>
-                                    <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="email@example.com" required>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
                                     <label>Message:</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                                    <textarea rows="10" cols="100" class="form-control" id="contactMessage" name="contactMessage" required maxlength="500" style="resize:none"></textarea>
                                 </div>
                             </div>
                             <div id="success"></div>
                             <!-- For success/fail messages -->
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="submit" name="contactSubmit" class="btn btn-primary">Send Message</button>
                         </form>
                     </div>
                 <!-- /.row -->
