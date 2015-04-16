@@ -1,6 +1,6 @@
 var count = 0;
 var filter = "All Recipes";
-
+var currentRow;
 $(function () {
     // var btnPrint = $('#btnPrintRecipe');
     var btnPrint = document.getElementById("btnPrintRecipe");
@@ -28,10 +28,23 @@ $(function () {
         $('#member-application-modal').modal('show');
     });
     $('table#lamb-grading-chart-table tr').on('click', function(e) {
-        $(this).addClass('highlight-table-row').siblings().removeClass('highlight-table-row');
+        //exclude table header row
+        if(!$(this).is(':first-child')){
+            if(!$(this).hasClass('highlight-table-row')){
+                $(this).addClass('highlight-table-row').siblings().removeClass('highlight-table-row');
+            }else{
+                 $(this).removeClass('highlight-table-row').siblings().removeClass('highlight-table-row');
+            }
+        }
     });
     $('table#lamb-grading-chart-table tr').on('mouseover', function(e) {
-        $(this).addClass('highlight-table-row');
+        //exclude table header row
+        if(!$(this).is(':first-child')){
+            $(this).addClass('hover-table-row');
+        }
+    });
+    $('table#lamb-grading-chart-table tr').on('mouseout', function(e) {
+        $(this).removeClass('hover-table-row');
     });
     // ----------------- END SHIPPER PAGE
     // -----------------    RECIPE PAGE

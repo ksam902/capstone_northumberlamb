@@ -397,6 +397,10 @@ div.application-modal div {
     background-color: #405FA2;
     color: #FFFFFF;
 }
+.hover-table-row{
+    background-color: #405FA2;
+    color: #FFFFFF;
+}
 div.lamb-grading {
     max-height: 800px;
     overflow-x: scroll;
