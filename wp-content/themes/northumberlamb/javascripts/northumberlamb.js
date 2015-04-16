@@ -182,7 +182,6 @@ $(function () {
         });
         if (matched === 0) {
             $('div.no-recipes').fadeIn(200);
-            ;
             $('small.filtering').hide();
         } else {
             $('div.no-recipes').hide();
@@ -197,11 +196,12 @@ $(function () {
         e.preventDefault();
     });
 // -------------------------------------------------------------------------- dropdown menu for important links
-    $('li > a:contains("Important Links")').addClass("dropdown-toggle");
-    $('li > a:contains("Important Links")').attr('data-toggle', 'dropdown');
-    $('li > a:contains("Important Links")').next().addClass("dropdown-menu");
-    $('li > a:contains("Important Links")').next().attr('role', 'menu');
-    $('li > a:contains("Important Links")').next().find('a').attr('target', '_blank');
+    var importantLinks = $('li > a:contains("Important Links")');
+    importantLinks.addClass("dropdown-toggle");
+    importantLinks.attr('data-toggle', 'dropdown');
+    importantLinks.next().addClass("dropdown-menu");
+    importantLinks.next().attr('role', 'menu');
+    importantLinks.next().find('a').attr('target', '_blank');
     $('.dropdown-toggle').dropdown();
 
     //----------------------------------------------------------------------- form validation
