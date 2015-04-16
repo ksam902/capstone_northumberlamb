@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-09 19:51:13
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-16 18:21:33
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:106163429854d90fb17b6412-20005331%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -15,8 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
+  'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54d90fb17b71b7_95870377',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54d90fb17b71b7_95870377')) {function content_54d90fb17b71b7_95870377($_smarty_tpl) {?><?php }} ?>

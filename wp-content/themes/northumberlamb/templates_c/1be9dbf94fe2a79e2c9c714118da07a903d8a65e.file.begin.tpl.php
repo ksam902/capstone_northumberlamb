@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-02-20 18:49:19
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-16 18:21:32
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/begin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:89378548754d90fb159b790-07566002%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -15,7 +15,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
+  'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54d90fb15c3db0_48052752',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>

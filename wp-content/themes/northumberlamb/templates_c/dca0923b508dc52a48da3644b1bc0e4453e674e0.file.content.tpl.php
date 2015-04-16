@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-16 18:19:40
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-16 18:21:32
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:212581338854e4b0ffd5c4a8-34523584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dca0923b508dc52a48da3644b1bc0e4453e674e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl',
-      1 => 1429208359,
+      1 => 1429208423,
       2 => 'file',
     ),
   ),
@@ -15,7 +15,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
+  'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54e4b0ffd9be04_22161936',
   'variables' => 
   array (
@@ -58,7 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="col-md-12 .table-responsive lamb-grading">
                     <table id="lamb-grading-chart-table" class="table lamb-grading-table">
                         <tr>
-                          <td class="info fixed-column"><h6>Weight (LBS)</h6></td>
+                          <td class="info"><h6>Weight (LBS)</h6></td>
                           <td class="info"><h6>Grade 0</h6></td>
                           <td class="info"><h6>Grade 1</h6></td>
                           <td class="info"><h6>Grade 2</h6></td>
@@ -87,7 +87,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['info']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['info']->_loop = true;
 ?>
                         <tr>
-                          <td class="fixed-column"><?php echo $_smarty_tpl->tpl_vars['info']->value['weight'];?>
+                          <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['weight'];?>
 </td>
                           <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_0'];?>
 </td>

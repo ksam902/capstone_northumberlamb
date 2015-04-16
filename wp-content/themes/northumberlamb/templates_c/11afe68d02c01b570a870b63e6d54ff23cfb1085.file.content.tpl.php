@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-04-08 17:05:46
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-16 19:01:13
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/media/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:182181235254db7961ba9611-69538817%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '11afe68d02c01b570a870b63e6d54ff23cfb1085' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/media/content.tpl',
-      1 => 1428512740,
+      1 => 1429210863,
       2 => 'file',
     ),
   ),
@@ -15,11 +15,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
+  'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54db7961bcd603_28536328',
   'variables' => 
   array (
     'content' => 0,
+    'pdf' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -54,6 +55,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div id="articles" class="tab-pane fade" style="padding: 30px;">
                         <?php echo do_shortcode($_smarty_tpl->tpl_vars['content']->value['page']['articles']);?>
 
+                        <div id="media-pdf" style="text-align: center;">
+                            <?php  $_smarty_tpl->tpl_vars['pdf'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['pdf']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['content']->value['page']['articles_pdf']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['pdf']->key => $_smarty_tpl->tpl_vars['pdf']->value) {
+$_smarty_tpl->tpl_vars['pdf']->_loop = true;
+?>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['pdf']->value['pdf']['url'];?>
+" target="_blank"><?php echo $_smarty_tpl->tpl_vars['pdf']->value['pdf']['title'];?>
+</a>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,9 +10,6 @@ $content = array(
 	'page' => fetch_page('media'),
 );
 
-// pre(get_the_content());
-// pre($content);
-
 $smarty->assign('content', $content);
 
 get_header();
