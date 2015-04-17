@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2015-03-30 20:04:59
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-17 15:44:14
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/consumers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:33396914054db75c432ed81-13430795%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '02c97a2dc7980d75fd734a2a9cadf52ac08ab9e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/consumers/content.tpl',
-      1 => 1427745887,
+      1 => 1429285336,
       2 => 'file',
     ),
   ),
@@ -15,7 +15,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
+  'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_54db75c4377062_88835870',
   'variables' => 
   array (
@@ -34,6 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="col-lg-12">
                 <p><?php echo $_smarty_tpl->tpl_vars['content']->value['page']['post_content'];?>
 </p>
+                <div class="centered">
+                    <button class="btn btn-default" type="submit" id="btnPurchasingStoring">Purchasing & Storing Lamb Information</button>
+                </div>
                 <br/><h4><strong>Where to Buy NorthumberLamb Product</strong></h4><br/>
                 <div id="client_navigation">
                     <h5><a href="#" id="first"><strong>Restaurants</strong></a></h5>

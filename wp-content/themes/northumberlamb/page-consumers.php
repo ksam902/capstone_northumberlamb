@@ -19,4 +19,5 @@ $content['posts'] = $posts;
 $smarty->assign('content', $content);
 get_header();
 $smarty->display('consumers/content.tpl');
+$smarty->display('consumers/purchasing-storing-modal.tpl');
 get_footer();

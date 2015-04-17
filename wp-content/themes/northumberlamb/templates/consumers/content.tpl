@@ -7,6 +7,9 @@
         <div class="box">
             <div class="col-lg-12">
                 <p>{$content.page.post_content}</p>
+                <div class="centered">
+                    <button class="btn btn-default" type="submit" id="btnPurchasingStoring">Purchasing & Storing Lamb Information</button>
+                </div>
                 <br/><h4><strong>Where to Buy NorthumberLamb Product</strong></h4><br/>
                 <div id="client_navigation">
                     <h5><a href="#" id="first"><strong>Restaurants</strong></a></h5>

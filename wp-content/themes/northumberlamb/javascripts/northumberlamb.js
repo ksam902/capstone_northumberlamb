@@ -216,6 +216,13 @@ $(function () {
         }, 1000);
     });
     // END RECIPE PAGE MODAL
+
+    //----------- CONSUMERS PAGE
+        $('#btnPurchasingStoring').click(function (e) {
+            e.preventDefault();
+            $('#purchasing-storing-modal').modal('show');
+        });
+    //----------- END CONSUMERS PAGE
     $('ul.nav-tabs li a').click(function (e) {
         e.preventDefault();
     });
