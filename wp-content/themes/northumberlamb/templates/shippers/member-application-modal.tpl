@@ -67,7 +67,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="txtPhoneMF">Telephone</label>
                         <div class="col-md-6">
-                            <input id="txtPhoneMF" name="txtPhoneMF" placeholder="19025551234" class="form-control input-md" type="text" required>
+                            <input id="txtPhoneMF" name="txtPhoneMF" placeholder="9025551234" class="form-control input-md" type="text" required>
 
                         </div>
                     </div>

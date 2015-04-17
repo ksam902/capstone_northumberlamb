@@ -123,12 +123,12 @@
                             <div class="col-md-6">
                                 <label class="radio-inline" for="rdoReadyToShipYesSF">
                                     <input name="rdoReadyToShipSF" value="yes" checked="checked" type="radio"
-                                           onclick="txtNumOfLambs.disabled=false">
+                                           onclick="txtNumOfLambsSF.disabled=false">
                                     Yes
                                 </label>
                                 <label class="radio-inline" for="rdoReadyToShipNoSF">
                                     <input name="rdoReadyToShipSF" value="no" type="radio"
-                                           onclick="txtNumOfLambs.value='';txtNumOfLambs.disabled=true">
+                                           onclick="txtNumOfLambsSF.value='';txtNumOfLambsSF.disabled=true">
                                     No
                                 </label>
                             </div>
