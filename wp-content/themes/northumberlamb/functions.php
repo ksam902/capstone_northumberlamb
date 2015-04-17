@@ -189,16 +189,16 @@ function create_post_type(){
             'has_archive' => true,
         )
     );
-    register_post_type('recipe-links',
-        array(
-            'labels' => array(
-                'name' => 'Recipe Links',
-                'singular_name' => 'Recipe Link',
-            ),
-            'public' => true,
-            'has_archive' => true,
-        )
-    );
+    // register_post_type('recipe-links',
+    //     array(
+    //         'labels' => array(
+    //             'name' => 'Recipe Links',
+    //             'singular_name' => 'Recipe Link',
+    //         ),
+    //         'public' => true,
+    //         'has_archive' => true,
+    //     )
+    // );
     register_post_type('clients',
         array(
             'labels' => array(
