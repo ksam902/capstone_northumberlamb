@@ -46,6 +46,10 @@ $(function () {
     });
     // ----------------- END SHIPPER PAGE
     // -----------------    RECIPE PAGE
+    $('#btnCookingLamb').click(function (e) {
+        e.preventDefault();
+        $('#cooking-lamb-modal').modal('show');
+    });
     $('#btnBroiling').click(function (e) {
         e.preventDefault();
         $('#broiling-modal').modal('show');

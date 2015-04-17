@@ -9,6 +9,7 @@
                     {$content.page.post_content}
                 </div>
                 <div class="btn-group" role="group" style="margin-bottom: 10px;">
+                    <button class="btn btn-default" type="submit" id="btnCookingLamb">General Information</button>
                     <button class="btn btn-default" type="submit" id="btnBroiling">Broiling</button>
                     <button class="btn btn-default" type="submit" id="btnBraising">Braising</button>
                     <button class="btn btn-default" type="submit" id="btnRoasting">Roasting</button>

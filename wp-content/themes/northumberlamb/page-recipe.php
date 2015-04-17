@@ -23,6 +23,7 @@ get_header();
 $smarty->display('recipes/lamb-cut-chart.tpl');
 $smarty->display('recipes/content.tpl');
 $smarty->display('recipes/recipe-popup.tpl');
+$smarty->display('recipes/cooking-lamb-modal.tpl');
 $smarty->display('recipes/braising-modal.tpl');
 $smarty->display('recipes/broiling-modal.tpl');
 $smarty->display('recipes/roasting-modal.tpl');
