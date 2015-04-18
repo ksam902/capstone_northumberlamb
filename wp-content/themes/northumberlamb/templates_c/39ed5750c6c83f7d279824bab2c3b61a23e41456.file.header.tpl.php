@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 20:09:47
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 20:22:34
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1429387783,
+      1 => 1429388550,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_54d90fb16ade51_38160939',
   'variables' => 
   array (
-    'menu' => 0,
     'options' => 0,
+    'menu' => 0,
     'image' => 0,
   ),
   'has_nocache_code' => false,
@@ -37,7 +37,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"> <img src="/images/NorthumberLamb_White.png" alt="logo" width="230" height="58"></a>
+            <!-- <a class="navbar-brand" href="/"> <img src="/images/NorthumberLamb_White.png" alt="logo" width="230" height="58"></a> -->
+            <a class="navbar-brand" href="/"> <img src="<?php echo $_smarty_tpl->tpl_vars['options']->value['site_logo']['url'];?>
+" alt="logo" width="230" height="58"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

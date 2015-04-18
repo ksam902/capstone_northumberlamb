@@ -10,7 +10,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"> <img src="/images/NorthumberLamb_White.png" alt="logo" width="230" height="58"></a>
+            <!-- <a class="navbar-brand" href="/"> <img src="/images/NorthumberLamb_White.png" alt="logo" width="230" height="58"></a> -->
+            <a class="navbar-brand" href="/"> <img src="{$options.site_logo.url}" alt="logo" width="230" height="58"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
