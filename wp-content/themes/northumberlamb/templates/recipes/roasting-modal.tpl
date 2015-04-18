@@ -10,7 +10,7 @@
           <div>{$content.page.roasting_content}</div>
           <br/>
           <div class="col-md-12 .table-responsive">
-              <table class="table table-hover roasting-table">
+              <table class="table roasting-table">
                   <tr>
                     <td class="info"><h6>Cut</h6></td>
                     <td class="info"><h6>Approximate Weight (LBS)</h6></td>

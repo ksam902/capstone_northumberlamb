@@ -27,4 +27,5 @@ $smarty->display('recipes/cooking-lamb-modal.tpl');
 $smarty->display('recipes/braising-modal.tpl');
 $smarty->display('recipes/broiling-modal.tpl');
 $smarty->display('recipes/roasting-modal.tpl');
+$smarty->display('recipes/nutritional-info-modal.tpl');
 get_footer();

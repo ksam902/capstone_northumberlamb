@@ -62,6 +62,10 @@ $(function () {
         e.preventDefault();
         $('#roasting-modal').modal('show');
     });
+    $('#btnNutritionalInfo').click(function (e) {
+        e.preventDefault();
+        $('#nutritional-info-modal').modal('show');
+    });
     $('a.recipe-modal-open').click(function (e) {
         e.preventDefault();
 

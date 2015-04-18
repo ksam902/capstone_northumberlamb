@@ -83,7 +83,10 @@ hr {
     max-width: 400px;
     border-color: #999999;
 }
-
+table.table tbody tr td.info, table.table tbody tr td.info h6{
+    background-color: #405FA2;
+    color: #FFFFFF;
+}
 /* Home Page Carousel */
 
 header.carousel {

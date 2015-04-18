@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body  broiling-modal">
           <div class="col-md-12 .table-responsive">
-              <table class="table table-hover broiling-table">
+              <table class="table broiling-table">
                   <tr>
                     <td class="info"><h6>Cut</h6></td>
                     <td class="info"><h6>Approximate Thickness (Inches)</h6></td>
