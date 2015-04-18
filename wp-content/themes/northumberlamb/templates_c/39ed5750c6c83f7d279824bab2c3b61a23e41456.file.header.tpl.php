@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-16 18:21:32
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 20:09:47
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1429193965,
+      1 => 1429387783,
       2 => 'file',
     ),
   ),
@@ -55,27 +55,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="col-lg-12 text-center">
                 <div id="myCarousel" class="carousel slide">
                     <!-- Header Carousel -->
-                    <!--<header id="myCarousel" class="carousel slide">-->
-                    <!-- Indicators -->
-<!--                     <ol class="carousel-indicators">
-
-                        <?php  $_smarty_tpl->tpl_vars['image'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['image']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['options']->value['banner']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
- $_smarty_tpl->tpl_vars['image']->iteration=0;
-foreach ($_from as $_smarty_tpl->tpl_vars['image']->key => $_smarty_tpl->tpl_vars['image']->value) {
-$_smarty_tpl->tpl_vars['image']->_loop = true;
- $_smarty_tpl->tpl_vars['image']->iteration++;
-?>
-
-                             <?php if ($_smarty_tpl->tpl_vars['image']->iteration==1) {?>
-
-                                <li data-target="#myCarousel" data-slide-to="" class="active"></li>
-                            <?php } else { ?>
-                                <li data-target="#myCarousel" data-slide-to=""></li>
-                             <?php }?>
-                        <?php } ?>
-                    </ol> -->
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <?php  $_smarty_tpl->tpl_vars['image'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['image']->_loop = false;

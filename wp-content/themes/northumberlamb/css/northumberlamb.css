@@ -45,6 +45,10 @@ nav, #nav-container {
     color: #9d9d9c !important;
 }
 /*BANNER*/
+div#myCarousel {
+    max-width: 850px;
+    margin: 0 auto;
+}
 img.img-responsive.img-full {
     height: 350px;
 }

@@ -27,21 +27,6 @@
             <div class="col-lg-12 text-center">
                 <div id="myCarousel" class="carousel slide">
                     <!-- Header Carousel -->
-                    <!--<header id="myCarousel" class="carousel slide">-->
-                    <!-- Indicators -->
-<!--                     <ol class="carousel-indicators">
-
-                        {foreach $options.banner as $image}
-
-                             {if $image@iteration == 1}
-
-                                <li data-target="#myCarousel" data-slide-to="" class="active"></li>
-                            {else}
-                                <li data-target="#myCarousel" data-slide-to=""></li>
-                             {/if}
-                        {/foreach}
-                    </ol> -->
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         {foreach $options.banner as $image}
