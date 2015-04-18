@@ -31,7 +31,7 @@
                         {do_shortcode($content.page.articles)}
                         <div id="media-pdf" style="text-align: center;">
                             {foreach $content.page.articles_pdf as $pdf}
-                                <a href="{$pdf.pdf.url}" target="_blank">{$pdf.pdf.title}</a>
+                                <a href="{$pdf.pdf.url}" target="_blank">{$pdf.pdf.title}</a><br/>
                             {/foreach}
                         </div>
                     </div>
