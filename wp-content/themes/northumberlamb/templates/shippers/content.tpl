@@ -30,7 +30,7 @@
                 <div class="col-md-12 .table-responsive lamb-grading">
                     <table id="lamb-grading-chart-table" class="table lamb-grading-table">
                         <tr>
-                          <td class="info"><h6>Weight (LBS)</h6></td>
+                          <td class="info"><h6>Weight (KGS)</h6></td>
                           <td class="info"><h6>Grade 0</h6></td>
                           <td class="info"><h6>Grade 1</h6></td>
                           <td class="info"><h6>Grade 2</h6></td>
@@ -52,6 +52,11 @@
                           <td class="info"><h6>Grade 18</h6></td>
                           <td class="info"><h6>Grade 19</h6></td>
                           <td class="info"><h6>Grade 20</h6></td>
+                          <td class="info"><h6>Grade 21</h6></td>
+                          <td class="info"><h6>Grade 22</h6></td>
+                          <td class="info"><h6>Grade 23</h6></td>
+                          <td class="info"><h6>Grade 24</h6></td>
+                          <td class="info"><h6>Grade 25</h6></td>
                         </tr>
                       {foreach $content.page.lamb_grading_chart_information as $info}
                         <tr>
@@ -77,6 +82,11 @@
                           <td class="">{$info.grade_18}</td>
                           <td class="">{$info.grade_19}</td>
                           <td class="">{$info.grade_20}</td>
+                          <td class="">{$info.grade_21}</td>
+                          <td class="">{$info.grade_22}</td>
+                          <td class="">{$info.grade_23}</td>
+                          <td class="">{$info.grade_24}</td>
+                          <td class="">{$info.grade_25}</td>
                         </tr>
                       {/foreach}
                     </table>

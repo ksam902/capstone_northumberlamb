@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-16 18:21:32
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 19:41:12
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:212581338854e4b0ffd5c4a8-34523584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dca0923b508dc52a48da3644b1bc0e4453e674e0' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/shippers/content.tpl',
-      1 => 1429208423,
+      1 => 1429386067,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="col-md-12 .table-responsive lamb-grading">
                     <table id="lamb-grading-chart-table" class="table lamb-grading-table">
                         <tr>
-                          <td class="info"><h6>Weight (LBS)</h6></td>
+                          <td class="info"><h6>Weight (KGS)</h6></td>
                           <td class="info"><h6>Grade 0</h6></td>
                           <td class="info"><h6>Grade 1</h6></td>
                           <td class="info"><h6>Grade 2</h6></td>
@@ -80,6 +80,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                           <td class="info"><h6>Grade 18</h6></td>
                           <td class="info"><h6>Grade 19</h6></td>
                           <td class="info"><h6>Grade 20</h6></td>
+                          <td class="info"><h6>Grade 21</h6></td>
+                          <td class="info"><h6>Grade 22</h6></td>
+                          <td class="info"><h6>Grade 23</h6></td>
+                          <td class="info"><h6>Grade 24</h6></td>
+                          <td class="info"><h6>Grade 25</h6></td>
                         </tr>
                       <?php  $_smarty_tpl->tpl_vars['info'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['info']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['content']->value['page']['lamb_grading_chart_information']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -130,6 +135,16 @@ $_smarty_tpl->tpl_vars['info']->_loop = true;
                           <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_19'];?>
 </td>
                           <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_20'];?>
+</td>
+                          <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_21'];?>
+</td>
+                          <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_22'];?>
+</td>
+                          <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_23'];?>
+</td>
+                          <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_24'];?>
+</td>
+                          <td class=""><?php echo $_smarty_tpl->tpl_vars['info']->value['grade_25'];?>
 </td>
                         </tr>
                       <?php } ?>
