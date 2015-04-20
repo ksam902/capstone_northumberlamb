@@ -222,7 +222,12 @@ table.broiling-table, table.braising-table, table.roasting-table {
     overflow-y: scroll;
 }
 
-.modal-content {
+div.nutritional-info {
+    max-height: 500px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    text-align: center;
+    font-size: 12px;
 }
 
 .modal-body {

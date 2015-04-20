@@ -16,6 +16,7 @@ foreach ($recipes->posts as $p) {
 $content = array(
 	'page' => fetch_page('recipes'),
 );
+
 $smarty->assign('content', $content);
 $smarty->assign('posts', $posts);
 $smarty->assign('json_content', json_encode($posts['recipes']));

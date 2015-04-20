@@ -11,27 +11,39 @@
             {$content.page.nutritional_content}
           </div>
           <div>
-            <div class="col-md-12 .table-responsive">
-              <table class="table nutritional-info-table">
+            <div class="col-md-12 .table-responsive nutritional-info">
+              <table id="nutritional-info-table" class="table nutritional-info-table">
                   <tr>
-                    <td class="info"><h6>Protein Food</h6></td>
-                    <td class="info"><h6>Calories</h6></td>
-                    <td class="info"><h6>Kilojoules</h6></td>
+                    <td class="info"><h6>Lamb Cut</h6></td>
+                    <td class="info"><h6>Energy</h6></td>
                     <td class="info"><h6>Protein</h6></td>
                     <td class="info"><h6>Fat</h6></td>
+                    <td class="info"><h6>Polyunsaturates</h6></td>
+                    <td class="info"><h6>Monosaturates</h6></td>
+                    <td class="info"><h6>Saturates</h6></td>
+                    <td class="info"><h6>Cholesterol</h6></td>
+                    <td class="info"><h6>Carbohydrate</h6></td>
+                    <td class="info"><h6>Sodium</h6></td>
+                    <td class="info"><h6>Potassium</h6></td>
                   </tr>
                   {foreach $content.page.nutritional_information as $info}
                     <tr>
                       <td class="">{$info.cut}</td>
-                      <td class="">{$info.thickness}</td>
-                      <td class="">{$info.weight}</td>
-                      <td class="">{$info.distance}</td>
-                      <td class="">{$info.cooking_time}</td>
+                      <td class="">{$info.energy}</td>
+                      <td class="">{$info.protein}</td>
+                      <td class="">{$info.fat}</td>
+                      <td class="">{$info.polyunsaturates}</td>
+                      <td class="">{$info.monounsaturates}</td>
+                      <td class="">{$info.saturates}</td>
+                      <td class="">{$info.cholesterol}</td>
+                      <td class="">{$info.carbohydrate}</td>
+                      <td class="">{$info.sodium}</td>
+                      <td class="">{$info.potassium}</td>
                     </tr>
                   {/foreach}
               </table>
             </div>
-            <div>
+            <div style="margin-top: 20px;">
               <h4>Notes:</h4>
               {$content.page.nutritional_notes}
             </div>
