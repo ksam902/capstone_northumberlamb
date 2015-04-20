@@ -86,6 +86,17 @@
 
                         <!-- Text input-->
                         <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtEmailSF">Email</label>
+
+                            <div class="col-md-6">
+                                <input id="txtEmailSF" name="txtEmailSF" placeholder="email@example.com"
+                                       class="form-control input-md" maxlength="50" type="text">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
                             <label class="col-md-4 control-label" for="txtflockSizeSF">Flock Size</label>
 
                             <div class="col-md-6">

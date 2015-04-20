@@ -71,6 +71,15 @@
 
                         </div>
                     </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="txtEmailMF">Email</label>
+                        <div class="col-md-6">
+                            <input id="txtEmailMF" name="txtEmailMF" placeholder="email@example.com" class="form-control input-md" type="text" required>
+
+                        </div>
+                    </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

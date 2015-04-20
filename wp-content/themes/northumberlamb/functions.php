@@ -303,6 +303,7 @@ if (isset($_POST['shipperFormSubmit'])) {
     $txtPostalCodeSF = htmlentities($_POST['txtPostalCodeSF']);
     $txtHomePhoneSF = htmlentities($_POST['txtHomePhoneSF']);
     $txtCellPhoneSF = htmlentities($_POST['txtCellPhoneSF']);
+    $txtEmailSF = htmlentities($_POST['txtEmailSF']);
     $txtFlockSizeSF = htmlentities($_POST['txtFlockSizeSF']);
     $rdoLambingPracticeSF = htmlentities($_POST['rdoLambingPracticeSF']);
     $rdoReadyToShipSF = htmlentities($_POST['rdoReadyToShipSF']);
@@ -495,6 +496,10 @@ if (isset($_POST['shipperFormSubmit'])) {
     <td>$txtCellPhoneSF</td>
   </tr>
   <tr>
+    <td>Email<br></td>
+    <td>$txtEmailSF</td>
+  </tr>
+  <tr>
     <td>Flock Size<br></td>
     <td>$txtFlockSizeSF</td>
   </tr>
@@ -551,6 +556,7 @@ if (isset($_POST['memberFormSubmit'])) {
     $txtAddressSFMF = htmlentities($_POST['txtAddressSFMF']);
     $txtPostalCodeSFMF = htmlentities($_POST['txtPostalCodeSFMF']);
     $txtPhoneMF = htmlentities($_POST['txtPhoneMF']);
+    $txtEmailMF = htmlentities($_POST['txtEmailMF']);
 
     $msg = "<table border='1'>
   <tr>
@@ -575,6 +581,10 @@ if (isset($_POST['memberFormSubmit'])) {
   <tr>
     <td>Phone<br></td>
     <td>$txtPhoneMF</td>
+  </tr>
+  <tr>
+    <td>Email<br></td>
+    <td>$txtEmailMF</td>
   </tr>
 </table>";
     $to = "cborden+northumberlamb@gmail.com";
