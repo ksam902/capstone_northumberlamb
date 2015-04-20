@@ -18,12 +18,14 @@
                     </p>
 <!--                     <p><i class="fa fa-clock-o"></i>
                         <abbr title="Hours">H</abbr>: {$content.page.hours}</p> -->
+                    <br>
+                    <p>Click on map to interact</p>
                 </div>
                 <!-- Map Column -->
                 <div class="col-md-8">
                     <!-- Embedded Google Map -->
                     <div class="overlay"></div>
-                    <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;fb=1&amp;cid=7317000422442979290&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd&amp;hq=&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=45.390059,-63.244085&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;fb=1&amp;cid=7317000422442979290&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd&amp;hq=&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=45.390059,-63.244085&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                    <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd,+Brookside+Branch+Road,+Bible+Hill,+NS,+Canada&amp;aq=0&amp;oq=Northumberland+Lamb+Marketing&amp;sll=37.0625,-95.677068&amp;sspn=59.769082,79.716797&amp;ie=UTF8&amp;hq=Northumberland+Lamb+Marketing+Co-Op+Ltd,&amp;hnear=Branch+Rd,+Nova+Scotia,+Canada&amp;ll=45.390059,-63.244085&amp;spn=0.105297,0.155697&amp;t=m&amp;z=13&amp;iwloc=A&amp;cid=7317000422442979290&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Northumberland+Lamb+Marketing+Co-Op+Ltd,+Brookside+Branch+Road,+Bible+Hill,+NS,+Canada&amp;aq=0&amp;oq=Northumberland+Lamb+Marketing&amp;sll=37.0625,-95.677068&amp;sspn=59.769082,79.716797&amp;ie=UTF8&amp;hq=Northumberland+Lamb+Marketing+Co-Op+Ltd,&amp;hnear=Branch+Rd,+Nova+Scotia,+Canada&amp;ll=45.390059,-63.244085&amp;spn=0.105297,0.155697&amp;t=m&amp;z=13&amp;iwloc=A&amp;cid=7317000422442979290" style="color:#0000FF;text-align:left">View Larger Map</a></small>
                 </div>
 
             </div>
