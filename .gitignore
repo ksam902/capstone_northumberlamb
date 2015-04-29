@@ -1,3 +1,4 @@
+wp-config-local.php
 /wp-content/themes/northumberlamb/templates_c/*
 /wp-content/uploads/*
 /.idea/*

@@ -18,6 +18,5 @@
     /** The Database Collate type. Don't change this if in doubt. */
     define('DB_COLLATE', '');
 
-	define('LOCAL_DEV', false);
+    define('LOCAL_DEV', false);
 
-    define('FS_METHOD', 'direct');
