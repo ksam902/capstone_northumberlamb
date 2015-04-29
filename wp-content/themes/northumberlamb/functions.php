@@ -9,7 +9,7 @@ function quick_slug($s)
 // ------ ADDING STYLESHEETS ------
 $stylesheets = array(
 
-    'all' => array(,
+    'all' => array(
         'bootstrap-theme.min.css',
         'bootstrap.min.css',
         'northumberlamb.css',
