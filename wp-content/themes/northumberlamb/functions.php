@@ -9,12 +9,8 @@ function quick_slug($s)
 // ------ ADDING STYLESHEETS ------
 $stylesheets = array(
 
-    'all' => array(
-        'bootstrap-theme.css',
-        'bootstrap-theme.css.map',
+    'all' => array(,
         'bootstrap-theme.min.css',
-        'bootstrap.css',
-        'bootstrap.css.map',
         'bootstrap.min.css',
         'northumberlamb.css',
         'font-awesome.min.css',
@@ -70,11 +66,9 @@ $javascripts = array(
 
         'all' => array(
             'jquery.js',
-            'bootstrap.js',
             'bootstrap.min.js',
             'npm.js',
             'northumberlamb.js',
-            'jquery.rwdImageMaps.js',
             'jquery.rwdImageMaps.min.js',
             'jquery.validate.min.js',
             'additional-methods.min.js',
