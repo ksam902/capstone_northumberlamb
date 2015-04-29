@@ -67,7 +67,7 @@ $(function () {
         e.preventDefault();
         $('#nutritional-info-modal').modal('show');
     });
-    $('table#nutritional-info-table tr').on('click', function(e) {
+    $('table.nutritional-info-table tr').on('click', function(e) {
         //exclude table header row
         if(!$(this).is(':first-child')){
             if(!$(this).hasClass('highlight-table-row')){
@@ -77,13 +77,13 @@ $(function () {
             }
         }
     });
-    $('table#nutritional-info-table tr').on('mouseover', function(e) {
+    $('table.nutritional-info-table tr').on('mouseover', function(e) {
         //exclude table header row
         if(!$(this).is(':first-child')){
             $(this).addClass('hover-table-row');
         }
     });
-    $('table#nutritional-info-table tr').on('mouseout', function(e) {
+    $('table.nutritional-info-table tr').on('mouseout', function(e) {
         $(this).removeClass('hover-table-row');
     });
     $('a.recipe-modal-open').click(function (e) {

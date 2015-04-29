@@ -10,7 +10,7 @@
           <div>
             {$content.page.nutritional_content}
           </div>
-          <div>
+          <br>
             <div class="col-md-12 .table-responsive nutritional-info">
               <table id="nutritional-info-table" class="table nutritional-info-table">
                   <tr>
@@ -18,8 +18,8 @@
                     <td class="info"><h6>Energy</h6></td>
                     <td class="info"><h6>Protein</h6></td>
                     <td class="info"><h6>Fat</h6></td>
-                    <td class="info"><h6>Polyunsaturates</h6></td>
-                    <td class="info"><h6>Monosaturates</h6></td>
+                    <td class="info"><h6>Poly-<br>unsaturates</h6></td>
+                    <td class="info"><h6>Mono-<br>saturates</h6></td>
                     <td class="info"><h6>Saturates</h6></td>
                     <td class="info"><h6>Cholesterol</h6></td>
                     <td class="info"><h6>Carbohydrate</h6></td>
@@ -43,11 +43,30 @@
                   {/foreach}
               </table>
             </div>
+            <div class="col-md-12 .table-responsive nutritional-info">
+              <table id="nutritional-info-table-2" class="table nutritional-info-table">
+                  <tr>
+                    <td class="info"><h6>Cut</h6></td>
+                    <td class="info"><h6>Calories</h6></td>
+                    <td class="info"><h6>Kilojoules</h6></td>
+                    <td class="info"><h6>Protein</h6></td>
+                    <td class="info"><h6>Fat</h6></td>
+                  </tr>
+                  {foreach $content.page.nutritional_information_2 as $info}
+                    <tr>
+                      <td class="">{$info.cut}</td>
+                      <td class="">{$info.calories}</td>
+                      <td class="">{$info.kilojuoles}</td>
+                      <td class="">{$info.protein}</td>
+                      <td class="">{$info.fat}</td>
+                    </tr>
+                  {/foreach}
+              </table>
+            </div>
             <div style="margin-top: 20px;">
               <h4>Notes:</h4>
               {$content.page.nutritional_notes}
             </div>
-          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">OK, Thanks!</button>
