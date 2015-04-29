@@ -222,9 +222,9 @@ table.broiling-table, table.braising-table, table.roasting-table {
     overflow-y: scroll;
 }
 
-div.nutritional-info {
+div.nutritional-info{
     margin-bottom: 20px;
-    max-height: 500px;
+    max-height: 200px;
     overflow-x: scroll;
     overflow-y: scroll;
     text-align: center;
