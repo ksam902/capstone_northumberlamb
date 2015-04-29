@@ -116,7 +116,8 @@ $(function () {
 
                         if (count === recipeData.length - 1) {
                             $('button#next_recipe').prop('disabled', true);
-                        } else if (count != 0) {
+                        }
+                        if (count != 0) {
                             $('button#previous_recipe').prop('disabled', false);
                         }
 
@@ -127,7 +128,8 @@ $(function () {
                         populateModal(count);
                         if (count === 0) {
                             $('button#previous_recipe').prop('disabled', true);
-                        } else if (count != recipeData.length - 1) {
+                        }
+                        if (count != recipeData.length - 1) {
                             $('button#next_recipe').prop('disabled', false);
                         }
                     });
