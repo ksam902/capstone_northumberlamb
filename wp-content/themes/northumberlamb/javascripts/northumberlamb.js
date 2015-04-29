@@ -156,8 +156,8 @@ $(function () {
         $('div#print-content h6').find('span:nth-of-type(1)').fadeIn(600).html(recipeData[count].prep_time);
         $('div#print-content h6').find('span:nth-of-type(2)').fadeIn(600).html(recipeData[count].servings);
         $('div#print-content h6').find('span:nth-of-type(3)').fadeIn(600).html(cuts);
-        $('div#print-content').find('p:nth-of-type(2)').fadeIn(600).html(recipeData[count].post_content);
-        $('div#print-content').find('p:nth-of-type(5)').fadeIn(600).html(recipeData[count].instructions);
+        $('div#print-content').find('p:nth-of-type(1)').fadeIn(600).text($(recipeData[count].post_content).text());
+        $('div#print-content').find('p:nth-of-type(2)').fadeIn(600).text($(recipeData[count].instructions).text());
     }
 
     function increaseCount() {

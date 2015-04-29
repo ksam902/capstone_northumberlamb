@@ -13,10 +13,10 @@
                       {$cut}{if $cut@iteration != count($recipe.lamb_cut)},{/if}
                     {/foreach}</span></h6>
                     <h4>Recipe Description</h4>
-                    <p>{$recipe.post_content}</p>
+                    {$recipe.post_content}
                     <hr class="modal-hr" style="width:100%; color:#405FA2;">
                     <h4>Recipe Instructions</h4>
-                    <p>{$recipe.instructions}</p>
+                    {$recipe.instructions}
                     <hr class="modal-hr">
                     <h4>Recipe Ingredients</h4>
         		<ol id="ul-recipe-ingredients">
