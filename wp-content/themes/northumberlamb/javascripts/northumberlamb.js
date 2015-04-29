@@ -94,6 +94,10 @@ $(function () {
             $('#recipe-popup .popup-content').html(response);
             $('#recipe-modal-ajax').modal('show');
             $("#recipe-modal-ajax").on('shown.bs.modal', function (e) {
+                //reset count to 0 when close modal button is clicked
+                $('#btnCloseModal').on('click', function () {
+                    count = 0;
+                });
                 $('#btnPrintRecipe').on('click', function () {
                     printRecipe(document.getElementById("print-title"), false);
                     printRecipe(document.getElementById("print-content"), true);

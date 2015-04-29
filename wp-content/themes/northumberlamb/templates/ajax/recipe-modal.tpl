@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div id="print-title" class="modal-header print">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button id="btnCloseModal" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h2 class="modal-title recipe-title" data-recipe="{$recipe.ID}">{$recipe.post_title}</h2>
             </div>
             <div id="print-content" class="modal-body print">
