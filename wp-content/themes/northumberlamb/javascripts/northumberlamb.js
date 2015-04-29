@@ -1,4 +1,5 @@
 var count = 0;
+var filter = "All Recipes";
 $(function () {
     // var btnPrint = $('#btnPrintRecipe');
     var btnPrint = document.getElementById("btnPrintRecipe");
@@ -113,31 +114,27 @@ $(function () {
                         e.preventDefault();
                         increaseCount();
                         populateModal(count);
-
-                        if (count === recipeData.length - 1) {
-                            $('button#next_recipe').prop('disabled', true);
-                        }
-                        if (count != 0) {
-                            $('button#previous_recipe').prop('disabled', false);
-                        }
-
                     });
                     $('button#previous_recipe').on('click', function () {
                         e.preventDefault();
                         decreaseCount();
                         populateModal(count);
-                        if (count === 0) {
-                            $('button#previous_recipe').prop('disabled', true);
-                        }
-                        if (count != recipeData.length - 1) {
-                            $('button#next_recipe').prop('disabled', false);
-                        }
                     });
             });
         });
 
     });
     function populateModal(count) {
+        if (count === 0) {
+            $('button#previous_recipe').prop('disabled', true);
+        }else{
+            $('button#previous_recipe').prop('disabled', false);
+        }
+        if (count != recipeData.length - 1) {
+            $('button#next_recipe').prop('disabled', false);
+        }else if(count === recipeData.length -1 ){
+            $('button#next_recipe').prop('disabled', true);
+        }
         //loop through cuts of lamb and append to string
         var cuts = "";
         for (var i = 0; i <= recipeData[count].lamb_cut.length - 1; i++) {
@@ -146,20 +143,44 @@ $(function () {
                 cuts += ", ";
             }
         }
-        //loop through ingredients of recipe and append to string
-        $('ol#ul-recipe-ingredients').empty();
-        var ingredients;
-        for (var i = 0; i <= recipeData[count].ingredients.length - 1; i++) {
-            $('ol#ul-recipe-ingredients').append('<li>' + recipeData[count].ingredients[i].ingredient + '</li>');
-        }
+        if(filter == "All Recipes"){
+                console.log("ALL RECIPES");
+                //loop through ingredients of recipe and append to string
+                $('ol#ul-recipe-ingredients').empty();
+                var ingredients;
+                for (var i = 0; i <= recipeData[count].ingredients.length - 1; i++) {
+                    $('ol#ul-recipe-ingredients').append('<li>' + recipeData[count].ingredients[i].ingredient + '</li>');
+                }
 
-        $('div#imgModalRecipe img').attr('src', recipeData[count].image.sizes['recipe-modal']);
-        $('h2.recipe-title').html(recipeData[count].post_title);
-        $('div#print-content h6').find('span:nth-of-type(1)').fadeIn(600).html(recipeData[count].prep_time);
-        $('div#print-content h6').find('span:nth-of-type(2)').fadeIn(600).html(recipeData[count].servings);
-        $('div#print-content h6').find('span:nth-of-type(3)').fadeIn(600).html(cuts);
-        $('div#print-content').find('p:nth-of-type(1)').fadeIn(600).text($(recipeData[count].post_content).text());
-        $('div#print-content').find('p:nth-of-type(2)').fadeIn(600).text($(recipeData[count].instructions).text());
+                $('div#imgModalRecipe img').attr('src', recipeData[count].image.sizes['recipe-modal']);
+                $('h2.recipe-title').html(recipeData[count].post_title);
+                $('div#print-content h6').find('span:nth-of-type(1)').fadeIn(600).html(recipeData[count].prep_time);
+                $('div#print-content h6').find('span:nth-of-type(2)').fadeIn(600).html(recipeData[count].servings);
+                $('div#print-content h6').find('span:nth-of-type(3)').fadeIn(600).html(cuts);
+                $('div#print-content').find('p:nth-of-type(1)').fadeIn(600).text($(recipeData[count].post_content).text());
+                $('div#print-content').find('p:nth-of-type(2)').fadeIn(600).text($(recipeData[count].instructions).text());
+        }else{
+            //check to see if there is a match with the filter
+            if (cuts.indexOf(filter) >= 0){
+                console.log("Contains Filter");
+                //loop through ingredients of recipe and append to string
+                $('ol#ul-recipe-ingredients').empty();
+                var ingredients;
+                for (var i = 0; i <= recipeData[count].ingredients.length - 1; i++) {
+                    $('ol#ul-recipe-ingredients').append('<li>' + recipeData[count].ingredients[i].ingredient + '</li>');
+                }
+
+                $('div#imgModalRecipe img').attr('src', recipeData[count].image.sizes['recipe-modal']);
+                $('h2.recipe-title').html(recipeData[count].post_title);
+                $('div#print-content h6').find('span:nth-of-type(1)').fadeIn(600).html(recipeData[count].prep_time);
+                $('div#print-content h6').find('span:nth-of-type(2)').fadeIn(600).html(recipeData[count].servings);
+                $('div#print-content h6').find('span:nth-of-type(3)').fadeIn(600).html(cuts);
+                $('div#print-content').find('p:nth-of-type(1)').fadeIn(600).text($(recipeData[count].post_content).text());
+                $('div#print-content').find('p:nth-of-type(2)').fadeIn(600).text($(recipeData[count].instructions).text());
+            }else{
+                console.log("NO FILTER MATCH");
+            }
+        }
     }
 
     function increaseCount() {
@@ -244,7 +265,7 @@ $(function () {
             scrollTop: $(".div-recipes").offset().top
         }, 1000);
     });
-    // END RECIPE PAGE MODAL
+    // ---- END LAMB CUT CHART
 
     //----------- CONSUMERS PAGE
         $('#btnPurchasingStoring').click(function (e) {
