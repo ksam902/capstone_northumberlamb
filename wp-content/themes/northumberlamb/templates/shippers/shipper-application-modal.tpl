@@ -206,7 +206,7 @@
                     <hr>
                     <div>
                         <strong>Only producers who abide by the Canadian Sheep Federation best practices <a href="http://www.cansheep.ca/" id="shipper-modal-link" target="_blank">www.cansheep.ca/</a>
-                            need apply. We will be on contact with you at our earliest convienence.</strong>
+                            need apply. We will be in contact with you as soon as possible.</strong>
                     </div>
             </div>
             <div class="modal-footer">
