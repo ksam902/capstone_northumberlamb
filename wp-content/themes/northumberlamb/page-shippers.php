@@ -11,6 +11,7 @@ $content = array(
 );
 
 $smarty->assign('content', $content);
+
 get_header();
 $smarty->display('shippers/content.tpl');
 $smarty->display('shippers/member-application-modal.tpl');

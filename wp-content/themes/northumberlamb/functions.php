@@ -145,7 +145,8 @@ function wp_smarty()
             $header_menu = wp_nav_menu(array(
                 'theme_location' => 'header-menu',
                 'echo' => false,
-                'menu_id' => 'header-menu'
+                'menu_id' => 'header-menu',
+                'menu_class' => 'nav navbar-nav navbar-right', 
             ));
 
             $wp_smarty->assign('menu', $header_menu);
