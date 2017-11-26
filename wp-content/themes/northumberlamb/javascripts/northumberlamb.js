@@ -9,6 +9,7 @@
         // var btnPrint = $('#btnPrintRecipe');
         var btnPrint = document.getElementById("btnPrintRecipe");
 
+        $('.navbar').show();
         // $('.menu-header-menu-container ul').addClass('nav navbar-nav navbar-right');
         $('.carousel').carousel({
             interval: 5000 //changes the speed
