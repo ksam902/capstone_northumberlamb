@@ -4,9 +4,9 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, navigation, post, next, previous, edit, post types, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 1.9
+Requires at least: 4.0
+Tested up to: 4.5
+Stable tag: 2.0
 
 Adds links to navigate to the next and previous posts when editing a post in the WordPress admin.
 
@@ -57,20 +57,27 @@ The 'c2c_admin_post_navigation_orderby' filter allows you to change the post fie
 Arguments:
 
 * $field (string) The current ORDER BY field
+* $post_type (string) The post type being navigated
 
 Example:
 
 `
 /**
- * Modify how Admin Post Navigation orders posts for navigation.
+ * Modify how Admin Post Navigation orders posts for navigation by ordering
+ * pages by 'menu_order' and posts by 'post_date'.
  *
- * @param string $field The field used to order posts for navigation.
+ * @param string $field     The field used to order posts for navigation.
+ * @param string $post_type The post type being navigated.
  * @return string
  */
-function order_apn_by_post_date( $field ) {
-	return 'post_date';
+function custom_order_apn( $field, $post_type ) {
+	if ( 'page' === $post_type ) {
+		return 'menu_order';
+	} else {
+		return 'post_date';
+	}
 }
-add_filter( 'c2c_admin_post_navigation_orderby', 'order_apn_by_post_date' );
+add_filter( 'c2c_admin_post_navigation_orderby', 'custom_order_apn', 10, 2 );
 `
 
 = c2c_admin_post_navigation_post_statuses (filter) =
@@ -91,12 +98,16 @@ Example:
  * @return array
  */
 function change_apn_post_status( $post_statuses ) {
-	// Adding a post status.
+	// Add a post status.
+	// Note: by default these are already in the $post_statuses array: 'draft', 'future', 'pending', 'private', 'publish'
 	$post_statuses[] = 'trash';
 
-	// Removing a post status.
-	if ( isset( $post_statuses['future'] ) ) {
-		unset( $post_statuses['future'] );
+	// Remove post status(es).
+	$post_statuses_to_remove = array( 'draft' ); // Customize here.
+	foreach ( $post_statuses_to_remove as $remove ) {
+		if ( false !== $index = array_search( $remove, $post_statuses ) ) {
+			unset( $post_statuses[ $index ] );
+		}
 	}
 
 	return $post_statuses;
@@ -215,6 +226,36 @@ add_filter( 'c2c_admin_post_navigation_display', 'override_apn_display' );
 
 
 == Changelog ==
+
+= 2.0 (2016-01-14) =
+* New: Add support for RTL display.
+* New: Enable post navigation for media when viewed/edited from list mode.
+* New: Move CSS into enqueuable .css file.
+* New: Move JS into enqueueable .js file.
+* Bugfix: Navigate non-hierarchical posts by post_date by default for more expected ordering.
+* Change: Use `the_title_attribute()` to get post title for use in attribute.
+* Remove: Delete `add_css()` and `add_js()`.
+* Change: Add support for language packs:
+    * Don't load plugin translations from file.
+    * Remove .pot file and /lang subdirectory.
+* Change: Note compatibility through WP 4.4+.
+* Change: Remove support for WordPress older than 4.0.
+* Change: Explicitly declare methods in unit tests as public.
+* Change: Update copyright date (2016).
+* New: Add inline documentation for class variables.
+* New: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
+
+= 1.9.2 (2015-08-19) =
+* Bugfix: Fix so navigation links appear in WordPress 4.3 (by targeting h1 instead of h2). Backwards compatibility maintained.
+* Update: Note compatibility through WP 4.3+
+
+= 1.9.1 (2015-07-08) =
+* Bugfix: Fix JS placement of navigation links to target the desired h2, which may not always be the first on the page
+* Update: Add additional unit test using example for customizing post status navigation
+* Update: Fix incorrect example for excluding post statuses via filter
+* Update: Improve example for using hook to define custom order for navigation
+* Update: Remove unused line of code.
+* Update: Note compatibility through WP 4.2+
 
 = 1.9 (2015-03-14) =
 * Fix to only append navigation to the first h2 on the page. props @pomegranate
@@ -344,6 +385,15 @@ add_filter( 'c2c_admin_post_navigation_display', 'override_apn_display' );
 
 
 == Upgrade Notice ==
+
+= 2.0 =
+Recommended update: added RTL support, moved CSS & JS into enqueueable files, enabled navigation for media files, adjustments to utilize language packs, minor unit test tweaks, noted compatibility through WP 4.4+, and updated copyright date
+
+= 1.9.2 =
+Bugfix: fix to display navigation links in WordPress 4.3; noted compatibility through WP 4.3+
+
+= 1.9.1 =
+Minor bugfix: fix to more reliably ensure the navigation links appear in certain situations; fix incorrect example code for excluding post statuses; noted compatibility through WP 4.2+
 
 = 1.9 =
 Feature update: fix to only apply navigation to first h2 on page; added filters to facilitate customizing link text; added unit tests; noted compatibility through WP 4.1+; added plugin icon

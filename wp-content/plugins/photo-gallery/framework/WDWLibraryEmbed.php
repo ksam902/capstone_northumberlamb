@@ -4,31 +4,31 @@
  * Class for handling embedded media in gallery
  *
  */
-
 class WDWLibraryEmbed {
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Events                                                                             //
-  ////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Constants                                                                          //
-  ////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Variables                                                                          //
-  ////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Constructor & Destructor                                                           //
-  ////////////////////////////////////////////////////////////////////////////////////////
-  public function __construct() {
-  }
+  public function __construct() {}
 
-
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Public Methods                                                                     //
-  ////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Getters & Setters                                                                  //
-  ////////////////////////////////////////////////////////////////////////////////////////
-    
+  public function get_provider($oembed, $url, $args = '') {
+		$provider = false;
+		if (!isset($args['discover'])) {
+			$args['discover'] = true;
+    }
+		foreach ($oembed->providers as $matchmask => $data ) {
+			list( $providerurl, $regex ) = $data;
+			// Turn the asterisk-type provider URLs into regex
+			if ( !$regex ) {
+				$matchmask = '#' . str_replace( '___wildcard___', '(.+)', preg_quote( str_replace( '*', '___wildcard___', $matchmask ), '#' ) ) . '#i';
+				$matchmask = preg_replace( '|^#http\\\://|', '#https?\://', $matchmask );
+			}
+			if ( preg_match( $matchmask, $url ) ) {
+				$provider = str_replace( '{format}', 'json', $providerurl ); // JSON is easier to deal with than XML
+				break;
+			}
+		}
+		if ( !$provider && $args['discover'] ) {
+			$provider = $oembed->discover($url);
+    }
+		return $provider;
+	}
 
 /** 
  * check host and get data for a given url
@@ -90,7 +90,13 @@ class WDWLibraryEmbed {
       include( ABSPATH . WPINC . '/class-oembed.php' );
     // get an oembed object
     $oembed = _wp_oembed_get_object();
-    $provider = $oembed->get_provider( $url );
+    if (method_exists($oembed, 'get_provider')) {
+      // Since 4.0.0
+      $provider = $oembed->get_provider($url);
+    }
+    else {
+      $provider = self::get_provider($oembed, $url);
+    }
     foreach ($accepted_oembeds as $oembed_provider => $regex) {
       if(preg_match($regex, $provider)==1){
         $host = $oembed_provider;
@@ -108,6 +114,7 @@ class WDWLibraryEmbed {
         $insta_host_and_id= strtok($url, '/')."/".strtok('/')."/".strtok('/')."/".strtok('/');
         $insta_host= strtok($url, '/')."/".strtok('/')."/".strtok('/')."/";
         $filename = str_replace($insta_host, "", $insta_host_and_id);
+        $thumb_filename = $filename;
         
         $get_embed_data = wp_remote_get("http://api.instagram.com/oembed?url=http://instagram.com/p/".$filename); 
         if ( is_wp_error( $get_embed_data ) ) {
@@ -117,20 +124,19 @@ class WDWLibraryEmbed {
         if(empty($result)){
           return json_encode(array("error", wp_remote_retrieve_body($get_embed_data)));
         }              
-        
-
+        list($img_width, $img_height) = @getimagesize('https://instagram.com/p/' . $thumb_filename . '/media/?size=l');
         $embedData = array(
           'name' => htmlspecialchars($result->title),
           'description' => htmlspecialchars($result->title),
           'filename' => $filename,
           'url' => $url,
           'reliative_url' => $url,
-          'thumb_url' => $result->thumbnail_url,
-          'thumb' => $result->thumbnail_url,
+          'thumb_url' => 'https://instagram.com/p/' . $thumb_filename . '/media/?size=m',
+          'thumb' => 'https://instagram.com/p/' . $thumb_filename . '/media/?size=m',
           'size' => '',
           'filetype' => $embed_type,
           'date_modified' => date('d F Y, H:i'),
-          'resolution' => $result->thumbnail_width." x ".$result->thumbnail_height." px",
+          'resolution' => $img_width . " x " . $img_height . " px",
           'redirect_url' => ''
           );
         
@@ -189,20 +195,20 @@ class WDWLibraryEmbed {
         $result  = json_decode(wp_remote_retrieve_body($get_embed_data));
         if(empty($result)){
           return json_encode(array("error", wp_remote_retrieve_body($get_embed_data)));
-        }  
-                      
+        }
+        list($img_width, $img_height) = @getimagesize('https://instagram.com/p/' . $filename . '/media/?size=l');
         $embedData = array(
           'name' => htmlspecialchars($result->title),
           'description' => htmlspecialchars($result->title),
           'filename' => $filename,
           'url' => $url,
           'reliative_url' => $url,
-          'thumb_url' => $result->thumbnail_url,
-          'thumb' => $result->thumbnail_url,
+          'thumb_url' => 'https://instagram.com/p/' . $filename . '/media/?size=m',
+          'thumb' => 'https://instagram.com/p/' . $filename . '/media/?size=m',
           'size' => '',
           'filetype' => $embed_type,
           'date_modified' => date('d F Y, H:i'),
-          'resolution' => $result->width." x ".$result->width." px",
+          'resolution' => $img_width . " x " . $img_height . " px",
           'redirect_url' => '');
  
         return json_encode($embedData);      
@@ -215,12 +221,13 @@ class WDWLibraryEmbed {
       }
       else{/*one of known oembed types*/
         $embed_type = 'EMBED_OEMBED_'.$host;
-        
         switch ($embed_type) {
           case 'EMBED_OEMBED_YOUTUBE':
-            parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
-            $filename = $my_array_of_vars['v'];    
-            
+            $youtube_regex = "#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#";
+            $matches = array();
+            preg_match($youtube_regex , $url , $matches);
+            $filename = $matches[0];
+
             $embedData = array(
               'name' => htmlspecialchars($result->title),
               'description' => htmlspecialchars($result->title),
@@ -456,7 +463,7 @@ class WDWLibraryEmbed {
           if(preg_match('/src/i', $attr)===0){
             if($attr != '' && $value != ''){
               $oembed_instagram_html .= ' '. $attr . '="'. $value . '"';
-              if($attr == 'class' || $attr =='CLASS' || $attr =='Class'){
+              if(strtolower($attr) == 'class') {
                 $class = $value;
               }
             }
@@ -501,10 +508,5 @@ class WDWLibraryEmbed {
     echo $html_to_insert;
 
   }
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Private Methods                                                                    //
-  ////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////
-  // Listeners                                                                          //
-  ////////////////////////////////////////////////////////////////////////////////////////
+
 }

@@ -1,26 +1,27 @@
 <?php
 
-/***
-{
-	Module:	photocrati-nextgen_settings
-}
-***/
-
 class M_NextGen_Settings extends C_Base_Module
 {
 	/**
 	 * Defines the module
 	 */
-	function define()
+	function define($id = 'pope-module',
+                    $name = 'Pope Module',
+                    $description = '',
+                    $version = '',
+                    $uri = '',
+                    $author = '',
+                    $author_uri = '',
+                    $context = FALSE)
 	{
 		parent::define(
 			'photocrati-nextgen_settings',
 			'NextGEN Gallery Settings',
 			'Provides central management for NextGEN Gallery settings',
-			'0.8',
-			'http://www.nextgen-gallery.com',
-			'Photocrati Media',
-			'http://www.photocrati.com'
+			'0.16',
+			'https://www.imagely.com/wordpress-gallery-plugin/nextgen-gallery/',
+			'Imagely',
+			'https://www.imagely.com'
 		);
 
 		C_Photocrati_Installer::add_handler($this->module_id, 'C_NextGen_Settings_Installer');
@@ -76,8 +77,8 @@ class C_NextGen_Settings_Installer
 			'relatedHeading'   => '<h3>' . __('Related Images', 'nggallery') . ':</h3>', // subheading for related images
 
 			// Thumbnail Settings
-			'thumbwidth'   => 120,  // Thumb Width
-			'thumbheight'  => 90,   // Thumb height
+			'thumbwidth'   => 240,  // Thumb Width
+			'thumbheight'  => 160,   // Thumb height
 			'thumbfix'     => True, // Fix the dimension
 			'thumbquality' => 100,  // Thumb Quality
 
@@ -112,7 +113,7 @@ class C_NextGen_Settings_Installer
 			'wmPos'    => 'botRight',             // Postion
 			'wmXpos'   => 5,                      // X Pos
 			'wmYpos'   => 5,                      // Y Pos
-			'wmType'   => 0,                 // Type : 'image' / 'text'
+			'wmType'   => 'image',                // Type : 'image' / 'text'
 			'wmPath'   => '',                     // Path to image
 			'wmFont'   => 'arial.ttf',            // Font type
 			'wmSize'   => 10,                     // Font Size
@@ -121,30 +122,15 @@ class C_NextGen_Settings_Installer
 			'wmOpaque' => '100',                  // Font Opaque
 
 			// Image Rotator settings
-			'enableIR'          => 0,
-			'slideFx'           => 'fade',
-			'irURL'             => '',
-			'irXHTMLvalid'      => 0,
-			'irAudio'           => '',
-			'irWidth'           => 600,
-			'irHeight'          => 400,
-			'irShuffle'         => True,
-			'irLinkfromdisplay' => True,
-			'irShownavigation'  => 0,
-			'irShowicons'       => 0,
-			'irWatermark'       => 0,
-			'irOverstretch'     => 'True',
-			'irRotatetime'      => 10,
-			'irTransition'      => 'random',
-			'irKenburns'        => 0,
-			'irBackcolor'       => '000000',
-			'irFrontcolor'      => 'FFFFFF',
-			'irLightcolor'      => 'CC0000',
-			'irScreencolor'     => '000000',
+			'slideFX'      => 'fade',
+			'irWidth'      => 600,
+			'irHeight'     => 400,
+			'irRotatetime' => 10,
 
 			// CSS Style
-			'activateCSS'       => 1, // activate the CSS file
-			'CSSfile'           => 'nggallery.css',     // set default css filename
+			'activateCSS' => 1, // activate the CSS file
+			'CSSfile'     => 'nggallery.css',     // set default css filename
+			'always_enable_frontend_logic' => FALSE
 		);
 	}
 

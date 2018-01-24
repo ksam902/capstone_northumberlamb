@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-04-18 20:22:34
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2018-01-24 00:27:59
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:133008654454d90fb15c84b2-13633154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '39ed5750c6c83f7d279824bab2c3b61a23e41456' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/northumberlamb/wp-content/themes/northumberlamb/templates/layout/header.tpl',
-      1 => 1429388550,
+      1 => 1511737338,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54d90fb16ade51_38160939')) {function content_54d90fb16ade51_38160939($_smarty_tpl) {?>
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"  style="display: none;">
     <div id="nav-container" class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
+			<?php echo $_smarty_tpl->tpl_vars['menu']->value;?>
 
         </div>
         <!-- /.navbar-collapse -->
@@ -94,5 +94,4 @@ $_smarty_tpl->tpl_vars['image']->_loop = true;
         </div>
     </div>
 </div>
-
 <?php }} ?>

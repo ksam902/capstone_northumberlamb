@@ -1,22 +1,24 @@
 <?php
 
-/***
-{
-Module: photocrati-wpcli
-}
- ***/
 class M_WPCLI extends C_Base_Module
 {
-    function define()
+    function define($id = 'pope-module',
+                    $name = 'Pope Module',
+                    $description = '',
+                    $version = '',
+                    $uri = '',
+                    $author = '',
+                    $author_uri = '',
+                    $context = FALSE)
     {
         parent::define(
             'photocrati-wpcli',
             'WP-CLI Integration',
             "Provides additional commands for WP-CLI (https://github.com/wp-cli/wp-cli",
-            '0.1',
-            'http://www.nextgen-gallery.com',
-            'Photocrati Media',
-            'http://www.photocrati.com'
+            '0.2',
+            'https://www.imagely.com/wordpress-gallery-plugin/nextgen-gallery/',
+            'Imagely',
+            'https://www.imagely.com'
         );
     }
 
@@ -33,7 +35,7 @@ class M_WPCLI extends C_Base_Module
 
 new M_WPCLI();
 
-if (class_exists('WP_CLI_Command')) {
+if (defined('WP_CLI') && WP_CLI && class_exists('WP_CLI_Command', FALSE)) {
     /**
      * Manage NextGen Gallery
      */
@@ -44,17 +46,8 @@ if (class_exists('WP_CLI_Command')) {
          */
         function flush_cache($args, $assoc_args)
         {
-            C_Photocrati_Cache::flush('all');
+            C_Photocrati_Transient_Manager::flush();
             WP_CLI::success('Flushed all caches');
-        }
-
-        /**
-         * Flushes POPE code cache
-         */
-        function flush_pope_cache($args, $assoc_args)
-        {
-            C_Photocrati_Cache::flush('all', TRUE);
-            WP_CLI::success('Flushed all expired items from the cache');
         }
 
         /**
@@ -108,6 +101,19 @@ if (class_exists('WP_CLI_Command')) {
             else {
                 WP_CLI::error("Gallery not found (with id #{$assoc_args['gallery']}");
             }
+        }
+
+        /**
+         * Clear all dismissed notifications handled by C_Admin_Notification_Manager
+         *
+         * @synopsis
+         */
+        function clear_dismissed_notifications($args, $assoc_args)
+        {
+            $settings = C_NextGen_Settings::get_instance();
+            $settings->set('dismissed_notifications', array());
+            $settings->set('gallery_created_after_reviews_introduced', FALSE);
+            $settings->save();
         }
     }
 
