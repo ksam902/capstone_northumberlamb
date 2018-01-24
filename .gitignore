@@ -1,4 +1,5 @@
 wp-config-local.php
-/wp-content/themes/northumberlamb/templates_c/*
 /wp-content/uploads/*
+wp-content/themes/northumberlamb/templates_c/
+*.DS_Store
 /.idea/*
